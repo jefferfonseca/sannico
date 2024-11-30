@@ -3,13 +3,13 @@ include('includes/header.php'); ?>
 
 <!--------------------- Titulo ------------------------------>
 <div" style="padding: 5px;">
-    <h3 class="center white-text"><b>GOBIERNO ESCOLAR</b></h3>
+    <h3 class="center green-text"><b>GOBIERNO ESCOLAR</b></h3>
     </div>
 
     <!--------------------- Directivos de la institución ------------------------------>
 
-    <div class="section ">
-        <h4 class="center white-text"><b>DIRECTIVOS DOCENTES</b></h4>
+    <div class=" ">
+        <h4 class="center green-text"><b>DIRECTIVOS DOCENTES</b></h4>
     </div>
 
     <div class="row white center">
@@ -35,8 +35,8 @@ include('includes/header.php'); ?>
 
     <!--------------------- Consejo Directivo ------------------------------>
 
-    <div class="section titulo">
-        <h4 class="center white-text"> <b>CONSEJO DIRECTIVO</b></h4>
+    <div class=" titulo">
+        <h4 class="center green-text"> <b>CONSEJO DIRECTIVO</b></h4>
     </div>
 
     <div class="row white">
@@ -105,11 +105,11 @@ include('includes/header.php'); ?>
 
     <!--------------------- Consejo académico ------------------------------>
 
-    <div class="section titulo">
+    <div class=" titulo">
         <h4 class="center white-text"><b>CONSEJO ACADÉMICO</b></h4>
     </div>
 
-    <div class="row white">
+    <div class="row green">
         <br />
         <div class="col s12 opacity">
             <div class="row">
@@ -227,7 +227,7 @@ include('includes/header.php'); ?>
 
     <!--------------------- Gobierno Estudiantíl ------------------------------>
 
-    <div class="section titulo">
+    <div class=" titulo">
         <h3 class="center white-text">Gobierno Estudiantíl</h3>
     </div>
 

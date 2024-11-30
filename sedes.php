@@ -3,12 +3,12 @@
 <!--------------------- Titulo ------------------------------>
 <div class="">
    <br>
-   <h4 class="center white-text"><b>SEDES</b></h4>
+   <h4 class="center green-text"><b>SEDES</b></h4>
    <br>
 </div>
 <!--------------------- Sedes Rurales ------------------------------>
-<div class="section yellow darken-3">
-   <h3 class="center white-text">Sedes Rurales</h3>
+<div class=" yellow darken-3">
+   <h3 class="center yellow-text">Sedes Rurales</h3>
 </div>
 <br>
  <div class="row white">
@@ -48,7 +48,6 @@
    </div>
 </div>
 
-<div class="section white"> ---- </div>
 
 
 <?php include('includes/footer.php');?>
