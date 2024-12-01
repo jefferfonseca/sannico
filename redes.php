@@ -3,7 +3,7 @@
 <!--------------------- Titulo ------------------------------>
 <div class="opacity">
    <br>
-   <h4 class="center green-text text-darken-4 opacity">Técnico Laboral en Instalación de Redes y Mantenimiento de Computadores</h4>
+   <h4 class="center green-text  opacity">Técnico Laboral en Instalación de Redes y Mantenimiento de Computadores</h4>
    <br>
 </div>
 
@@ -14,7 +14,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Misión</h2>
+       <h2 class="center green-text ">Misión</h2>
           <p>
                Formar Técnicos Profesionales en instalación y mantenimiento de redes cableadas e inalámbricas, que soporten tecnologías para la transmisión de datos, Voz sobre IP a fin de garantizar los servicios, cumpliendo los estándares del sector, la normatividad y las necesidades de seguridad. Reconociendo las tecnologías vanguardistas para conectividad e instalación de redes y computadores.
            </p>
@@ -34,7 +34,7 @@
        <div class="col m6 hide-on-small-only"></div>
 
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Visión</h2>
+       <h2 class="center green-text ">Visión</h2>
           <p>
                Ser un programa de producción de conocimiento, con reconocimiento local, nacional e internacional, de carácter dinámico en la permanente búsqueda de la excelencia y la competitividad académica para la transferencia de tecnología y la investigación en el sector, debido a su carácter dinámico en la búsqueda constante de la fiabilidad, la pertinencia y proyección mediante el fomento de la investigación, la innovación y la extensión.
           </p>
@@ -51,7 +51,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Objetivos</h2>
+       <h2 class="center green-text ">Objetivos</h2>
           <ul>
               <li>✔ Formar Técnicos Profesionales con las competencias profesionales en la instalación y el mantenimiento de redes y computadores, a fin de dar impulso al desarrollo y aprovechamiento de las TIC y las telecomunicaciones a nivel regional y nacional, mediante el ofrecimiento de este de nivel tecnológico orientado al diseño, gestión, mantenimiento y control de redes de computadores y telemática. Desarrollando procesos investigativos coherentes con los alcances del nivel técnico profesional y que lo proyecten a continuar el siguiente ciclo. </li>
               <li>✔ Ofrecer a los futuros Técnicos profesionales una formación integral que les permita enfrentar el mercado laboral de una manera idónea y pertinente, de acorde con los cambios y avances que se presentan el sector para enfrentar y adaptar los cambios e innovaciones en tecnología para redes de computadores y sus procesos de instalación y mantenimiento. </li>
@@ -74,7 +74,7 @@
         <div class="col m6 hide-on-small-only"></div>
 
        <div class="col s12 m6 columnas opacity">
-           <h2 class="center green-text text-darken-4">Perfil Profesional</h2>
+           <h2 class="center green-text ">Perfil Profesional</h2>
            <p>
                El perfil del Técnico Profesional en Instalación de Redes y Mantenimiento Computadores le permitirá:
            </p>

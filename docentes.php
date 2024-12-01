@@ -33,7 +33,7 @@ include('includes/header.php'); ?>
             ?>
                         <div class="col s12 m6 center">
                             <img src="./images/<?php echo htmlspecialchars($docente[0]) ?>.png" alt="" width="auto" height="140">
-                            <h5 class="green-text text-darken-4"><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
+                            <h5 class="green-text "><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
                             <p class="black-text center" style="margin: 0;"><b>Celular: </b><a href="https://wa.me/+57<?php echo htmlspecialchars($docente[3]) ?>" target="_blank">+57<?php echo htmlspecialchars($docente[3]) ?></a></p>
                             <p class="black-text center" style="margin: 0;"><b>E-mail: </b><?php echo htmlspecialchars($docente[4]) ?></p>
                             <p class="black-text center" style="margin: 0;"><b>Cargo: </b><?php echo htmlspecialchars($docente[5]) ?></p>
@@ -74,7 +74,7 @@ include('includes/header.php'); ?>
             ?>
                         <div class="col s12 m6 l4 center">
                             <img src="./images/<?php echo htmlspecialchars($docente[0]) ?>.png" alt="" width="auto" height="140">
-                            <h5 class="green-text text-darken-4"><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
+                            <h5 class="green-text "><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
                             <p class="black-text center" style="margin: 0;"><b>Celular: </b><a href="https://wa.me/+57<?php echo htmlspecialchars($docente[3]) ?>" target="_blank">+57<?php echo htmlspecialchars($docente[3]) ?></a></p>
                             <p class="black-text center" style="margin: 0;"><b>E-mail: </b><?php echo htmlspecialchars($docente[4]) ?></p>
                             <p class="black-text center" style="margin: 0;"><b>Área: </b><?php echo htmlspecialchars($docente[5]) ?></p>
@@ -114,7 +114,7 @@ include('includes/header.php'); ?>
             ?>
                         <div class="col s12 m6 l4 center">
                             <img src="./images/<?php echo htmlspecialchars($docente[0]) ?>.png" alt="" width="auto" height="140">
-                            <h5 class="green-text text-darken-4"><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
+                            <h5 class="green-text "><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
                             <p class="black-text center" style="margin: 0;"><b>Celular: </b><a href="https://wa.me/+57<?php echo htmlspecialchars($docente[3]) ?>" target="_blank">+57<?php echo htmlspecialchars($docente[3]) ?></a></p>
                             <p class="black-text center" style="margin: 0;"><b>E-mail: </b><?php echo htmlspecialchars($docente[4]) ?></p>
                             <p class="black-text center" style="margin: 0;"><b>Área: </b><?php echo htmlspecialchars($docente[5]) ?></p>
@@ -154,7 +154,7 @@ include('includes/header.php'); ?>
             ?>
                         <div class="col s12 m6 l3 center">
                             <img src="./images/<?php echo htmlspecialchars($docente[0]) ?>.png" alt="" width="auto" height="140">
-                            <h5 class="green-text text-darken-4"><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
+                            <h5 class="green-text "><b><?php echo htmlspecialchars($docente[1] . ' ' . $docente[2]) ?></b></h5>
                             <p class="black-text center" style="margin: 0;"><b>Celular: </b><a href="https://wa.me/+57<?php echo htmlspecialchars($docente[3]) ?>" target="_blank">+57<?php echo htmlspecialchars($docente[3]) ?></a></p>
                             <p class="black-text center" style="margin: 0;"><b>E-mail: </b><?php echo htmlspecialchars($docente[4]) ?></p>
                             <p class="black-text center" style="margin: 0;"><b>Área: </b><?php echo htmlspecialchars($docente[5]) ?></p>

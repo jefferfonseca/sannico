@@ -1,14 +1,14 @@
 <?php $menu = "Institución";
 include('includes/header.php'); ?>
 
-<div class=" section2">
+<div class=" section1">
     <!-- Bandera -->
-    <div id="bandera" class="section  scrollspy ">
-        <h4 class="center green-text text-darken-4"><b>SIMBOLOS INSTITUCIONALES</b></h4>
+    <div id="bandera" class="section  scrollspy">
         <div class="row valign-wrapper">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
-                <h3 class="green-text text-darken-4"><b>Bandera</b></h3>
+                <h4 class="center green-text m-0 pt"><b>SIMBOLOS INSTITUCIONALES</b></h4>
+                <h3 class="green-text "><b>Bandera</b></h3>
                 <!--linea azul decorativa-->
                 <br>
                 <img src="./images/simbolos/bandera.jpg" width="450px" alt="bandera">
@@ -50,7 +50,7 @@ include('includes/header.php'); ?>
         <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
-                <h3 class="green-text text-darken-4"><b>Escudo</b></h3>
+                <h3 class="green-text "><b>Escudo</b></h3>
                 <br>
                 <img src="./images/simbolos/Escudo.png" width="330px" height="330px" alt="bandera">
                 <br>
@@ -63,10 +63,10 @@ include('includes/header.php'); ?>
         <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
-                <h3 class="green-text text-darken-4"><b>Himno de la Institución</b></h3>
+                <h3 class="green-text"><b>Himno de la Institución</b></h3>
 
                 <!--linea azul decorativa-->
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
+                <div class="col s12 green-line"></div>
                 <br>
                 <audio controls preload='auto'>
                     <source src="./images/simbolos/Himno.mpeg">
@@ -123,16 +123,16 @@ include('includes/header.php'); ?>
         <div class="row">
             <div class="col s12 l9 offset-l2 center">
                 <!-- Titulo principal -->
-                <h5 class="green-text text-darken-4 center"><b>Uniformes</b></h5>
+                <h5 class="green-text  center"><b>Uniformes</b></h5>
 
                 <!-- Uniformes de diario -->
-                <h5 class="green-text text-darken-4 center"><b>UNIFORMES DE DIARIO</b></h5>
+                <h5 class="green-text  center"><b>UNIFORMES DE DIARIO</b></h5>
 
                 <!--Col Masculino-->
                 <div class="col s12 m6 center">
                     <br>
 
-                    <h5 class="green-text text-darken-4 ">Masculino</h5>
+                    <h5 class="green-text  ">Masculino</h5>
 
                     <br>
                     <img src="./images/simbolos/2.png" width="60%" alt="hombre">
@@ -151,7 +151,7 @@ include('includes/header.php'); ?>
                 <!--Col Femenino-->
                 <div class="col s12 m6  center">
                     <br>
-                    <h5 class="green-text text-darken-4">Femenino</h5>
+                    <h5 class="green-text ">Femenino</h5>
                     <br>
                     <img src="./images/simbolos/1.png" width="60%" alt="femenino">
                     <br>
@@ -168,7 +168,7 @@ include('includes/header.php'); ?>
         <div class="row center">
             <!-- Uniformes de edu. física -->
             <div class="col s12 l9 offset-l2 center">
-                <h5 class="green-text text-darken-4"><b>UNIFORMES DE EDUCACIÓN FÍSICA.</b></h5>
+                <h5 class="green-text "><b>UNIFORMES DE EDUCACIÓN FÍSICA.</b></h5>
 
                 <div class="col s12">
                     <br>
@@ -186,7 +186,7 @@ include('includes/header.php'); ?>
             <div class="row center">
                 <!-- Uniformes de edu. física -->
                 <div class="col s12 l9 offset-l2 center">
-                    <h5 class="green-text text-darken-4"><b>ADICIONALMENTE.</b></h5>
+                    <h5 class="green-text "><b>ADICIONALMENTE.</b></h5>
 
                     <div class="col s12">
                         <p class="black-text" style="text-align: justify;">
@@ -243,6 +243,10 @@ include('includes/header.php'); ?>
         var instances = M.ScrollSpy.init(elems);
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
+    });
+
     // JavaScript para cambiar el fondo dependiendo de la sección visible
     document.addEventListener("scroll", function() {
         const sections = document.querySelectorAll(".section");
@@ -258,13 +262,13 @@ include('includes/header.php'); ?>
             ) {
                 switch (index) {
                     case 0:
-                        document.body.style.backgroundImage = "url('./images/nosotros/h2.jpeg')";
+                        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
                         break;
                     case 1:
-                        document.body.style.backgroundImage = "url('./images/parallax/5.jpg')";
+                        document.body.style.backgroundImage = "url('./images/parallax/10.jpg')";
                         break;
                     case 2:
-                        document.body.style.backgroundImage = "url('./images/parallax/6.jpg')";
+                        document.body.style.backgroundImage = "url('./images/parallax/17.jpg')";
                         break;
                     case 3:
                         document.body.style.backgroundImage = "url('./images/parallax/6.jpg')";

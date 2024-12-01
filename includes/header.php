@@ -21,16 +21,16 @@
 
 <body>
     <header>
-        <div class="navbar ">
+        <div class="navbar">
             <div class="row  center valign-wrapper ">
-                <div class="col s12 m4">
-                    <img src="./images/Escudo.png" alt="sanicolas" height="90px">
+                <div class="col s3 m4" style="background: transparent;">
+                    <img src="./images/Escudo.png" style="background: transparent !important;" alt="sanicolas" height="90px">
                 </div>
-                <div class="col s12 m4 center">
+                <div class="col s6 m4 center">
                     <h5 class="center m-0">Institución Educativa Técnica<br>San Nicolás - Tuta</h5>
                     <p class="center m-0">"Queremos y podemos"</p>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s1 m4">
                     <img src="./images/Escudo-tuta.png" alt="tuta" height="90px">
                 </div>
             </div>

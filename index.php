@@ -1,7 +1,7 @@
 <?php $menu = "Inicio";
 include 'includes/header.php'; ?>
 <div class="row section valign-wrapper" id="content">
-    <div class="col s12 l8">
+    <div class="col s12 m12 l7">
         <div class="slideshow-container center">
             <?php
             // Lee la carpeta de fotos y las carga automáticamente en el slide
@@ -21,35 +21,35 @@ include 'includes/header.php'; ?>
 
     </div>
 
-    <div class="col s12 l4  center">
+    <div class="col s12 m12 l4  center">
         <div class="botones">
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="http://sedboyaca.gov.co/" target="_blank">
                     <img class="borde-dorado img_enlaces" src="./images\convenios\sedboyaca.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank">
                     <img class="borde-dorado img_enlaces" src="./images\convenios\cc.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="https://www.uptc.edu.co/sitio/portal/" target="_blank">
                     <img class="borde-dorado  img_enlaces" src="./images\convenios\UPTC.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="https://www.uniboyaca.edu.co/es" target="_blank">
                     <img class="borde-dorado  img_enlaces" src="./images\convenios\udb.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F
                     &service=mail&hd=ietsannicolas.edu.co&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank">
                     <img class="borde-dorado" src="./images\convenios\gmail.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s6 m4 l6">
                 <a href="https://www.icfes.gov.co/web/cajas-herramientas/Caja_Saber11" target="_blank">
                     <img class="borde-dorado" src="./images/convenios/saber.jpg">
                 </a>
@@ -105,7 +105,7 @@ include 'includes/header.php'; ?>
     <div class="parallax"><img src="images/parallax/2.jpeg"></div>
 </div>
 
-<div class="section section2 valign-wrapper">
+<div class="section section1 valign-wrapper">
     <div class="row ">
         <h2 class="center yellow-text" id="content">Perfil del Egresado</h2>
         <div class="valign-wrapper">

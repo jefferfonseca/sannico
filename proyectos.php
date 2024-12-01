@@ -3,7 +3,7 @@
 <div class="row white">
    <div  class="col s11 m9">
        <br />
-       <h4 class="center green-text text-darken-4 container"><b>PROYECTOS INSTITUCIONALES</b></h4>
+       <h4 class="center green-text  container"><b>PROYECTOS INSTITUCIONALES</b></h4>
        <br />
    </div>
 
@@ -13,7 +13,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto pedagógico de democracia y derechos humanos 2020</b></h5>
+                   <h5 class="green-text "><b>Proyecto pedagógico de democracia y derechos humanos 2020</b></h5>
                    <p class="black-text">Comité de democracia</p>
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -52,7 +52,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12">
-                   <h5 class="green-text text-darken-4"><b>Competencias a desarrollar.</b></h5>
+                   <h5 class="green-text "><b>Competencias a desarrollar.</b></h5>
 
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -105,7 +105,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto de orientación vocacional y proyecto de vida</b></h5>
+                   <h5 class="green-text "><b>Proyecto de orientación vocacional y proyecto de vida</b></h5>
                    <p class="black-text">Psicoorientación.</p>
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -162,7 +162,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto de dirección de grado</b></h5>
+                   <h5 class="green-text "><b>Proyecto de dirección de grado</b></h5>
 
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -206,7 +206,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto de escuela para padres</b></h5>
+                   <h5 class="green-text "><b>Proyecto de escuela para padres</b></h5>
 
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -245,7 +245,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto institucional de atención a padres de familia</b></h5>
+                   <h5 class="green-text "><b>Proyecto institucional de atención a padres de familia</b></h5>
 
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
@@ -307,7 +307,7 @@
            <div class="row">
                <!--titulo de articulo-->
                <div class="col s12 m6">
-                   <h5 class="green-text text-darken-4"><b>Proyecto de aprovechamiento del tiempo libre</b></h5>
+                   <h5 class="green-text "><b>Proyecto de aprovechamiento del tiempo libre</b></h5>
 
                    <!--linea azul decorativa-->
                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>

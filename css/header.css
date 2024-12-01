@@ -11,14 +11,31 @@ body {
   color: white;
 }
 
-.nav {
+.nav * {
   background: #056245 !important;
+  color: #fff !important;
+  text-align: center;
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.3, 1) circle-out-hesitate both;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav ul li a:hover,
+.nav ul li a:hover i {
+  color: #056245 !important;
+  background: #97AB97 !important; /* fallback for old browsers */
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 3px solid #ffc400;
 }
 
 .green {
   background-color: #056245 !important;
 }
-
+.green-line {
+  background-color: #056245 !important;
+  min-height: 5px;
+}
 .m-0 {
   margin: 0 !important;
 }
@@ -26,10 +43,15 @@ body {
   padding: 0 !important;
 }
 
+.pt {
+  padding-top: 50px !important;
+}
+
 header {
   background-color: var(--verde);
   position: relative;
   border-bottom: 3px solid #ffc400;
+  transition: all 0.7s ease !important;
 }
 
 div.row {

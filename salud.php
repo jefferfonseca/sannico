@@ -3,7 +3,7 @@
 <!--------------------- Titulo ------------------------------>
 <div class="opacity">
    <br>
-   <h4 class="center green-text text-darken-4">Técnico Laboral en procesos Administrativos de Salud</h4>
+   <h4 class="center green-text ">Técnico Laboral en procesos Administrativos de Salud</h4>
    <br>
 </div>
 
@@ -14,7 +14,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Misión</h2>
+       <h2 class="center green-text ">Misión</h2>
           <p>
            El programa Técnico profesional en procesos Administrativos de Salud, tiene como misión, propender por el desarrollo, generación y difusión del conocimiento administrativo a nivel operativo, para el progreso de las organizaciones del sector salud a partir de la formación de Técnicos profesionales en el campo de su competencia.
           </p>
@@ -34,7 +34,7 @@
        <div class="col m6 hide-on-small-only"></div>
 
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Visión</h2>
+       <h2 class="center green-text ">Visión</h2>
           <p>
            Formar Técnicos profesionales íntegros capaces de operar dentro de una estructura institucional organizativa de salud que les permita desarrollar permanentemente procesos de calidad y generar desarrollo productivo a nivel Municipal, Departamental y Nacional .
           </p>
@@ -51,7 +51,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Objetivos</h2>
+       <h2 class="center green-text ">Objetivos</h2>
           <ul>
               <li>✔ Ofrecer una formación integral que les permita enfrentarse y adaptarse el mercado laboral de una manera idónea y pertinente, acorde con los cambios y avances que se presentan en el sector salud. </li>
               <li>✔ Generar espacios prácticos en el entorno y la aplicación de procesos a nivel administrativo en salud, que favorezcan el fortalecimiento y crecimiento de las empresas del sector. </li>
@@ -74,7 +74,7 @@
         <div class="col m6 hide-on-small-only"></div>
 
        <div class="col s12 m6 columnas opacity">
-           <h2 class="center green-text text-darken-4">Perfil Profesional</h2>
+           <h2 class="center green-text ">Perfil Profesional</h2>
            
            <ul>
               <li>✔ El Técnico Profesional en Procesos Administrativos de Salud posee competencias y desarrollo intelectual a partir de aptitudes, habilidades y destrezas necesarias para el desempeño laboral, en procedimientos de apoyo técnico y administrativo, en las empresas de servicios de salud.</li>

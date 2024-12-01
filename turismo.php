@@ -3,7 +3,7 @@
 <!--------------------- Titulo ------------------------------>
 <div class="opacity">
    <br>
-   <h4 class="center green-text text-darken-4">Técnico Turismo</h4>
+   <h4 class="center green-text ">Técnico Turismo</h4>
    <br>
 </div>
 
@@ -14,7 +14,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Misión</h2>
+       <h2 class="center green-text ">Misión</h2>
           <p>
            La especialidad de turismo contribuye a la comunidad educativa de Paipa confirmando a los educados en la cultura del turismo como parte de su formación integral y su entorno.
           </p>
@@ -34,7 +34,7 @@
        <div class="col m6 hide-on-small-only"></div>
 
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Visión</h2>
+       <h2 class="center green-text ">Visión</h2>
           <p>
            En cinco años la institución contribuye con un 90% a la comunidad Paipana formando personas y contribuye al desarrollo del turismo sostenible.
           </p>
@@ -51,7 +51,7 @@
    <div class="row">
        <br>
        <div class="col s12 m6 columnas opacity">
-       <h2 class="center green-text text-darken-4">Perfil Profesional</h2>
+       <h2 class="center green-text ">Perfil Profesional</h2>
           <p>Ofrece información en competencias laborales y brinda al sector turístico la posibilidad de incorporar personal de calidad que contribuya al desarrollo del sector productivo local. ofrece a los estudiantes una formación en la prestación de servicios turísticos y hoteleros que le permitan mejorar su calidad de vida.</p>
        </div>
    </div>

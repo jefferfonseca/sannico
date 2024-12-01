@@ -2,7 +2,7 @@
 include 'includes/header.php'; ?>
 
 <div class="parallax-container">
-    <div class="parallax"><img src="./images/nosotros/h2.jpeg"></div>
+    <div class="parallax"><img src="./images/parallax/17.jpg"></div>
 </div>
 
 
@@ -84,11 +84,11 @@ include 'includes/header.php'; ?>
 
 
 <!-- Principios -->
-<div class="section valign-wrapper">
+<div class="section section1 valign-wrapper">
     <div style="width: 100%;">
-        <h2 class="center white-text text-darken-4 container"><b>PRINCIPIOS</b></h2>
+        <h2 class="center white-text  container"><b>PRINCIPIOS</b></h2>
         <div class="carousel carousel-slider center" data-indicators="true">
-            <div class="carousel-item white-text text-darken-4" href="#one!">
+            <div class="carousel-item white-text " href="#one!">
                 <div class="principios">
                     <h4 class="container"><br><b>FORMACIÓN ETICA Y MORAL</b></h4>
                     <h5 class="container">
@@ -122,7 +122,7 @@ include 'includes/header.php'; ?>
                     </h5>
                 </div>
             </div>
-            <div class="carousel-item white-text text-darken-4 valign-wrappe" href="#four!">
+            <div class="carousel-item white-text  valign-wrappe" href="#four!">
                 <div class="principios">
                     <h4 class="container"><br><b>EXCELENCIA ACADÉMICA</b></h4>
                     <h5 class="container">
@@ -144,7 +144,7 @@ include 'includes/header.php'; ?>
     <div class="parallax"><img src="./images/parallax/5.jpg"></div>
 </div>
 
-<div class="sec section section3">
+<div class="sec section section1">
     <div class="row  ">
         <div class="col s12">
             <h2 class="center yellow-text">Filosofía</h2>

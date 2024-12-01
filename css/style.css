@@ -41,7 +41,7 @@ body {
 }
 
 .section {
-  min-height: 100vh;
+  min-height: 80vh;
   backdrop-filter: blur(5px); /* Desenfoque aplicado al fondo */
   -webkit-backdrop-filter: blur(10px);
   /* Compatibilidad con navegadores Webkit */
@@ -58,12 +58,13 @@ body {
 }
 
 .pinned {
-  top: 148px;
+  top: 160px;
   left: 80px;
 }
 .botones {
   padding: 20px 0;
-  margin: 40px 0;
+  margin: 0;
+  min-height: 45vh;
 }
 
 .botones img {
@@ -89,7 +90,7 @@ body {
 }
 
 .parallax-container {
-  min-height: 350px;
+  min-height: 500px;
 }
 
 .yellow-text {
@@ -157,7 +158,7 @@ body {
   /* Espacio entre las columnas */
   column-gap: 30px;
   padding: 0 40px;
-  text-shadow: #000000 1px 1px 1px;
+  text-shadow: #000 1px 1px 1px;
 }
 .columnas p {
   margin: 0;
@@ -273,20 +274,40 @@ button:focus {
   background: #056245;
   color: aliceblue;
 }
+.table-of-contents a {
+  transition: all 0.5s cubic-bezier(1, -0.73, 0.25, 1.52);
+  height: auto;
+  width: 150px;
+}
+.table-of-contents a:hover {
+  color: #000;
+  border-left: 4px solid #ffc40063;
+  background: #05624428;
+  padding: 5px;
+}
+
+.table-of-contents a.active {
+  border-left: 4px solid #ffc4009d;
+  background: #05624457;
+  padding: 15px;
+  color: #d49114;
+  font-weight: 700;
+  font-size: 25px;
+  text-shadow: #000 1px 1px 1px;
+}
 
 /* Estilos para el contenedor del reproductor */
 audio {
   width: 100%; /* Hace que ocupe todo el ancho disponible */
   max-width: 600px; /* Limita el tamaño máximo */
   border-radius: 10px; /* Bordes redondeados */
-  background:  #056245; /* Gradiente de fondo */
+  background: #ffc40060; /* Gradiente de fondo */
   padding: 10px; /* Espaciado interno */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil */
   border: none; /* Quitar bordes predeterminados */
   outline: none; /* Quitar borde de enfoque */
   transition: transform 0.3s ease-in-out; /* Animación de transformación */
 }
-
 
 /* Efecto de enfoque */
 audio:focus {
@@ -295,7 +316,7 @@ audio:focus {
 
 /* Estilo para los controles del audio */
 audio::-webkit-media-controls-panel {
-  background-color: #ffc400d5; /* Fondo oscuro para el panel de controles */
+  background-color: #056245; /* Fondo oscuro para el panel de controles */
   border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -303,6 +324,13 @@ audio::-webkit-media-controls-play-button:hover,
 audio::-webkit-media-controls-volume-slider:hover,
 audio::-webkit-media-controls-mute-button:hover,
 audio::-webkit-media-controls-fullscreen-button:hover {
-  background-color: #ffc400f1; /* Cambiar a color naranja cuando el mouse pasa por encima */
+  background-color: #ffc400d5; /* Cambiar a color naranja cuando el mouse pasa por encima */
+  border-radius: 20px;
 }
 
+
+@media (max-width: 992px) { /* Para dispositivos medianos y pequeños */
+  .valign-wrapper {
+      display: block !important; /* Quita el efecto de alineación vertical */
+  }
+}

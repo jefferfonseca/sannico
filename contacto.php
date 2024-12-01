@@ -1,6 +1,6 @@
 <?php $menu="Contacto"; include('includes/header.php');?>
 <br>
-<div class="row green-text text-darken-4">
+<div class="row green-text ">
 
    <div class="col s12 m9 l7 offset-m3 offset-l2 white"style="border-radius:50px;">
 
