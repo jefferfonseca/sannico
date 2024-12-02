@@ -166,7 +166,7 @@ include 'includes/header.php'; ?>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.body.style.backgroundImage = "url('./images/nosotros/h2.jpeg')";
+        document.body.style.backgroundImage = "url('./images/parallax/17.jpg)";
     });
     // JavaScript para cambiar el fondo dependiendo de la sección visible
     document.addEventListener("scroll", function() {

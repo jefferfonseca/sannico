@@ -14,8 +14,8 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
 ?>
 
 
-<!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/materialize.min.js"></script>
 <!-- Inicializa los JavaScript -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -23,13 +23,27 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        var instances = M.Dropdown.init(elems);
-    });
+        // Inicializar los dropdowns
+        const dropdowns = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(dropdowns, {
+            coverTrigger: false, // Evita que el dropdown cubra el activador
+            constrainWidth: false // Permite ajustar el ancho
+        });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
+        // Inicializar el sidenav
+        const sidenav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sidenav);
+
+        // Detectar la página actual
+        const currentPage = window.location.pathname.split('/').pop();
+        const menuLinks = document.querySelectorAll('nav ul li a');
+
+        menuLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
     });
 
     //js fixed header
@@ -78,8 +92,6 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems);
     });
-
-
 </script>
 <footer class="p-0">
     <div class="row valign-wrapper m-0">

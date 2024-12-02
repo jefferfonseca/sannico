@@ -1,36 +1,42 @@
 /* Import de fuentes */
+/* Importación de fuentes desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
-/* Fuentes personalizadas */
+/* Definición de una fuente personalizada */
 @font-face {
   font-family: Avenir;
   src: url(./../assets/fonts/FontsFree-Net-Avenir-Light.woff);
 }
 
+/* Estilo global para todas las fuentes del documento */
 * {
   font-family: Avenir;
 }
-
+:root {
+  /*--verde: var(--verde);  green darken-4*/
+  --verde: #056245 !important;
+  --amarillo: #ffc400d5 !important;
+}
+/* Fondo inicial */
 body,
 html {
   margin: 0;
   padding: 0;
+  font-family: Avenir, sans-serif;
+  background: url("images/parallax/1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
+  color: white;
 }
 
 .section-destacados {
-  height: 100vh; /* Cada sección ocupa toda la altura del viewport */
+  height: 100vh;
   display: flex;
-  justify-content: center !important;
+  justify-content: center;
   align-items: center;
   color: white;
   font-size: 2rem;
-}
 
-/* Fondo inicial */
-body {
-  background: url("images/parallax/1.jpg") no-repeat center center fixed;
-  background-size: cover;
-  transition: background 0.5s ease; /* Transición suave al cambiar el fondo */
 }
 
 .sec {
@@ -74,13 +80,13 @@ body {
 
 .borde-dorado {
   border-radius: 10px;
-  border-bottom: 5px solid #ffc400d5;
+  border-bottom: 5px ridge var(--amarillo);
   height: 100%;
   width: 100%;
 }
 
 .green-text {
-  color: #056245 !important;
+  color: var(--verde) !important;
   text-shadow: #000000 1px 1px 2px;
 }
 
@@ -94,7 +100,7 @@ body {
 }
 
 .yellow-text {
-  color: #ffc400;
+  color: var(--amarillo);
   text-shadow: #8baaa0 1px 1px 2px;
 }
 .justify-text {
@@ -103,54 +109,42 @@ body {
 }
 
 /*Cards de destacados*/
+
+/* Estilo para las tarjetas destacadas */
 .destacados {
   position: relative;
   border-radius: 20px;
-  width: 80%; /* Ajustar al ancho del contenedor padre */
-  overflow: hidden; /* Esconde cualquier exceso de la imagen */
+  width: 80%; /* Ancho relativo al contenedor padre */
+  overflow: hidden; /* Esconde el contenido desbordado */
   margin: 0px 20px;
 }
+
+/* Imagen dentro de .destacados */
 .destacados .image {
-  height: 100%; /* Ajusta la altura de la imagen al contenedor */
-  width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-  object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
-  object-position: center; /* Centra la imagen dentro del contenedor */
-}
-.image {
-  opacity: 1;
-  display: block;
+  height: 100%; /* Ajusta la altura de la imagen */
   width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
+  object-fit: cover; /* Mantiene las proporciones sin deformar */
+  object-position: center; /* Centra la imagen */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
 }
 
-.middle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
+/* Efecto al pasar el mouse sobre .destacados */
 .destacados:hover .image {
-  opacity: 0.3;
+  opacity: 0.3; /* Reduce la opacidad */
 }
 
 .destacados:hover .middle {
-  opacity: 1;
+  opacity: 1; /* Muestra el contenido central */
 }
 
 .text {
-  background-color: #056245;
+  background-color: var(--verde);
   width: 100%;
   color: white;
   font-size: 30px;
   padding: 16px 32px;
   text-shadow: 1 1 1 px black;
+  border-top: 5px ridge var(--amarillo);
 }
 
 .historia {
@@ -271,7 +265,7 @@ footer {
 }
 
 button:focus {
-  background: #056245;
+  background: var(--verde);
   color: aliceblue;
 }
 .table-of-contents a {
@@ -316,7 +310,7 @@ audio:focus {
 
 /* Estilo para los controles del audio */
 audio::-webkit-media-controls-panel {
-  background-color: #056245; /* Fondo oscuro para el panel de controles */
+  background-color: var(--verde); /* Fondo oscuro para el panel de controles */
   border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -324,13 +318,13 @@ audio::-webkit-media-controls-play-button:hover,
 audio::-webkit-media-controls-volume-slider:hover,
 audio::-webkit-media-controls-mute-button:hover,
 audio::-webkit-media-controls-fullscreen-button:hover {
-  background-color: #ffc400d5; /* Cambiar a color naranja cuando el mouse pasa por encima */
+  background-color: var(--amarillo);
   border-radius: 20px;
 }
 
-
-@media (max-width: 992px) { /* Para dispositivos medianos y pequeños */
+@media (max-width: 992px) {
+  /* Para dispositivos medianos y pequeños */
   .valign-wrapper {
-      display: block !important; /* Quita el efecto de alineación vertical */
+    display: block !important; /* Quita el efecto de alineación vertical */
   }
 }

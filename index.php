@@ -66,9 +66,9 @@ include 'includes/header.php'; ?>
                 <br>
                 <a href="https://web.facebook.com/ietsannicolas" target="_blank">
                     <div class="destacados">
-                        <img src="./images/destacados/facebook.jpg" alt="fb" class="image borde-dorado">
+                        <img src="./images/destacados/facebook.jpg" alt="fb" class="image">
                         <div class="middle">
-                            <h4 class="text">Facebook</h4>
+                            <div class="text">Facebook</div>
                         </div>
                     </div>
                 </a>
@@ -78,7 +78,7 @@ include 'includes/header.php'; ?>
                 <br>
                 <a href="#" target="_blank">
                     <div class="destacados">
-                        <img src="./images/destacados/periodico.jpg" alt="Live" class="image borde-dorado">
+                        <img src="./images/destacados/periodico.jpg" alt="Live" class="image">
                         <div class="middle">
                             <div class="text">Periódico Escolar</div>
                         </div>
@@ -90,7 +90,7 @@ include 'includes/header.php'; ?>
                 <br>
                 <a href="#" target="_blank">
                     <div class="destacados">
-                        <img src="./images/destacados/especialidad.jpeg" alt="ig" class="image borde-dorado">
+                        <img src="./images/destacados/especialidad.jpeg" alt="ig" class="image">
                         <div class="middle">
                             <div class="text">Especialidad</div>
                         </div>

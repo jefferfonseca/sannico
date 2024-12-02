@@ -26,7 +26,7 @@
                 <div class="col s3 m4" style="background: transparent;">
                     <img src="./images/Escudo.png" style="background: transparent !important;" alt="sanicolas" height="90px">
                 </div>
-                <div class="col s6 m4 center">
+                <div class="col s6 m4 center institucion">
                     <h5 class="center m-0">Institución Educativa Técnica<br>San Nicolás - Tuta</h5>
                     <p class="center m-0">"Queremos y podemos"</p>
                 </div>
@@ -45,9 +45,9 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.php">Inicio</a></li>
-                    <li>
-                        <a href="#" class="dropdown-trigger" data-target="institucion">Institución
+                    <li class="active"><a href="index.php">Inicio</a></li>
+                    <li class="active">
+                        <a href="#" class="active dropdown-trigger" data-target="institucion">Institución
                             <i class="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>
