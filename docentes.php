@@ -1,21 +1,10 @@
 <?php $menu = "Institución";
 include('includes/header.php'); ?>
 
-<!--------------------- Titulo ------------------------------>
-<div class="">
-    <h4 class="center white-text"><b>DIRECTORIO DE DOCENTES</b></h4>
-    <br>
-</div>
-
+<div class="section p-0 m-0">
+<h3 class="center white-text"><b>DOCENTES</b></h3>
 <!--------------------- Docentes Directivos ------------------------------>
-
-<div class="section">
-    <h3 class="center white-text">Directivos Docentes</h3>
-</div>
-<br>
-
-<div class="row white">
-    <div class="col s12 opacity">
+<h4 class="center white-text">Directivos Docentes</h4>
         <div class="row">
             <br>
             <!-- Leer archivo csv con php para crear dodentes-->
@@ -59,7 +48,7 @@ include('includes/header.php'); ?>
 </div>
 <br>
 
-<div class="row white">
+<div class="row">
     <div class="col s12 opacity">
         <div class="row">
             <br>
@@ -99,7 +88,7 @@ include('includes/header.php'); ?>
 </div>
 <br>
 
-<div class="row white">
+<div class="row">
     <div class="col s12 opacity">
     <div class="row">
             <br>
@@ -139,7 +128,7 @@ include('includes/header.php'); ?>
 </div>
 <br>
 
-<div class="row white">
+<div class="row">
     <div class="col s12 opacity">
     <div class="row">
             <br>
@@ -172,5 +161,45 @@ include('includes/header.php'); ?>
         <br>
     </div>
 </div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
+    });
+
+    // JavaScript para cambiar el fondo dependiendo de la sección visible
+    document.addEventListener("scroll", function() {
+        const sections = document.querySelectorAll(".section");
+        const scrollPosition = window.scrollY;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop - 20;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+                switch (index) {
+                    case 0:
+                        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
+                        break;
+                    case 1:
+                        document.body.style.backgroundImage = "url('./images/parallax/10.jpg')";
+                        break;
+                    case 2:
+                        document.body.style.backgroundImage = "url('./images/parallax/17.jpg')";
+                        break;
+                    case 3:
+                        document.body.style.backgroundImage = "url('./images/parallax/6.jpg')";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+    });
+</script>
 
 <?php include('includes/footer.php'); ?>

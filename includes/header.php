@@ -45,9 +45,9 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li class="active"><a href="index.php">Inicio</a></li>
-                    <li class="active">
-                        <a href="#" class="active dropdown-trigger" data-target="institucion">Institución
+                    <li><a href="index.php">Inicio</a></li>
+                    <li>
+                        <a href="#" class="dropdown-trigger" data-target="institucion">Institución
                             <i class="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>

@@ -58,7 +58,7 @@ include 'includes/header.php'; ?>
     </div>
 </div>
 
-<div class="section-destacados section  section1 valign-wrapper">
+<div class="section-destacados section   valign-wrapper">
     <div class="row ">
         <h2 class="center-align green-text p-0 m-0">Destacados</h2>
         <div class="center">
@@ -105,7 +105,7 @@ include 'includes/header.php'; ?>
     <div class="parallax"><img src="images/parallax/2.jpeg"></div>
 </div>
 
-<div class="section section1 valign-wrapper">
+<div class="section  valign-wrapper">
     <div class="row ">
         <h2 class="center yellow-text" id="content">Perfil del Egresado</h2>
         <div class="valign-wrapper">

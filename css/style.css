@@ -25,7 +25,7 @@ html {
   font-family: Avenir, sans-serif;
   background: url("images/parallax/1.jpg") no-repeat center center fixed;
   background-size: cover;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
   color: white;
 }
 
@@ -36,7 +36,6 @@ html {
   align-items: center;
   color: white;
   font-size: 2rem;
-
 }
 
 .sec {
@@ -48,20 +47,13 @@ html {
 
 .section {
   min-height: 80vh;
-  backdrop-filter: blur(5px); /* Desenfoque aplicado al fondo */
-  -webkit-backdrop-filter: blur(10px);
-  /* Compatibilidad con navegadores Webkit */
-  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(3px); /* Desenfoque aplicado al fondo */
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5); /* Efecto de fondo sobre la imagen */
   padding: 0 !important;
 }
 
-.section1 {
-  background-color: rgba(0, 0, 0, 0.5); /* Efecto de fondo sobre la imagen */
-}
 
-.section2 {
-  background-color: #ffc40028;
-}
 
 .pinned {
   top: 160px;
@@ -108,6 +100,10 @@ html {
   text-shadow: #000000 1px 1px 2px;
 }
 
+.center,
+.center-align {
+  text-align: center !important;
+}
 /*Cards de destacados*/
 
 /* Estilo para las tarjetas destacadas */
@@ -125,7 +121,7 @@ html {
   width: 100%;
   object-fit: cover; /* Mantiene las proporciones sin deformar */
   object-position: center; /* Centra la imagen */
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
 }
 
 /* Efecto al pasar el mouse sobre .destacados */
@@ -143,7 +139,7 @@ html {
   color: white;
   font-size: 30px;
   padding: 16px 32px;
-  text-shadow: 1 1 1 px black;
+  text-shadow: 1px 1px 1px black;
   border-top: 5px ridge var(--amarillo);
 }
 
@@ -170,6 +166,10 @@ html {
   }
 }
 
+p {
+  text-align: justify;
+  font-size: 24px;
+}
 .mision {
   display: flex;
   align-items: center;
@@ -256,6 +256,7 @@ footer {
   border: none;
   cursor: pointer;
   z-index: 10;
+  padding: 10px;
 }
 .carousel-prev {
   left: 10px;
@@ -269,21 +270,37 @@ button:focus {
   color: aliceblue;
 }
 .table-of-contents a {
-  transition: all 0.5s cubic-bezier(1, -0.73, 0.25, 1.52);
+  transition: all 0.2s cubic-bezier(1, -0.73, 0.25, 1.52);
   height: auto;
   width: 150px;
+  font-size: 23px;
+  color: white;
+  text-shadow: #000 1px 1px 1px;
 }
+
+.yellow-text{
+  color: #d49114 !important;
+  text-shadow: black 1px 1px 1px ;
+}
+
+.white-text{
+  text-shadow: #000 1px 1px 1px;
+  color: white;
+  text-align: justify;
+}
+
 .table-of-contents a:hover {
-  color: #000;
   border-left: 4px solid #ffc40063;
   background: #05624428;
   padding: 5px;
+  font-size: 24px;
+  color: #d49114;
 }
 
 .table-of-contents a.active {
   border-left: 4px solid #ffc4009d;
   background: #05624457;
-  padding: 15px;
+  padding: 8px;
   color: #d49114;
   font-weight: 700;
   font-size: 25px;

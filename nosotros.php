@@ -6,7 +6,7 @@ include 'includes/header.php'; ?>
 </div>
 
 
-<div class="sec section section1 valign-wrapper">
+<div class="sec section  valign-wrapper">
     <div>
         <h2 class="center yellow-text">HISTORIA</h2>
         <div class="row historia">
@@ -38,7 +38,7 @@ include 'includes/header.php'; ?>
     <div class="parallax"><img src="./images/parallax/8.jpg"></div>
 </div>
 <!-- Misión -->
-<div class="row mision section section1  valign-wrapper">
+<div class="row mision section  valign-wrapper ">
     <div class="col s12 m6">
         <h1 class="center yellow-text">Misión</h1>
         <p style="padding: 5px 25px">
@@ -84,7 +84,7 @@ include 'includes/header.php'; ?>
 
 
 <!-- Principios -->
-<div class="section section1 valign-wrapper">
+<div class="section  valign-wrapper">
     <div style="width: 100%;">
         <h2 class="center white-text  container"><b>PRINCIPIOS</b></h2>
         <div class="carousel carousel-slider center" data-indicators="true">
@@ -144,7 +144,7 @@ include 'includes/header.php'; ?>
     <div class="parallax"><img src="./images/parallax/5.jpg"></div>
 </div>
 
-<div class="sec section section1">
+<div class="sec section ">
     <div class="row  ">
         <div class="col s12">
             <h2 class="center yellow-text">Filosofía</h2>

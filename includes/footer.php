@@ -33,23 +33,31 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
         // Inicializar el sidenav
         const sidenav = document.querySelectorAll('.sidenav');
         M.Sidenav.init(sidenav);
-
-        // Detectar la página actual
-        const currentPage = window.location.pathname.split('/').pop();
-        const menuLinks = document.querySelectorAll('nav ul li a');
-
-        menuLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPage) {
-                link.classList.add('active');
-            }
-        });
     });
 
     //js fixed header
     window.onscroll = function() {
         myFunction();
     };
+
+
+    // Obtener el nombre del archivo de la URL actual
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Seleccionar todos los elementos del menú principal
+    const menuItems = document.querySelectorAll("nav ul li a");
+
+    // Recorrer los elementos y comparar la URL del enlace con la página actual
+    menuItems.forEach((link) => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+            // Agregar la clase 'active' al elemento <li> padre del enlace
+            link.parentElement.classList.add("active");
+        }
+    });
+
+
+
 
     var header = document.getElementById("myHeader");
     var logo = document.getElementById("logo");

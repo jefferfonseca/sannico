@@ -39,7 +39,14 @@ header *{
   font-size: 15px;
   font-weight: 600;
 }
-
+nav ul li.active a {
+  color: #ffffff; /* Color del texto del enlace activo */
+  font-weight: bold; /* Aumenta el grosor del texto */
+  background: linear-gradient(90deg, #ff562244, #ff980044) !important; /* Fondo degradado */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  border-bottom: 3px ridge #ffc400d5;
+}
 .green {
   background-color: #056245 !important;
 }
@@ -113,10 +120,6 @@ footer .footer-copyright {
   display: flex;
   color: rgba(255, 255, 255, 0.8);
   background-color: #181717;
-}
-
-p {
-  text-align: justify;
 }
 
 /* On smaller screens, decrease text size */
