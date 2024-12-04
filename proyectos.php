@@ -672,6 +672,7 @@ include('includes/header.php'); ?>
         var instances = M.ScrollSpy.init(elems);
     });
 
+<<<<<<< Updated upstream
     document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
     });
@@ -735,3 +736,7 @@ include('includes/header.php'); ?>
 
 
 <?php include('includes/footer.php'); ?>
+=======
+<?php include('includes/footer.php');?>
+
+>>>>>>> Stashed changes
