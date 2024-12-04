@@ -53,8 +53,6 @@ html {
   padding: 0 !important;
 }
 
-
-
 .pinned {
   top: 160px;
   left: 80px;
@@ -99,11 +97,19 @@ html {
   text-align: justify;
   text-shadow: #000000 1px 1px 2px;
 }
-
+.left-text {
+  text-align: left !important;
+  text-shadow: #000000 1px 1px 2px;
+}
 .center,
 .center-align {
   text-align: center !important;
 }
+
+.cent{
+  display: flex;
+}
+
 /*Cards de destacados*/
 
 /* Estilo para las tarjetas destacadas */
@@ -265,10 +271,68 @@ footer {
   right: 10px;
 }
 
+/*docentes*/
+/* Contenedor para controlar la posición relativa */
+.position-container {
+  position: relative;
+}
+
+/* Rectángulo verde */
+.green-rectangle {
+  position: absolute;
+  top: 50%; /* Coloca el rectángulo en la mitad vertical de la imagen */
+  left: 0;
+  width: 100%;
+  height: 80%; /* Altura del rectángulo */
+  background-color: #056245;
+  z-index: -1; /* Detrás de la imagen */
+  border-radius: 20px;
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
+  overflow: hidden; /* Evita desbordamientos */
+}
+/* Centrar las filas y columnas */
+.row.valign-wrapper {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+.center-align {
+  display: flex !important;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.contenedor {
+  display: flex !important;
+  justify-items: center !important;
+  align-items: center;
+  padding: 20px 40px !important;
+}
+
+.apellidos {
+  font-size: 22px;
+}
+
+.cargo {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 18px;
+}
+
 button:focus {
   background: var(--verde);
   color: aliceblue;
 }
+
 .table-of-contents a {
   transition: all 0.2s cubic-bezier(1, -0.73, 0.25, 1.52);
   height: auto;
@@ -278,12 +342,12 @@ button:focus {
   text-shadow: #000 1px 1px 1px;
 }
 
-.yellow-text{
+.yellow-text {
   color: #d49114 !important;
-  text-shadow: black 1px 1px 1px ;
+  text-shadow: black 1px 1px 1px;
 }
 
-.white-text{
+.white-text {
   text-shadow: #000 1px 1px 1px;
   color: white;
   text-align: justify;
@@ -341,7 +405,7 @@ audio::-webkit-media-controls-fullscreen-button:hover {
 
 @media (max-width: 992px) {
   /* Para dispositivos medianos y pequeños */
-  .valign-wrapper {
+  .valign-wrapper, .center-align {
     display: block !important; /* Quita el efecto de alineación vertical */
   }
 }
