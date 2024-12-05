@@ -214,7 +214,7 @@ include('includes/header.php'); ?>
         <h3 class="center white-text">Gobierno Estudiantíl</h3>
     </div>
 
-    <div class="row white">
+    <div class="row">
         <br />
         <div class="col s12">
             <h3 class="center yellow-text ">Representantes</h3>
