@@ -1,7 +1,7 @@
 <?php $menu = "Institución";
 include('includes/header.php'); ?>
 
-<div class="">
+<div class=" section">
     <!-- Bandera -->
     <div id="bandera" class="section  scrollspy">
         <div class="row valign-wrapper">

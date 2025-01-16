@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        #reader {
+            width: 300px;
+            height: 300px;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Scanner</h1>
+    <div id="reader"></div>
+    <div class="output">
+        <p><strong>Scanned QR Code:</strong> <span id="result">None</span></p>
+    </div>
+
+    <form id="qrForm" action="qr.php" method="POST">
+        <input type="hidden" name="qrData" id="qrData">
+    </form>
+    
+    <script>
+        function onScanSuccess(decodedText, decodedResult) {
+            console.log(`Code scanned = ${decodedText}`, decodedResult);
+            document.getElementById('result').textContent = decodedText;
+    
+            // Populate the hidden input field with the scanned data
+            document.getElementById('qrData').value = decodedText;
+    
+            // Submit the form automatically
+            document.getElementById('qrForm').submit();
+        }
+    
+        function onScanFailure(error) {
+            console.warn(`Code scan error = ${error}`);
+        }
+    
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", { fps: 10, qrbox: 250 });
+    
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    </script>
+</body>
+</html>
