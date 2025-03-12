@@ -14,8 +14,8 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
 ?>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/materialize.min.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <!-- Inicializa los JavaScript -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -23,41 +23,19 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Inicializar los dropdowns
-        const dropdowns = document.querySelectorAll('.dropdown-trigger');
-        M.Dropdown.init(dropdowns, {
-            coverTrigger: false, // Evita que el dropdown cubra el activador
-            constrainWidth: false // Permite ajustar el ancho
-        });
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems);
+    });
 
-        // Inicializar el sidenav
-        const sidenav = document.querySelectorAll('.sidenav');
-        M.Sidenav.init(sidenav);
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
     });
 
     //js fixed header
     window.onscroll = function() {
         myFunction();
     };
-
-
-    // Obtener el nombre del archivo de la URL actual
-    const currentPage = window.location.pathname.split("/").pop();
-
-    // Seleccionar todos los elementos del menú principal
-    const menuItems = document.querySelectorAll("nav ul li a");
-
-    // Recorrer los elementos y comparar la URL del enlace con la página actual
-    menuItems.forEach((link) => {
-        const linkPage = link.getAttribute("href");
-        if (linkPage === currentPage) {
-            // Agregar la clase 'active' al elemento <li> padre del enlace
-            link.parentElement.classList.add("active");
-        }
-    });
-
-
-
 
     var header = document.getElementById("myHeader");
     var logo = document.getElementById("logo");
@@ -100,11 +78,13 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems);
     });
+
+
 </script>
 <footer class="p-0">
     <div class="row valign-wrapper m-0">
         <div class="col s4  center">
-            <h4 class="white-text"><b>Contacto:</b></h4>
+            <h4 class="white-text center"><b>Contacto:</b></h4>
             <h6><b>Celular: <br>(+57)</b> 321 222 2082</h6>
             <h6><b>E - mail:</b> <br>tuta_colsannicolas@hotmail.com</h6>
             <h6><b>Dirección</b> <br>Vda. El Arenal - Tuta</h6>

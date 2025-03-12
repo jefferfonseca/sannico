@@ -3,18 +3,17 @@
   src: url(./../assets/fonts/FontsFree-Net-Avenir-Light.woff);
 }
 
-header *{
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
-
+header * {
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
 }
 
-.nav *{
+.nav * {
   background: #056245 !important;
   color: #fff !important;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1)  !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
 }
 
 .dropdown-content {
@@ -42,7 +41,11 @@ header *{
 nav ul li.active a {
   color: #ffffff; /* Color del texto del enlace activo */
   font-weight: bold; /* Aumenta el grosor del texto */
-  background: linear-gradient(90deg, #ff562244, #ff980044) !important; /* Fondo degradado */
+  background: linear-gradient(
+    90deg,
+    #ff562244,
+    #ff980044
+  ) !important; /* Fondo degradado */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
   border-bottom: 3px ridge #ffc400d5;
@@ -59,9 +62,6 @@ nav ul li.active a {
 }
 .p-0 {
   padding: 0 !important;
-}
-.p-0 {
-  padding: 20px !important;
 }
 .pt {
   padding-top: 50px !important;

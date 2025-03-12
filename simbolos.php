@@ -3,8 +3,8 @@ include('includes/header.php'); ?>
 
 <div class=" section">
     <!-- Bandera -->
-    <div id="bandera" class="section  scrollspy">
-        <div class="row valign-wrapper">
+    <div id="bandera" class="scrollspy">
+        <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
                 <h3 class="center yellow-text m-0 pt"><b>SIMBOLOS INSTITUCIONALES</b></h3>
@@ -46,7 +46,7 @@ include('includes/header.php'); ?>
 
 
     <!-- Escudo -->
-    <div id="escudo" class="section scrollspy ">
+    <div id="escudo" class="scrollspy ">
         <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
@@ -59,7 +59,7 @@ include('includes/header.php'); ?>
     </div>
 
     <!-- himno -->
-    <div id="himno" class="section scrollspy  valign-wrapper">
+    <div id="himno" class="scrollspy  valign-wrapper">
         <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l9 offset-l2 center">
@@ -119,7 +119,7 @@ include('includes/header.php'); ?>
     </div>
 
     <!-- Uniformes -->
-    <div id="uniformes" class="section scrollspy ">
+    <div id="uniformes" class="scrollspy ">
         <div class="row">
             <div class="col s12 l9 offset-l2 center">
                 <!-- Titulo principal -->
@@ -160,7 +160,7 @@ include('includes/header.php'); ?>
                 </div>
 
                 <!--Col Femenino-->
-                <div class="col s12 m6  center">
+                <div class="col s12 m6 center">
                     <br>
                     <h5 class="yellow-text ">Femenino</h5>
                     <br>
@@ -175,7 +175,8 @@ include('includes/header.php'); ?>
                             <p>• Camisa blanca con entremetidos rojo cuello sport.</p>
                         </li>
                         <li>
-                            <p>• Bléiser azul oscuro con entremetidos rojo cereza y bordado con las iniciales de la institución.</p>
+                            <p>• Bléiser azul oscuro con entremetidos rojo cereza y bordado con las iniciales de la
+                                institución.</p>
                         </li>
                         <li>
                             <p>• Corbata rojo cereza.</p>
@@ -232,7 +233,8 @@ include('includes/header.php'); ?>
                         </p>
 
                         <p class="white-text">
-                            <b>Educación Media (10 - 11): </b> Uniformes establecidos y demás elementos EPP requeridos por
+                            <b>Educación Media (10 - 11): </b> Uniformes establecidos y demás elementos EPP requeridos
+                            por
                             norma para uso de laboratorios.
                         </p>
 
@@ -250,37 +252,61 @@ include('includes/header.php'); ?>
     <!-- cierre de row -->
     <!-- cierre de Contents-->
 
+</div>
 
 
-    <!-- Table of Contents -->
-    <div class="col hide-on-small-only m1 section ">
-        <ul class="table-of-contents pinned">
-            <ul class="table-of-contents">
-                <li><a href="#bandera">Bandera</a></li>
-                <li><a href="#escudo"> Escudo</a></li>
-                <li><a href="#himno">Himno</a></li>
-                <li><a href="#uniformes">Uniformes</a></li>
-            </ul>
-    </div>
+<!-- Table of Contents -->
+<div class="col hide-on-small-only m1 pinned">
+    <ul class="table-of-contents ">
+        <ul class="table-of-contents">
+            <li><a href="#bandera">Bandera</a></li>
+            <li><a href="#escudo"> Escudo</a></li>
+            <li><a href="#himno">Himno</a></li>
+            <li><a href="#uniformes">Uniformes</a></li>
+        </ul>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("scroll", function () { 
+    const toc = document.querySelector(".pinned"); // Table of Contents
+    const footer = document.querySelector("footer"); // Footer
+    const header = document.querySelector("header"); // Header
+
+    const headerHeight = header.offsetHeight; // Altura del header
+    const footerTop = footer.getBoundingClientRect().top; // Posición del footer en la vista
+    const viewportHeight = window.innerHeight; // Altura de la ventana
+    const scrollY = window.scrollY; // Cuánto hemos bajado
+
+    // Posición máxima para que el TOC no pase al footer
+    const maxTop = footerTop - toc.offsetHeight - 20; 
+
+    if (scrollY === 0) {
+        toc.style.top = `${headerHeight}px`; // Alineado con el header si está arriba
+    } else if (footerTop <= viewportHeight + toc.offsetHeight) {
+        toc.style.top = `${maxTop}px`; // Mantiene el TOC justo arriba del footer
+    } else {
+        toc.style.top = "140px"; // Mantiene una posición fija
+    }
+});
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems);
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
     });
 
     // JavaScript para cambiar el fondo dependiendo de la sección visible
-    document.addEventListener("scroll", function() {
+    document.addEventListener("scroll", function () {
         const sections = document.querySelectorAll(".section");
         const scrollPosition = window.scrollY;
 
         sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop - 20;
+            const sectionTop = section.offsetTop - 140;
             const sectionHeight = section.offsetHeight;
 
             if (
