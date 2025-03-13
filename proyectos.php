@@ -355,19 +355,18 @@ include('includes/header.php'); ?>
                         los diferentes
                         proyectos pedagógicos. <br />
                         <br />
-                        <b>OBJETIVOS</b> <br />
+                        <b>OBJETIVOS</b> 
                         <br />
                         Fomentar y afianzar valores, en los estudiantes para fortalecer su formación
                         integral como
                         miembro
                         activo de la institución.
-                        <br />
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div id=" escuela-padres" class="scrollspy container">
+    <div id="escuela-padres" class="scrollspy container">
         <div class="row">
             <!--titulo de articulo-->
             <div class="col s12 l10 offset-l2 center">
@@ -672,7 +671,6 @@ include('includes/header.php'); ?>
         var instances = M.ScrollSpy.init(elems);
     });
 
-<<<<<<< Updated upstream
     document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
     });
@@ -736,7 +734,3 @@ include('includes/header.php'); ?>
 
 
 <?php include('includes/footer.php'); ?>
-=======
-<?php include('includes/footer.php');?>
-
->>>>>>> Stashed changes
