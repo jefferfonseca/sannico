@@ -215,7 +215,6 @@ include('includes/header.php'); ?>
     </div>
 
     <div class="row">
-        <br />
         <div class="col s12">
             <h3 class="center yellow-text ">Representantes</h3>
             <div class="row">
