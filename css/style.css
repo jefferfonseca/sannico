@@ -55,7 +55,7 @@ html {
 
 .pinned {
   position: absolute;
-  top: 140px; /* Altura inicial alineada con el header */
+  top: 163px; /* Altura inicial alineada con el header */
   left: 80px;
   z-index: 1000;
   transition: top 0.3s ease-in-out; /* Suaviza la transición */
@@ -351,7 +351,7 @@ button:focus {
   transition: all 0.2s cubic-bezier(1, -0.73, 0.25, 1.52);
   height: auto;
   width: 150px;
-  font-size: 23px;
+  font-size: 18px;
   color: white;
   text-shadow: #000 1px 1px 1px;
 }
@@ -371,7 +371,7 @@ button:focus {
   border-left: 4px solid #ffc40063;
   background: #05624428;
   padding: 5px;
-  font-size: 24px;
+  font-size: 20px;
   color: #d49114;
 }
 
@@ -381,7 +381,7 @@ button:focus {
   padding: 8px;
   color: #d49114;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: #000 1px 1px 1px;
 }
 
