@@ -225,6 +225,7 @@ include('includes/header.php'); ?>
                     <p class="white-text center"><b>Personero Estudiantil 2024</b></p>
                 </div>
 
+
                 <!--- Representante Estudiantíl --->
                 <div class="col s12 m6 center">
                     <img src="images/docentes/h1.png" alt="" width="auto" height="140" />
