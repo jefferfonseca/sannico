@@ -605,7 +605,6 @@ include('includes/header.php'); ?>
                         situaciones de índole familiar que los afecta emocional y actitudinal a los
                         estudiantes.
                         <br />
-                        <br />
                         Con base en lo anterior se hace necesario implementar diferentes actividades
                         que
                         motiven y
@@ -631,7 +630,6 @@ include('includes/header.php'); ?>
                     <br />
                     <h5>OBJETIVOS ESPECIFICOS</h5>
                     </p>
-
                     <ul style=" padding-left: 25px;" class="white-text">
                         <li>• Promover en los estudiantes la práctica de la actividad física.</li>
                         <br />
