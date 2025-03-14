@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Avenir;
+  src: url(./../assets/fonts/FontsFree-Net-Avenir-Light.woff);
+}
+
+header * {
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+}
+
+.nav * {
+  background: #056245 !important;
+  color: #fff !important;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+}
+
+.dropdown-content {
+  min-height: max-content !important;
+}
+
+.dropdown-content li > a {
+  font-size: 14px !important;
+}
+
+.nav ul li a:hover {
+  color: #056245 !important;
+  background: #97ab97 !important; /* fallback for old browsers */
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 3px ridge #ffc400d5;
+}
+
+.nav ul li a:hover i {
+  color: #056245 !important;
+  background: #97ab97 !important; /* fallback for old browsers */
+  font-size: 15px;
+  font-weight: 600;
+}
+nav ul li.active a {
+  color: #ffffff; /* Color del texto del enlace activo */
+  font-weight: bold; /* Aumenta el grosor del texto */
+  background: linear-gradient(
+    90deg,
+    #ff562244,
+    #ff980044
+  ) !important; /* Fondo degradado */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  border-bottom: 3px ridge #ffc400d5;
+}
+.green {
+  background-color: #056245 !important;
+}
+.green-line {
+  background-color: #056245 !important;
+  min-height: 5px;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.p-0 {
+  padding: 0 !important;
+}
+.pt {
+  padding-top: 50px !important;
+}
+
+header {
+  background-color: var(--verde);
+  position: relative;
+  border-bottom: 3px ridge #ffc400d5;
+  transition: all 0.7s ease !important;
+}
+
+div.row {
+  margin: 0px;
+}
+
+/* fixed navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 3px solid #ffc400;
+}
+
+/*super pone el menú responsive*/
+#lista_responsive {
+  z-index: inherit;
+}
+
+ul > .dropdown-content #institucion {
+  padding-top: 150px;
+  background-color: transparent;
+}
+
+.navbar ul > li:hover {
+  background-color: #ffc400;
+}
+
+.li {
+  background-color: #056245;
+}
+
+.dropdown-content > .li > a:hover {
+  background-color: #ffc400;
+}
+
+footer {
+  background-color: #056245;
+  padding-top: 20px;
+  color: #fff;
+  border-top: 4px ridge #ffc400d5;
+}
+
+footer .footer-copyright {
+  overflow: hidden;
+  min-height: 50px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #181717;
+}
+
+/* On smaller screens, decrease text size */
+/*para fijar el header con el nombre del colegio  el escudo
+ @media only screen and (max-width: 300px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ } */

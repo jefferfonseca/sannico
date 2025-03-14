@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Favicon Badge</title>
+    <link rel="icon" href="tu-favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/favico.js/0.3.10/favico.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Favicon Badge</h1>
+    <button id="increaseCount">Aumentar contador</button>
+    <button id="clearCount">Limpiar contador</button>
+
+    <script>
+        // Crear una instancia de Favico
+        var favico = new Favico({
+            animation: 'slide' // Tipo de animación
+        });
+
+        // Inicializar el contador
+        var count = 0;
+
+        // Referencias a los botones
+        var increaseButton = document.getElementById('increaseCount');
+        var clearButton = document.getElementById('clearCount');
+
+        // Función para aumentar el contador y actualizar el favicon
+        increaseButton.addEventListener('click', function() {
+            count++;
+            favico.badge(count);
+        });
+
+        // Función para limpiar el contador y el favicon
+        clearButton.addEventListener('click', function() {
+            count = 0;
+            favico.badge(count);
+        });
+
+        // Inicialmente, establecer el badge en 0
+        favico.badge(count);
+    </script>
+</body>
+</html>

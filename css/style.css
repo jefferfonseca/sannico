@@ -1,0 +1,425 @@
+/* Import de fuentes */
+/* Importación de fuentes desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+/* Definición de una fuente personalizada */
+@font-face {
+  font-family: Avenir;
+  src: url(./../assets/fonts/FontsFree-Net-Avenir-Light.woff);
+}
+
+/* Estilo global para todas las fuentes del documento */
+* {
+  font-family: Avenir;
+}
+:root {
+  /*--verde: var(--verde);  green darken-4*/
+  --verde: #056245 !important;
+  --amarillo: #ffc400d5 !important;
+}
+/* Fondo inicial */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  background: url("images/parallax/1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+  color: white;
+}
+
+.section-destacados {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
+}
+
+.section {
+  min-height: 80vh;
+  backdrop-filter: blur(3px); /* Desenfoque aplicado al fondo */
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5); /* Efecto de fondo sobre la imagen */
+  padding: 0 !important;
+}
+
+.pinned {
+  position: absolute;
+  top: 163px; /* Altura inicial alineada con el header */
+  left: 80px;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.scrollspy {
+  width: 100%; /* O un ancho específico, como 80% */
+  max-width: 1200px; /* Ajusta esto según el diseño deseado */
+  margin: 0 auto; /* Centra las secciones */
+}
+
+.botones {
+  padding: 20px 0;
+  margin: 0;
+  min-height: 45vh;
+}
+
+.botones div {
+  padding: 20px;
+}
+
+.botones img {
+  height: 100px;
+  width: 200px;
+}
+
+.borde-dorado {
+  border-radius: 10px;
+  border-bottom: 5px ridge var(--amarillo);
+  height: 100%;
+  width: 100%;
+}
+
+.green-text {
+  color: var(--verde) !important;
+  text-shadow: #000000 1px 1px 2px;
+}
+
+.container {
+  text-shadow: #000000 1px 1px 4px;
+  padding-bottom: 30px;
+}
+
+.parallax-container {
+  min-height: 500px;
+}
+
+.yellow-text {
+  color: var(--amarillo);
+  text-shadow: #8baaa0 1px 1px 2px;
+}
+.justify-text {
+  text-align: justify;
+  text-shadow: #000000 1px 1px 2px;
+}
+.left-text {
+  text-align: left !important;
+  text-shadow: #000000 1px 1px 2px;
+}
+.center,
+.center-align {
+  text-align: center !important;
+}
+
+.cent{
+  display: flex;
+}
+
+/*Cards de destacados*/
+
+/* Estilo para las tarjetas destacadas */
+.destacados {
+  position: relative;
+  border-radius: 20px;
+  width: 80%; /* Ancho relativo al contenedor padre */
+  overflow: hidden; /* Esconde el contenido desbordado */
+  margin: 0px 20px;
+}
+
+/* Imagen dentro de .destacados */
+.destacados .image {
+  height: 100%; /* Ajusta la altura de la imagen */
+  width: 100%;
+  object-fit: cover; /* Mantiene las proporciones sin deformar */
+  object-position: center; /* Centra la imagen */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+}
+
+/* Efecto al pasar el mouse sobre .destacados */
+.destacados:hover .image {
+  opacity: 0.3; /* Reduce la opacidad */
+}
+
+.destacados:hover .middle {
+  opacity: 1; /* Muestra el contenido central */
+}
+
+.text {
+  background-color: var(--verde);
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  padding: 16px 32px;
+  text-shadow: 1px 1px 1px black;
+  border-top: 5px ridge var(--amarillo);
+}
+
+.historia {
+  column-count: 2;
+  /* Espacio entre las columnas */
+  column-gap: 30px;
+  padding: 0 40px;
+  text-shadow: #000 1px 1px 1px;
+}
+.columnas p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .historia {
+    column-count: 1;
+  }
+  .mision {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+p {
+  text-align: justify;
+  font-size: 24px;
+}
+.mision {
+  display: flex;
+  align-items: center;
+}
+
+.vision {
+  background-color: #262137;
+}
+
+.vision img {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    /* Parte superior transparente */ rgba(0, 0, 0, 1) 20%,
+    /* Difuminado superior */ rgba(0, 0, 0, 1) 80%,
+    /* Zona central visible */ rgba(0, 0, 0, 0) 100% /* Difuminado inferior */
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+
+  /* Opcional: Añadir borde suave en los laterales */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.foot-dev * {
+  background: #212121 !important;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+@keyframes circle-out-hesitate {
+  0% {
+    clip-path: circle(125%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-out-hesitate both;
+}
+
+/*Slider items*/
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+}
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
+}
+
+/*docentes*/
+/* Contenedor para controlar la posición relativa */
+.position-container {
+  position: relative;
+}
+
+/* Rectángulo verde */
+.green-rectangle {
+  position: absolute;
+  top: 50%; /* Coloca el rectángulo en la mitad vertical de la imagen */
+  left: 0;
+  width: 100%;
+  height: 80%; /* Altura del rectángulo */
+  background-color: #056245;
+  z-index: -1; /* Detrás de la imagen */
+  border-radius: 20px;
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
+  overflow: hidden; /* Evita desbordamientos */
+}
+/* Centrar las filas y columnas */
+.row.valign-wrapper {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+.center-align {
+  display: flex !important;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.contenedor {
+  display: flex !important;
+  justify-items: center !important;
+  align-items: center;
+  padding: 20px 40px !important;
+}
+
+.apellidos {
+  font-size: 22px;
+}
+
+.cargo {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 18px;
+}
+
+button:focus {
+  background: var(--verde);
+  color: aliceblue;
+}
+
+.table-of-contents a {
+  transition: all 0.2s cubic-bezier(1, -0.73, 0.25, 1.52);
+  height: auto;
+  width: 150px;
+  font-size: 18px;
+  color: white;
+  text-shadow: #000 1px 1px 1px;
+}
+
+.yellow-text {
+  color: #d49114 !important;
+  text-shadow: black 1px 1px 1px;
+}
+
+.white-text {
+  text-shadow: #000 1px 1px 1px;
+  color: white;
+  text-align: justify;
+}
+
+.table-of-contents a:hover {
+  border-left: 4px solid #ffc40063;
+  background: #05624428;
+  padding: 5px;
+  font-size: 20px;
+  color: #d49114;
+}
+
+.table-of-contents a.active {
+  border-left: 4px solid #ffc4009d;
+  background: #05624457;
+  padding: 8px;
+  color: #d49114;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: #000 1px 1px 1px;
+}
+
+/* Estilos para el contenedor del reproductor */
+audio {
+  width: 100%; /* Hace que ocupe todo el ancho disponible */
+  max-width: 600px; /* Limita el tamaño máximo */
+  border-radius: 10px; /* Bordes redondeados */
+  background: #ffc40060; /* Gradiente de fondo */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  border: none; /* Quitar bordes predeterminados */
+  outline: none; /* Quitar borde de enfoque */
+  transition: transform 0.3s ease-in-out; /* Animación de transformación */
+}
+
+/* Efecto de enfoque */
+audio:focus {
+  box-shadow: 0 0 10px 4px #05624470; /* Resalta el reproductor con un borde azul cuando tiene foco */
+}
+
+/* Estilo para los controles del audio */
+audio::-webkit-media-controls-panel {
+  background-color: var(--verde); /* Fondo oscuro para el panel de controles */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-volume-slider:hover,
+audio::-webkit-media-controls-mute-button:hover,
+audio::-webkit-media-controls-fullscreen-button:hover {
+  background-color: var(--amarillo);
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  /* Para dispositivos medianos y pequeños */
+  .valign-wrapper, .center-align {
+    display: block !important; /* Quita el efecto de alineación vertical */
+  }
+}
