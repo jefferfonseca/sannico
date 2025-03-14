@@ -1,3 +1,6 @@
+countdown('Sat Nov 17 2020 09:00:00 GMT-0500', 'clock');
+
+
 const getRemainTime = deadline => {
 
 
@@ -71,5 +74,3 @@ const countdown =  (deadline, elem) =>{
 };
 
 
-
-countdown('Sat Nov 17 2020 09:00:00 GMT-0500', 'clock');
