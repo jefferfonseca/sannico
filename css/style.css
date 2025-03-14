@@ -423,3 +423,60 @@ audio::-webkit-media-controls-fullscreen-button:hover {
     display: block !important; /* Quita el efecto de alineación vertical */
   }
 }
+
+
+
+/*PAGINA DE CONTACTO*/ 
+
+.Contacto{
+  background-color:#056245;
+  border-radius: 10px;
+  border: none;
+  margin-top: 3%;
+  padding-bottom: 3%;
+  color: #fefefb;
+  text-align: justify;
+  font-size: 150%;
+  width: 100%;
+}
+.opcionesdecontacto{
+  text-align: center;
+  font-size: 100%;
+  
+}
+
+.ImgContacto{
+  border-radius: 5px;
+}
+
+.ContInfo{
+  text-align: center;
+}
+
+.formulario{
+  margin-top: 1%;
+}
+
+.contact-link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
