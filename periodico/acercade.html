@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Enlaces a los archivos CSS -->
+    <link rel="stylesheet" href="css/materialize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Asegúrate de que el archivo JavaScript se carga al final -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="row">
+        <!-- Columna izquierda con el menú -->
+        <aside
+          class="col s2 sidenav sidenav-fixed"
+          style="padding: 0% !important"
+        >
+          <div class="center escudo">
+            <img
+              src="images/escudo.png"
+              alt="Escudo"
+              height="90"
+              style="padding: 5px"
+            />
+          </div>
+          <ul class="menu">
+            <li>
+              <a href="index.html"><i class="material-icons">home</i>Inicio</a>
+            </li>
+            <li>
+              <a href="acercade.html"
+                ><i class="material-icons">info</i>Acerca de</a
+              >
+            </li>
+            <li class="submenu">
+              <a href="#"><i class="material-icons">article</i>Noticias</a>
+              <ul class="submenu-items">
+                <li><a href="plantilla-1.html"><i class="material-icons">article</i>Plantilla 1</a></li>
+                <li><a href="plantilla-2.html"><i class="material-icons">article</i>Plantilla 2</a></li>
+                <li><a href="plantilla-3.html"><i class="material-icons">article</i>Plantilla 3</a></li>
+                <li><a href="plantilla-4.html"><i class="material-icons">article</i>Plantilla 4</a></li>
+                <li><a href="plantilla-5.html"><i class="material-icons">article</i>Plantilla 5</a></li>
+                <li><a href="plantilla-6.html"><i class="material-icons">article</i>Plantilla 6</a></li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Columna derecha con el contenido principal -->
+        <div class="col s10 offset-s2">
+          <h2 class="center" id="titulo1">Hablemos Sobre El</h2>
+          <hr />
+          <h1 class="center">PERIÓDICO</h1>
+          <h3 class="center">¿Cuáles son sus orígenes?</h3>
+
+          <div class="row valign-wrapper">
+            <div class="col s6 contenedor center">
+              <img src="images/colegio.jfif" alt="colegio" />
+            </div>
+            <div class="col s6">
+              <h2>COMO SE LLEVO ACABO</h2>
+              <hr />
+              <p>
+                A partir de una necesidad que vimos en la Institución Educativa
+                San Nicolás, surgió la idea de crear un periódico digital de una
+                forma creativa y con colores atractivos que llamen la atención
+                de las personas interesadas en la escritura y lectura, conceptos
+                importantes en nuestra vida.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s6">
+              <hr />
+              <h4>¿POR QUÉ LO HICIMOS?</h4>
+              <p>
+                Se evidenció que la Institución Educativa Técnica San Nicolás
+                carece de un periódico digital actualizado que proporcione
+                información relevante para la comunidad educativa. Este proyecto
+                busca fomentar la lectura y la escritura entre los estudiantes,
+                brindándoles un espacio para compartir sus artículos y estar
+                informados sobre las actividades en la institución. Además, el
+                periódico es gratuito y accesible para todos.
+              </p>
+              <hr />
+            </div>
+            <div class="col s6">
+              <img
+                src="images/periodico.jfif"
+                alt="Imagen del periódico"
+                height="400px"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s3">
+              <p>html</p>
+            </div>
+            <div class="col s3">
+              <p>javascript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="page-footer green">
+      <div class="row center">
+        <div class="col s2 offset-s2">
+          <img src="images/escudo.png" alt="Escudo" height="50" />
+        </div>
+        <div class="col s6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.978313165623!2d-73.22735148532549!3d5.716261833606349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a6e896ba57b19%3A0xa2950f5e2a24f373!2sInstituci%C3%B3n%20Educativa%20San%20Nicolas%2C%20Sede%20Sider%C3%BArgica!5e0!3m2!1ses!2sco!4v1680283187306!5m2!1ses!2sco"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="col s2">Contacto</div>
+      </div>
+      <div class="footer-copyright green darken-3">
+        <div class="container center">
+          2024 | Design by: Sofia Diaz - Yerly Robles - Mariana Ayure - Yurly
+          Cipagauta - Angelica Figueredo
+        </div>
+      </div>
+    </footer>
+
+    <!-- Inicialización de los componentes JS de Materialize -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicialización del menú lateral
+        var elems = document.querySelectorAll(".sidenav");
+        M.Sidenav.init(elems);
+
+        // Inicialización de selectores
+        var elemsSelect = document.querySelectorAll("select");
+        M.FormSelect.init(elemsSelect);
+
+        // Inicialización de los componentes de Materialize (otros como Collapsible, etc.)
+        var collapsibleElems = document.querySelectorAll(".collapsible");
+        M.Collapsible.init(collapsibleElems);
+
+        // Código para activar el enlace del menú actual
+        const menuLinks = document.querySelectorAll(".sidenav a, .menu a");
+        const currentPath = window.location.pathname.split("/").pop();
+        menuLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -10,7 +10,7 @@ include 'includes/header.php'; ?>
             while (($archivo = $dirint->read()) !== false) {
                 if ($archivo != "." && $archivo != "..") {
                     echo
-                    "<div class='mySlides fade'>
+                        "<div class='mySlides fade'>
                     <img src='" . $directory . $archivo . "' class='slider-image'>
                  </div>";
                 }
@@ -23,33 +23,38 @@ include 'includes/header.php'; ?>
 
     <div class="col s12 l4  center">
         <div class="botones">
-            <div class="col s12 m4 l6">
+            <div class="col s12 m4 l5">
                 <a href="http://sedboyaca.gov.co/" target="_blank">
                     <img class="borde-dorado img_enlaces" src="./images\convenios\sedboyaca.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+
+            <div class="col s12 m1 l1"></div>
+            <div class="col s12 m4 l5">
                 <a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank">
                     <img class="borde-dorado img_enlaces" src="./images\convenios\cc.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s12 m4 l5">
                 <a href="https://www.uptc.edu.co/sitio/portal/" target="_blank">
                     <img class="borde-dorado  img_enlaces" src="./images\convenios\UPTC.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s12 m1 l1"></div>
+            <div class="col s12 m4 l5">
                 <a href="https://www.uniboyaca.edu.co/es" target="_blank">
                     <img class="borde-dorado  img_enlaces" src="./images\convenios\udb.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s12 m4 l5">
                 <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F
-                    &service=mail&hd=ietsannicolas.edu.co&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank">
+                    &service=mail&hd=ietsannicolas.edu.co&sacu=1&flowName=GlifWebSignIn&flowEntry=AddSession"
+                    target="_blank">
                     <img class="borde-dorado" src="./images\convenios\gmail.jpg">
                 </a>
             </div>
-            <div class="col s12 m4 l6">
+            <div class="col s12 m1 l1"></div>
+            <div class="col s12 m4 l5">
                 <a href="https://www.icfes.gov.co/web/cajas-herramientas/Caja_Saber11" target="_blank">
                     <img class="borde-dorado" src="./images/convenios/saber.jpg">
                 </a>
@@ -76,7 +81,7 @@ include 'includes/header.php'; ?>
 
             <div class="col s12 m4 p-0 m-0">
                 <br>
-                <a href="#" target="_blank">
+                <a href="periodico/index.html" target="_blank">
                     <div class="destacados">
                         <img src="./images/destacados/periodico.jpg" alt="Live" class="image borde-dorado">
                         <div class="middle">
@@ -129,11 +134,11 @@ include 'includes/header.php'; ?>
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundImage = "url('images/parallax/1.jpg')";
     });
 
-    document.addEventListener("scroll", function() {
+    document.addEventListener("scroll", function () {
         const sections = document.querySelectorAll(".section");
         const scrollPosition = window.scrollY; // Ajusta el cálculo con la altura del header
 
