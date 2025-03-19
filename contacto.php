@@ -1,68 +1,94 @@
-<?php $menu="Contacto"; include('includes/header.php');?>
+<?php $menu = "Contacto";
+include('includes/header.php'); ?>
 <br>
-<div class="row green-text ">
+<style>
+    /*PAGINA DE CONTACTO*/
 
-   <div class="col s12 m9 l7 offset-m3 offset-l2 white"style="border-radius:50px;">
+    .Contacto {
+        background-color: #056245;
+        border-radius: 10px;
+        border: none;
+        margin-top: 3%;
+        padding-bottom: 3%;
+        color: #fefefb;
+        text-align: justify;
+        font-size: 150%;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+    }
 
-       <div class="row">
+    .opcionesdecontacto {
+        text-align: center;
+        font-size: 100%;
 
-               <div class="col s12 m5  center green darken-4 white-text">
-                   <br><br><br>
-                   <img src="./images/hombre.png" width="150px" height="auto" alt="">
-                   <h4><b>Información de Contacto</b></h4>
-                   <p>secretaria@ietsannicolas.edu.co</p>
-                   <p>(+57) 321 222 2082</p>
-                   <br><br><br><br>
-               </div>
+    }
 
-               <div class="col s12 m7">
-           
-               <form action="enviar.php" method="post" class="container center">
-                   <h5>Envia un mensaje</h5>
-                              
-                       <!-- Nombres -->
-                       <div class="input-field">
-                           <i class="material-icons prefix">account_circle</i>
-                           <input id="last_name" type="text" name="nombre" class="validate" required>
-                           <label for="last_name">Nombre Completo</label>
-                       </div>
+    .ImgContacto {
+        border-radius: 5px;
+    }
 
-                       <!-- Celular -->
-                       <div class="input-field">
-                           <i class="material-icons prefix">settings_cell</i>
-                           <input id="cell" type="tel" name="telefono" class="validate" required>
-                           <label for="cell">Celular</label>
-                       </div>
+    .ContInfo {
+        text-align: center;
+    }
 
-                       <!-- E-mail -->
-                       <div class="input-field">
-                           <i class="material-icons prefix">email</i>
-                           <input id="mail" type="email" name="correo" class="validate" required>
-                           <label for="mail">E-mail</label>
-                       </div>
+    .formulario {
+        margin-top: 1%;
+    }
 
-                      <!-- Asunto -->
-                      <div class="input-field">
-                           <i class="material-icons prefix">outlined_flag</i>
-                           <input id="Asunto" type="text" name="asunto" class="validate" required>
-                           <label for="Asunto">Asunto</label>
-                       </div>
+    .contact-link {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
 
-                       <!-- Mensaje -->
-                       <div class="input-field">
-                           <i class="material-icons prefix">description</i>
-                           <input id="Mensaje" type="text" name="mensaje" class="validate" required>
-                           <label for="Mensaje">Mensaje</label>
-                       </div>
+    .contact-link:hover {
+        text-decoration: underline;
+    }
 
-                       <input type="submit" value="Enviar" id="btnSend" class="btn green darken-4">
-                   </div>
-               </form>
-           </div>
-       </div>    
-   </div>
-</div>
+    .contact-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .contact-item a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<main>
+    <div class="row">
+        <div class="col s6">
+            <div class="Contacto">
+                <img src="images/Contacto.jpg" alt="ImgContacto" width="100%" class="ImgContacto" height="auto">
+                <h4 class="ContInfo"><b>Información de Contacto:</b>
+                </h4>
+                <ul class="opcionesdecontacto">
+                    <li class="contact-item">Correo Electrónico: <b><a href="mailto:secretaria@ietsannicolas.edu.co"
+                                class="contact-link">secretaria@ietsannicolas.edu.co </a></b></li>
+                    <li class="contact-item">Facebook: <b><a href="https://www.facebook.com/ietsannicolas?_rdc=1&_rdr"
+                                target="_blank" class="contact-link">IET San Nicolás Tuta.</a></b></li>
+                    <li class="contact-item">Número Telefónico: <b> <a href="tel:3212222082" class="contact-link">(+57)
+                                321 222 2082</a></b></li>
+                    <li class="contact-item">Nuestro WhatsApp: <b> <a href="https://wa.me/573212222082" target="_blank"
+                                class="contact-link">(+57) 321 222 2082</a></b></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col s6 formulario">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdGOYocCUBbIdjSNXhC9GbdFJuhkvuE6KOJCanA3wjzCkKsrQ/viewform?embedded=true"
+                width="730" height="675" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+    </div>
+</main>
+
 
 <br>
 
-<?php include('includes/footer.php');?>
+<?php include('includes/footer.php'); ?>
