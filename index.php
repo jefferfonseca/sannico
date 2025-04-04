@@ -65,42 +65,39 @@ include 'includes/header.php'; ?>
 
 <div class="section-destacados section  section1 valign-wrapper">
     <div class="row ">
-        <h2 class="center-align green-text p-0 m-0">Destacados</h2>
-        <div class="center">
-            <div class="col s12 m4 p-0 m-0">
-                <br>
-                <a href="https://web.facebook.com/ietsannicolas" target="_blank">
-                    <div class="destacados">
-                        <img src="./images/destacados/facebook.jpg" alt="fb" class="image borde-dorado">
-                        <div class="middle">
-                            <h4 class="text">Facebook</h4>
-                        </div>
+        <h2 class="yellow-text p-0 m-0">Destacados</h2>
+        <div class="col s12 m4 p-0 m-0">
+            <br>
+            <a href="https://web.facebook.com/ietsannicolas" target="_blank">
+                <div class="destacados">
+                    <img src="./images/destacados/facebook.jpg" alt="Live" class="image borde-dorado">
+                    <div class="middle">
+                        <div class="text">Facebook</div>
                     </div>
-                </a>
-            </div>
-
-            <div class="col s12 m4 p-0 m-0">
-                <br>
-                <a href="periodico/index.html" target="_blank">
-                    <div class="destacados">
-                        <img src="./images/destacados/periodico.jpg" alt="Live" class="image borde-dorado">
-                        <div class="middle">
-                            <div class="text">Periódico Escolar</div>
-                        </div>
+                </div>
+            </a>
+        </div>
+        <div class="col s12 m4 p-0 m-0">
+            <br>
+            <a href="periodico/index.html" target="_blank">
+                <div class="destacados">
+                    <img src="./images/destacados/periodico.jpg" alt="Live" class="image borde-dorado">
+                    <div class="middle">
+                        <div class="text">Periódico Escolar</div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
+        </div>
 
-            <div class="col s12 m4 p-0 m-0">
-                <br>
-                <a href="#" target="_blank">
-                    <div class="destacados">
-                        <img src="./images/destacados/especialidad.jpeg" alt="ig" class="image borde-dorado">
-                        <div class="middle">
-                            <div class="text">Especialidad</div>
-                        </div>
-                </a>
-            </div>
+        <div class="col s12 m4 p-0 m-0">
+            <br>
+            <a href="#" target="_blank">
+                <div class="destacados">
+                    <img src="./images/destacados/especialidad.jpeg" alt="ig" class="image borde-dorado">
+                    <div class="middle">
+                        <div class="text">Especialidad</div>
+                    </div>
+            </a>
         </div>
     </div>
 </div>

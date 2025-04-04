@@ -46,11 +46,11 @@ html {
 }
 
 .section {
-  min-height: 80vh;
+  min-height: max-content !important;
   backdrop-filter: blur(3px); /* Desenfoque aplicado al fondo */
   -webkit-backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.5); /* Efecto de fondo sobre la imagen */
-  padding: 0 !important;
+  padding: 50px 0 !important;
 }
 
 .pinned {
@@ -120,7 +120,7 @@ html {
   text-align: center !important;
 }
 
-.cent{
+.cent {
   display: flex;
 }
 
@@ -419,8 +419,8 @@ audio::-webkit-media-controls-fullscreen-button:hover {
 
 @media (max-width: 992px) {
   /* Para dispositivos medianos y pequeños */
-  .valign-wrapper, .center-align {
+  .valign-wrapper,
+  .center-align {
     display: block !important; /* Quita el efecto de alineación vertical */
   }
 }
-
