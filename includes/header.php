@@ -51,7 +51,7 @@
                             <i class="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>
-                    <li><a href="live.php" target="_blank">Radio</a></li>
+                    <li><a href="constru.php" target="_blank">Radio</a></li>
                     <li>
                         <a href="#" class="dropdown-trigger" data-target="esp">Especialidades
                             <i class="material-icons right">arrow_drop_down</i>
