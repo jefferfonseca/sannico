@@ -1,0 +1,589 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: aliceblue;
+  color: #3333;
+}
+
+/* Estilo del header */
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #27ac60;
+}
+
+.nav-wrapper {
+  padding: 0%;
+  background-color: #27ac60 !important;
+}
+
+.estilos {
+
+  background: #081b29;
+  margin: 0;
+  font-family: monospace;
+  display: grid;
+  padding: 0px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+/*Estilos de la galeria*/
+.galeria {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 90px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria img {
+  width: 300px;
+  height: 250px;
+  padding: 2 0px;
+  border-radius: 39px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0 0.3);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.galeria li {
+  margin: 0px;
+  padding: 20px;
+}
+
+/*Estilos del modal*/
+
+.moda {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.moda:target {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.moda h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2;
+}
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 30px solid #fff;
+  box-sizing: border-box;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgb(0, 0, 0, 0.4);
+}
+
+.cerrar {
+  display: block;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px;
+}
+
+.li {
+  background-color: #00ffff;
+}
+
+.b2 {
+  color: #27ae60;
+}
+
+b {
+  color: black;
+  padding: 10px;
+}
+
+.nav-mobil {
+  color: white;
+}
+
+.more-text {
+  color: black;
+}
+
+.mix {
+  color: black;
+}
+
+button {
+  color: #333;
+  background: #e0e0e0;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+  transition: all 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+  background-color: white;
+}
+
+.read-more-btn {
+  box-shadow: inset 5px 5px 10px green, inset -5px -5px 10px #27ae60;
+}
+
+.brand-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+/* Estilo de los enlaces en el menú */
+.nav-wrapper a {
+  color: #333;
+  padding: 1px 15px;
+  transition: color 0.3s;
+}
+
+.nav-wrapper a:hover {
+  color: #3e7d75;
+  /* Color al pasar el mouse */
+}
+
+/* Estilo del main */
+main {
+  padding: 20px;
+  height: 10%;
+  width: 10;
+}
+
+/* Estilo del título */
+h1 {
+  font-size: 3rem;
+  animation: mover 0.5s infinite alternate;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(25px);
+  }
+}
+
+/* Estilo de las cards */
+.container {
+  justify-content: center;
+  /* Centra las cards en el contenedor */
+  flex-wrap: nowrap;
+  /* Evita que se envuelvan en múltiples filas */
+  overflow-x: auto;
+  /* Permite desplazamiento horizontal si es necesario */
+}
+
+.cards {
+  background: #fff;
+  border: 10px solid #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 20px 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0;
+}
+
+.cards:hover {
+  transform: scale();
+}
+
+.cards figure {
+  margin: 0;
+}
+
+.cards img {
+  width: 80%;
+  height: 50%;
+  object-fit: cover;
+  /* Ajusta la imagen y recorta el sobrante */
+}
+
+/* Contenido de las cards */
+.contenido {
+  padding: 15px;
+}
+
+.contenido h3 {
+  font-size: 1.5rem;
+  color: #00796b;
+}
+
+.contenido p {
+  margin: 10px 0;
+}
+
+.contenido a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #199532;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.contenido a:hover {
+  background: #005b0b;
+  /* Color al pasar el mouse */
+}
+
+/* Estilo del footer */
+.page-footer {
+  background-color: #041018 !important;
+  color: #fff;
+  padding: 0;
+}
+
+.autor {
+  background-color: #212121 !important;
+}
+
+.img {
+  background: url(../image/estilo-1.png);
+  background-repeat: no-repeat;
+  text-align: left;
+  list-style: none;
+  padding: 5px 0px 5px 40px;
+  background-size: 25px;
+}
+
+.autor {
+  color: black;
+  background-color: grey;
+  text-align: center;
+  padding: 1px;
+}
+
+.footer {
+  color: black;
+  background-color: black;
+}
+
+.carousel {
+  text-align: justify;
+}
+
+.iframe {
+  background: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  color: #fff;
+}
+
+body {
+  background: #081b29;
+  display: grid;
+}
+
+.wrapper {
+  position: relative;
+  width: 1705px;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 50px 0 #00a6bc;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 260px;
+  margin-top: 40px;
+  padding-right: 10px;
+  font-size: 17px;
+  color: #0ef;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  width: 288px;
+  margin-top: 25px;
+  padding: 10px 0;
+  font-size: 20px;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #0ef, #c800ff);
+}
+
+.footer {
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+.link {
+  color: #0ef;
+  text-decoration: none;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 390px;
+  background: linear-gradient(to right, #0ef, #c800ff);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+  padding-right: 70px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.wel_text {
+  font-size: 40px;
+  margin-top: -50px;
+  line-height: 50px;
+}
+
+.para {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+:root {
+  --dark: #333;
+  --ligth: #fff;
+}
+
+.bot {
+  color: #000;
+}
+
+.active {
+
+  background: linear-gradient(135deg, rgba(230, 186, 64, 0.555), rgba(255, 255, 255, 0.438));
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+
+
+}
+
+body.jue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+}
+
+.header,
+.nav-wrapper {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.benefit-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.card {
+  min-height: 360px;
+  text-align: justify;
+}
+
+.card-content {
+  font-size: 1.1rem;
+  color: #34495e;
+  text-align: justify center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #27ae60;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.responsive-img {
+  max-height: 300px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 30px;
+
+}
+
+.tiba {
+  color: black;
+  justify-content: center;
+  flex-wrap: 1;
+}
+
+.content-block {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-block img {
+  max-width: 200px;
+  margin-left: 20px;
+}
+
+p,
+ul {
+  text-align: justify;
+
+}
+
+.tip {
+  color: black;
+}
+
+.more-text {
+  text-align: justify;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.big {
+  color: white;
+}
+
+footer * {
+  margin: 0;
+}
+
+footer .row {
+  margin: 0;
+}
+
+.footer-1 {
+  border-right: #fff ridge 2px;
+  height: 65px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-1 p {
+  text-align: right;
+}
+
+.footer-2 {
+  text-align: right;
+  margin: 0 !important;
+}
+
+.footer-2 p {
+  text-align: left;
+}
+
+.footer-3 {
+
+  margin: 0 !important;
+}
+
+b {
+  color: #fff;
+}

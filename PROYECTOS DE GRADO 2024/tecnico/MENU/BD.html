@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="images/png" href="/de nuevo/images/Escudo.png">
+  <title>Bases de Datos</title>
+  <link rel="stylesheet" href="/de nuevo/ESTILOS/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <style>
+    body{
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="row">
+          <div class="col s2">
+          <img class="Escudo" src="/de nuevo/images/Escudo.png" width="9%" height="auto">
+      </div>
+          <div class="col s8" id="CierreNombre">
+              <p id="TituloPrincipal"> Institución Educativa Técnica San
+                  Nicolás - Tuta <br>Técnico en Desarrollo de Aplicaciones Web
+              </p>
+          </div>
+              <div class="col s2">
+                  <img class="Escudo" src="/de nuevo/images\escudo.tuta.png" width="9%" height="auto"> 
+              </div>
+  </div>
+  </header>
+  <nav class="BarraNav">
+    <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/de nuevo/Inicio.html">Inicio</a></li>
+            <li><a href="/de nuevo/Niveles.html">Niveles</a></li>
+            <li><a href="/de nuevo/acercaDe.html">Acerca de</a></li>
+            <li><a href="/de nuevo/contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+  </nav>
+  <h2 class="Bienvenida Css"> <img src="/de nuevo/images/bd.png" alt="Base de Datos" width="50" height="auto"> <b> BD (Bases de Datos):</b></h2> 
+  <div class="TodaInfoLenguajes">
+    <p>
+      <h3>¿Qué es una base de datos?</h3>
+      Una base de datos es como un archivo súper organizado donde almacenamos información de manera estructurada.
+      Imagina una biblioteca, <br> pero en lugar de libros, tenemos datos. Estos datos pueden ser cualquier cosa, desde nombres
+      y direcciones hasta registros de ventas <br> o información de productos. Las bases de datos nos permiten guardar, buscar y actualizar esta información de forma rápida y eficiente.
+      <h3>¿Para qué sirve una base de datos?</h3>
+      Las bases de datos son fundamentales para el funcionamiento de muchas aplicaciones y sistemas informáticos. Se utilizan en:
+      <ul>
+        <li>- Sitios web: Para almacenar información de usuarios, productos, pedidos y mucho más.</li>
+        <li>- Aplicaciones móviles: Para guardar datos de usuarios, preferencias y sincronización.</li>
+        <li>- Sistemas de gestión empresarial: Para administrar información sobre clientes, empleados, inventario, finanzas y otros aspectos de una empresa.</li>
+        <li>- Análisis de datos: Para almacenar grandes cantidades de datos y realizar análisis para tomar decisiones informadas.</li>
+    </ul>
+      <h3>¿Cómo funciona una base de datos?</h3>
+      Una base de datos está organizada en tablas. Cada tabla tiene filas (registros) y columnas (campos). <br> Las filas representan elementos individuales (por ejemplo, un cliente), y las columnas representan las propiedades 
+      <br> de esos elementos (por ejemplo, nombre, dirección, teléfono).
+    box-shadow: #2a28247b 0px 5px 30px; 
+      Un sistema de gestión de bases de datos (SGBD) <br> es el software que nos permite crear, modificar y gestionar las bases de datos. Algunos de los SGBD más populares son MySQL, <br>  PostgreSQL, Oracle y SQL Server. Estos sistemas utilizan un lenguaje especial llamado SQL (Structured Query Language) <br> para interactuar con las bases de datos.
+      <h3>¿Por qué son importantes las bases de datos?</h3>
+      Las bases de datos son esenciales en el mundo digital actual porque nos permiten:
+      <ul>
+      <li>- Almacenar grandes cantidades de datos: Las bases de datos pueden almacenar millones o incluso miles de millones de registros.</li>
+      <li>- Acceder a los datos de forma rápida: Los SGBD están optimizados para realizar búsquedas y consultas muy rápidamente.</li>
+      <li>- Compartir datos: Múltiples usuarios pueden acceder y modificar los datos de una base de datos de forma simultánea.</li>
+      <li>- Asegurar la integridad de los datos: Los SGBD incluyen mecanismos para garantizar que los datos sean precisos y consistentes.</li>
+      </ul>
+    </p>
+      <div>
+        <ul>
+            <li>
+                <h5><b>Conoce otros Lenguajes:</b></h5> <br>
+                <ul class="hoverable DBLenguajes">
+                  <div class="row">
+                    <div class="col s2">
+                      <a href="/de nuevo/MENU/BD.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/bd.png" alt="Base de Datos" width="37">Bases De Datos</a>
+                    </div>
+                    <div class="col s2"> 
+                      <a href="/de nuevo/MENU/CSS.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/css.png" alt="CSS" width="35">CSS</a>
+                    </div>
+                    <div class="col s2">                  
+                      <a href="/de nuevo/MENU/HTML.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/HTML.png" alt="HTML" width="35">HTML</a><br>
+                    </div> 
+                    <div class="col s2">                                   
+                      <a href="/de nuevo/MENU/JS.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/JS.png" alt="JavaScript" width="30">JavaScript</a>
+                    </div>               
+                    <div class="col s2">                 
+                      <a href="/de nuevo/MENU/MYSQL.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/MYSQL.png" alt="MySQL" width="45">MySQL</a><br>
+                    </div>
+                    <div class="col s2">                
+                      <a href="/de nuevo/MENU/PHP.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/PHP.png" alt="PHP" width="40">PHP</a>
+                    </div>   
+                  </div>
+                </ul>
+            </li>
+        </ul>
+      </div>
+  </div>
+  <footer class="footer">
+    <div class="row">
+      <div class="col s2" id="Escudofooter">
+          <img class="Escudo" src="/de nuevo/images/Escudo.png" width="12%" height="auto">
+      </div>
+      <div class="row">
+          <div class="col s2" id="CierreNombre">
+              <b>
+                  <p>Institución Educativa Técnica <br> San Nicolás Sede Siderurgica</p>
+          </div>
+      <div class="col s4">
+          <p class="contact">Contáctanos:</p>
+          <p class="datos">Celular: +57 321 222 20 82.</p>
+          <p class="datos">Dirección: Tuta, Boyacá, Colombia.</p>
+      </div>
+      <div class="col s4">
+          <p class="desing">2024  |  Design by:
+              <p id="Autores">
+              Est. Rubén Santiago Pedraza Pérez.
+              <br>
+              Est. Luis Felipe León Martínez.
+              <br>
+              Est. Juan Pablo Cuevas Tamayo.
+              <br>
+              Est. William Ferney Robles Torres.
+              </p>
+          </p>
+      </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+     // Verificar si Materialize está disponible
+     if (typeof M !== 'undefined') {
+         console.log('Materialize está cargado correctamente');
+     } else {
+         console.error('Materialize no está cargado');
+     }
+
+     // Verificar si jQuery está disponible
+     if (typeof jQuery !== 'undefined') {
+         console.log('jQuery está cargado correctamente');
+     } else {
+         console.error('jQuery no está cargado');
+     }
+
+     // Inicializar el dropdown de Materialize
+     var elems = document.querySelectorAll('.dropdown-trigger');
+     var instances = M.Dropdown.init(elems, {
+         hover: true,  // Hace que el dropdown se abra al pasar el mouse
+         coverTrigger: false, // Hace que el dropdown no cubra el botón
+         constrainWidth: false // Permite que el dropdown sea más ancho que el botón
+     });
+ });
+</script>
+
+</body>
+
+</html>

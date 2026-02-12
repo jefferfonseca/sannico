@@ -1,0 +1,10 @@
+body{
+    background-image: url(imagenf.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+h1{
+    color: rgb(43, 40, 40);
+}

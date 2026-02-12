@@ -1,0 +1,7 @@
+gaia-key.php
+config/database.php
+.env
+*.zip
+*.rar
+/vendor
+/node_modules

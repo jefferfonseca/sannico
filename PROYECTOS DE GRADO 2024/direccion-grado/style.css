@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(231, 239, 240);
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-image: url("https://cdn.pixabay.com/photo/2017/07/17/00/58/coffee-2511065_640.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contenido{
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+nav {
+  position: relative;
+  padding: 1rem;
+  background-color: green;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 80px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(26, 33, 34);
+  margin-left: 40px;
+}
+
+.p1 {
+  text-align: center;
+  color: rgb(20, 20, 22);
+  margin-right: 50px;
+}
+
+.p2 {
+  text-align: center;
+  color: rgb(20, 20, 22);
+  margin-right: 50px;
+}
+
+.text1{
+  color: white;
+}
+
+.CajaTexto{
+  background-color: transparent;
+}
+
+.boton {
+  text-align: center;
+}
+
+.nav-wrapper {
+  text-align: center;
+}
+.btn-colores {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: white;
+  background-color: #3498db; /* Color inicial */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

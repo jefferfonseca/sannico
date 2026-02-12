@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+.m-0 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.slider-image {
+  min-width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideshow-container img {
+  width: auto;
+  height: 100vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  animation-duration: 3s;
+}
+
+/* Animación de fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🔘 Contenedor de botones */
+.btn-container {
+  width: 80%;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-container img {
+  max-width: 100%;
+  height: auto !important;
+  transition: transform 0.7s;
+}
+
+.btn-container img:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile */
+@media (max-width: 992px) {
+  .btn-container {
+    width: 80%; /* sigue siendo 80% */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-image,
+  .slideshow-container img {
+    height: 20rem;
+  }
+
+  /* 🚨 En mobile los botones ya NO estarán sobre el slider */
+  .btn-container {
+    position: static; /* se sale del absolute */
+    transform: none;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .slider-image{
+    min-width: 100vw;
+    min-height: auto;
+  }
+  .slideshow-container {
+    height:100%;
+  }
+
+  .slider-image {
+    height: 35px;
+  }
+
+  /* 🚨 En mobile los botones ya NO estarán sobre el slider */
+  .btn-container {
+    position: static; /* se sale del absolute */
+    transform: none;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-image,
+  .slideshow-container img {
+    height: 15rem;
+  }
+}

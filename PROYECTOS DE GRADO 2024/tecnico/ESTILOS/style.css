@@ -1,0 +1,405 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-color: rgba(52, 120, 69, 255);
+}
+
+/*Encabezado*/ 
+
+header{
+    background-color:#056245;
+    color: white;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 220%;
+}
+
+.Escudo{
+    margin-bottom: 3%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    position: relative;
+    height: auto;
+    width: 115px;
+    margin-left: 16%;
+}
+
+#TituloPrincipal{
+    text-align: center;
+    margin-top: 1%;
+    padding-bottom: 2%;
+}
+
+/*Menú Desplegable*/ 
+
+#BotonLenguajes{
+    background-color: white;
+    color: rgb(37, 35, 35);
+    font-size: 105%; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.MenuLenguajes{
+    background-color: #f9f4d9;
+    border: rgb(96, 86, 86) solid 1px;
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LenguajesNiveles{
+    padding-left: 6%;
+    padding-top: 8%;
+    padding-right: 12%;
+    padding-bottom: 2%;
+    color: rgb(83, 81, 81);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LenguajesEnBD{
+    padding-top: 8%;
+    padding-left: 5%;
+    padding-right: 4%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.BDLenguajes{
+    padding: 30%;
+    margin: 10%;
+}
+/*Barra de Navegación*/ 
+nav ul {
+    text-align: center;
+    background-color:rgba(52, 120, 69, 255);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(230, 210, 185);
+    list-style-type: none; /* Asegura que no haya viñetas en la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    font-size: 110%; 
+ 
+}
+
+nav ul li {
+    display: inline;
+    padding-right: 5%;  
+    margin-top: -3%;
+}
+
+.BarraNav {
+    background-color:rgba(52, 120, 69, 255);
+    margin-top: -2%;
+    width: 100%;
+    color: rgb(230, 210, 185);
+   
+}
+
+/* Efecto de sombra al pasar el mouse */
+.BarraNav a:hover {
+    box-shadow: 0 4px 5px rgba(21, 58, 17, 0.56);
+}
+
+/*Primer Titulo en la Página Principal*/ 
+
+.Bienvenida{
+    text-align: center;
+    margin: -1% 8% 2% 8%;
+    padding-bottom: 10%;
+    border-bottom: none rgb(101, 102, 89) 6px;
+    text-shadow: #056245 3px 2px 4px; 
+    background-color: #ecd7a500;
+    padding: 2%;
+    font-size: 250%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}   
+
+/*Carrusel*/ 
+
+.imagen-clase {
+    background-color: rgb(255, 250, 250);
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+/*Información del técnico y de la Institución*/ 
+
+.tecnologias {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+    padding-bottom: 1%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tecnologia {
+    padding: 10px;
+    
+    border-radius: 5px;
+}
+
+
+.informacion, 
+.informacion-institucion {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    font-size: 115%;
+    margin: 3%;
+    text-align: justify;
+
+}
+
+.TituloInfo {
+    font-size: 175%;
+    color: black;
+    text-align: center;
+    padding-top: 3%;
+    margin-bottom: 8%;
+
+}
+
+#Parrafo-informacion-institucion {
+    padding-bottom: 8%;
+}
+
+#colapsable-info-inst {
+    margin-top: 4%;
+}
+
+
+/*Parte final de la pagina*/ 
+
+.footer{
+    background-color:rgba(52, 120, 69, 255);
+    padding: 10px;
+    color: aliceblue; 
+    font-size: 115%;
+    padding-top: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:#056245;
+    justify-content: center;
+}
+#Escudofooter{
+    padding-right: 2%;
+}
+#CierreNombre{
+    font-size: 120%;
+    text-align: left;
+    padding-right: 3%;
+}
+.contact{
+    font-size: 24px;
+    text-align: center;
+}
+.desing{
+    font-size: 24px;
+    text-align: justify;
+    margin-left: 10% ;
+}
+.datos{
+    text-align: center;
+}
+#Autores{
+    margin-top: -4%;
+    text-align: justify;
+    margin-left: 10%;
+}
+
+/*PAGINA DE NIVELES ACADEMICOS*/ 
+.asignatura{
+    background-color: white;
+}
+
+.scrollspy{
+    padding: 80px;
+}
+
+.info-box{
+    box-shadow: #110f0baf 0px 10px 30px; 
+    border-radius: 20px;
+    padding: 1% 5% 1% 5%;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+    margin: 2%;
+    border-left: double 4px lightgreen;
+    border-bottom: double 7px lightgreen;
+    color: rgb(52, 46, 46);
+    flex-grow: 1;
+}
+
+.card-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.table-of-contents a:hover {
+    color: #a8a8a8;
+    padding-left: 15px;
+    border-left: 1px solid #32a54f !important;
+}
+
+.table-of-contents a.active {
+        font-weight: 500;
+    padding-left: 14px;
+    border-left: 2px solid #347845 !important;
+}
+
+.card-content {
+    flex-grow: 1; /* Asegura que el contenido crezca uniformemente */
+    text-align: justify;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.Niveles{
+    background-color: white;
+    margin-top: 1%;
+    box-shadow: #2a28247b 0px 5px 30px; 
+    border-radius: 20px;
+    border-bottom: double lightgreen 6px;
+   /* border-right: double rgb(47, 43, 43) 6px;
+    border-left: double rgb(47, 43, 43) 6px; */
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.TitulosNiveles{
+    border-bottom: 6px groove lightgreen;
+    border-radius: 5px;
+}
+.lenguajesdenivel{
+    text-align: center;
+    
+}
+
+
+/*PAGINA DE ACERCA DE*/ 
+
+.Acercade{
+    margin-top: 0%;
+    margin-right: 0%;
+}
+
+.TituAcercade{
+    text-align: center;
+}
+
+.InfoAcercade{
+    text-align: justify;
+    font-size: 140%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4%;
+    padding-top: 1%;
+}
+
+.TodoAcercade{
+    padding: 20%;
+}
+
+/*PAGINA DE CONTACTO*/ 
+
+.Contacto{
+    background-color:rgba(52, 120, 69, 255);
+    border-radius: 10px;
+    border: none;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    color: #fefefb;
+    text-align: justify;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+}
+.opcionesdecontacto{
+    text-align: center;
+    font-size: 100%;
+    
+}
+
+.ImgContacto{
+    border-radius: 5px;
+}
+
+.ContInfo{
+    text-align: center;
+}
+
+.formulario{
+    margin-top: 1%;
+}
+
+.contact-link {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/*PAGINA BD*/ 
+
+.Css{
+    font-size: 200%;
+    text-align: center;
+    margin-right: 0%;
+    margin-top: 0%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ImagenBD{
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    display: flex;
+}
+
+/*Todos los estilos para los lenguajes*/
+
+.TodaInfoLenguajes{
+    background-color: white;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 5px;
+    padding: 3%;
+    padding-top: 1%;
+    margin-bottom: 2%;
+    box-shadow: #2a28247b 0px 5px 30px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 125%;
+}
+
+.codigoCss{
+    background-color: #cad2b5a7;
+    padding: 3%;
+    border-radius: 10px;
+    margin-top: 1%;
+    font-size: 100%;
+    margin-right: 20%;
+}
+
+
+button:focus {
+    outline: none;
+    background-color: #056245 !important;
+    color: aliceblue;
+  }     

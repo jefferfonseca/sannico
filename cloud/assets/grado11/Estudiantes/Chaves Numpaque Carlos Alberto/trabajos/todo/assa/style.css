@@ -1,0 +1,20 @@
+/* Estilo básico de la imagen */
+img.temblor {
+    width: 300px;  /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    transition: transform 0.1s;
+}
+
+/* Animación de temblor */
+@keyframes temblor {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* Aplicar el temblor cuando el cursor pase por encima */
+img.temblor:hover {
+    animation: temblor 0.2s ease-in-out infinite;
+}

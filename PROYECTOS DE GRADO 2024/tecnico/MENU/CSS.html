@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/png" href="/de nuevo/images/Escudo.png">
+    <title>CSS</title>
+    <link rel="stylesheet" href="/de nuevo/ESTILOS/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <style>
+    body{
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="row">
+          <div class="col s2">
+          <img class="Escudo" src="/de nuevo/images/Escudo.png" width="9%" height="auto">
+      </div>
+          <div class="col s8" id="CierreNombre">
+              <p id="TituloPrincipal"> Institución Educativa Técnica San
+                  Nicolás - Tuta <br>Técnico en Desarrollo de Aplicaciones Web
+              </p>
+          </div>
+              <div class="col s2">
+                  <img class="Escudo" src="/de nuevo/images\escudo.tuta.png" width="9%" height="auto"> 
+              </div>
+  </div>
+    </div>
+  </header>
+  <nav class="BarraNav">
+    <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/de nuevo/Inicio.html">Inicio</a></li>
+            <li><a href="/de nuevo/Niveles.html">Niveles</a></li>
+            <li><a href="/de nuevo/acercaDe.html">Acerca de</a></li>
+            <li><a href="/de nuevo/contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <h2 class="Bienvenida Css"> <img src="/de nuevo/images/css.png" alt="CSS" width="45" height="auto"> <b>CSS (Cascading Style Sheets): </b></h2>
+
+  <div class="TodaInfoLenguajes">
+
+    <h3>De qué trata:</h3>
+    <ul>
+      <li>es un lenguaje de diseño gráfico que se
+        utiliza para definir y crear la presentación visual de documentos
+        estructurados escritos en HTML o XML. A continuación, se detallan los
+        aspectos más relevantes de CSS:</li>
+      <li>CSS se encarga de la apariencia y el formato de las páginas web.</li>
+      <li>
+        Separa el contenido (HTML) de su presentación visual, lo que facilita la
+        gestión y el mantenimiento del diseño.
+      </li>
+      <li>
+        Permite aplicar estilos de manera coherente a múltiples páginas, lo que
+        mejora la consistencia del diseño en todo un sitio web.
+      </li>
+    </ul>
+
+    <h3>Cómo funciona:</h3>
+    <ol>
+      <li>
+        Se aplica mediante reglas que asocian propiedades de estilo a elementos
+        HTML.
+      </li>
+      <li>
+        Utiliza selectores para identificar los elementos a los que se aplicarán
+        los estilos, como etiquetas, clases y IDs.
+      </li>
+      <li>
+        Las reglas pueden ser aplicadas de las siguientes maneras:
+        <ul>
+          <li>- En línea, dentro de las etiquetas HTML.</li>
+          <li>
+            - En el encabezado del documento, utilizando la etiqueta
+            <code>&lt;style&gt;</code>.
+          </li>
+          <li>
+           - En archivos externos, enlazados mediante la etiqueta
+            <code>&lt;link&gt;</code>.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Qué se puede hacer con CSS:</h3>
+    <ul>
+      <li>Definir colores, fuentes, tamaños y espaciados de texto.</li>
+      <li>
+        Crear diseños responsivos que se adapten a diferentes tamaños de
+        pantalla mediante técnicas como media queries.
+      </li>
+      <li>
+        Animar elementos de la página con transiciones y transformaciones.
+      </li>
+      <li>
+        Controlar la disposición de los elementos en la página (layout)
+        utilizando técnicas como Flexbox y Grid.
+      </li>
+      <li>
+        Aplicar efectos visuales como sombras, gradientes, transparencias o
+        transformaciones.
+      </li>
+    </ul>
+
+    <h3>Función de CSS en una página web:</h3>
+    <ul>
+      <li>
+        Mejora la apariencia y la experiencia del usuario, haciendo que las
+        páginas sean más atractivas y fáciles de navegar.
+      </li>
+      <li>
+        Permite una mayor consistencia en el diseño a través de múltiples
+        páginas, lo que refuerza la identidad visual del sitio.
+      </li>
+      <li>
+        Facilita el mantenimiento y la actualización del diseño del sitio, ya
+        que los cambios en el CSS se reflejan en todas las páginas vinculadas.
+      </li>
+      <li>
+        Optimiza el rendimiento al separar el estilo del contenido, permitiendo
+        que los navegadores procesen el HTML y el CSS de manera más eficiente.
+      </li>
+    </ul>
+
+    <h3>Propiedades personalizadas (variables CSS):</h3>
+    <ul>
+      <div class="codigoCss">
+        <li>Sintaxis: <code>--nombre-variable: valor;</code></li>
+        <li>
+          Uso: <code>var(--nombre-variable)</code> para aplicar el valor de la
+          variable.
+        </li>
+        <li>
+          Scope: Pueden ser globales (definidas en <code>:root</code>) o locales a
+          un selector específico.
+        </li>
+        <li>
+          Ejemplo:
+          <pre>
+        :root {
+          --color-primario: #3498db;
+        }
+        .boton {
+          background-color: var(--color-primario);
+        }
+        </pre>
+        </li>
+      </div>  
+    </ul>
+
+    <h3>Funciones CSS:</h3>
+    <ul>
+      <li>
+        <code>calc():</code> Realiza cálculos matemáticos. Ejemplo:
+        <code>width: calc(100% - 20px);</code>
+      </li>
+      <li>
+        <code>clamp():</code> Limita un valor entre un mínimo y máximo. Ejemplo:
+        <code>font-size: clamp(1rem, 2.5vw, 2rem);</code>
+      </li>
+      <li>
+        <code>min(), max():</code> Selecciona el valor mínimo o máximo entre
+        varios valores.
+      </li>
+      <li>
+        <code>attr():</code> Obtiene el valor de un atributo HTML, útil para
+        generar contenido dinámico.
+      </li>
+    </ul>
+
+    <h3>Heurística de cascada y especificidad:</h3>
+    <ul>
+      <li>
+        Orden de importancia:
+        <code
+          >!important &gt; Estilos en línea &gt; ID &gt;
+          Clase/Atributo/Pseudoclase &gt; Elemento / Pseudoelemento</code
+        >
+      </li>
+      <li>
+        Cálculo de especificidad: <code>(0,0,0,0)</code> representa la
+        especificidad más baja.
+      </li>
+      <li>
+        Estilos en línea: <code>1,0,0,0</code> tienen la mayor especificidad.
+      </li>
+      <li>Cada ID: <code>0,1,0,0</code> incrementa la especificidad.</li>
+      <li>
+        Cada clase, atributo o pseudoclase: <code>0,0,1,0</code> añade un nivel
+        de especificidad.
+      </li>
+      <li>
+        Cada elemento o pseudoelemento: <code>0,0,0,1</code> tiene la
+        especificidad más baja.
+      </li>
+    </ul>
+
+    <h3>Layout avanzado con Grid:</h3>
+    <ul>
+      <li>
+        Grid implícito vs explícito: el primero se genera automáticamente,
+        mientras que el segundo se define manualmente.
+      </li>
+      <li>
+        Unidades fr y <code>minmax()</code>: permiten crear diseños flexibles y
+        adaptativos.
+      </li>
+      <li>
+        Áreas de grid y naming lines: facilitan la organización y el diseño de
+        layouts complejos.
+      </li>
+      <li>
+        Alineamiento y justificación de ítems: controlan la distribución de los
+        elementos dentro del grid.
+      </li>
+      <li>
+        Ejemplo:
+        <div class="codigoCss">
+          <pre>
+            .container {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap: 10px;
+            }
+            .item1 {
+              grid-column: span 2;
+            }
+          </pre>
+        </div>
+      </li>
+    </ul>
+
+    <h3>Conclusión:</h3>
+    <p>
+      CSS es una herramienta fundamental en el desarrollo web moderno, ya que
+      permite a los diseñadores y desarrolladores crear interfaces atractivas y
+      funcionales. Su capacidad para separar el contenido de la presentación no
+      solo mejora la organización del código, sino que también facilita el
+      mantenimiento y la escalabilidad de los sitios web. Con el uso de
+      propiedades personalizadas, funciones avanzadas y técnicas de layout como
+      Flexbox y Grid, CSS ha evolucionado para ofrecer un control preciso sobre
+      el diseño y la experiencia del usuario. A medida que la web continúa
+      evolucionando, el dominio de CSS se vuelve cada vez más esencial para
+      cualquier profesional del desarrollo web.
+    </p>
+    <div>
+      <ul>
+          <li>
+              <h5><b>Conoce otros Lenguajes:</b></h5><br>
+              <ul class="hoverable DBLenguajes">
+                <div class="row">
+                  <div class="col s2">
+                    <a href="/de nuevo/MENU/BD.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/bd.png" alt="Base de Datos" width="37">Bases De Datos</a>
+                  </div>
+                  <div class="col s2"> 
+                    <a href="/de nuevo/MENU/CSS.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/css.png" alt="CSS" width="35">CSS</a>
+                  </div>
+                  <div class="col s2">                  
+                    <a href="/de nuevo/MENU/HTML.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/HTML.png" alt="HTML" width="35">HTML</a><br>
+                  </div> 
+                  <div class="col s2">                                   
+                    <a href="/de nuevo/MENU/JS.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/JS.png" alt="JavaScript" width="30">JavaScript</a>
+                  </div>               
+                  <div class="col s2">                 
+                    <a href="/de nuevo/MENU/MYSQL.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/MYSQL.png" alt="MySQL" width="45">MySQL</a><br>
+                  </div>
+                  <div class="col s2">                
+                    <a href="/de nuevo/MENU/PHP.html" class="LenguajesNiveles hoverable LenguajesEnBD"><img src="/de nuevo/images/PHP.png" alt="PHP" width="40">PHP</a>
+                  </div>   
+                </div>
+              </ul>
+          </li>
+      </ul>
+    </div>
+  </div>  
+    <footer class="footer">
+      <div class="row">
+        <div class="col s2" id="Escudofooter">
+            <img class="Escudo" src="/de nuevo/images/Escudo.png" width="12%" height="auto">
+        </div>
+        <div class="row">
+            <div class="col s2" id="CierreNombre">
+                <b>
+                    <p>Institución Educativa Técnica <br> San Nicolás Sede Siderurgica</p>
+            </div>
+        <div class="col s4">
+            <p class="contact">Contáctanos:</p>
+            <p class="datos">Celular: +57 321 222 20 82.</p>
+            <p class="datos">Dirección: Tuta, Boyacá, Colombia.</p>
+        </div>
+        <div class="col s4">
+            <p class="desing">2024  |  Design by:
+                <p id="Autores">
+                Est. Rubén Santiago Pedraza Pérez.
+                <br>
+                Est. Luis Felipe León Martínez.
+                <br>
+                Est. Juan Pablo Cuevas Tamayo.
+                <br>
+                Est. William Ferney Robles Torres.
+                </p>
+            </p>
+        </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+       // Verificar si Materialize está disponible
+       if (typeof M !== 'undefined') {
+           console.log('Materialize está cargado correctamente');
+       } else {
+           console.error('Materialize no está cargado');
+       }
+
+       // Verificar si jQuery está disponible
+       if (typeof jQuery !== 'undefined') {
+           console.log('jQuery está cargado correctamente');
+       } else {
+           console.error('jQuery no está cargado');
+       }
+
+       // Inicializar el dropdown de Materialize
+       var elems = document.querySelectorAll('.dropdown-trigger');
+       var instances = M.Dropdown.init(elems, {
+           hover: true,  // Hace que el dropdown se abra al pasar el mouse
+           coverTrigger: false, // Hace que el dropdown no cubra el botón
+           constrainWidth: false // Permite que el dropdown sea más ancho que el botón
+       });
+   });
+</script>
+  </body>
+</html>

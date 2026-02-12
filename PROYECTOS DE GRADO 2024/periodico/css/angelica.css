@@ -1,0 +1,95 @@
+*{
+  font-family: roboto;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.card-img {
+  height: 200px;
+}
+i {
+  font-size: 40px;
+}
+.acerca {
+  background-image: url(card2.1moto.avif);
+  min-height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.s6 {
+  margin-top: 10px;
+}
+p {
+  background-color: antiquewhite;
+
+  padding: 20px;
+}
+.registro {
+  min-height: 70vh;
+}
+
+.registro > div {
+  width: 60%;
+}
+.titulo-registro {
+  text-align: center;
+  border-left: 10px ridge rgb(235, 184, 192);
+  border-top: 10px ridge pink;
+  border-bottom: 10px ridge pink;
+  border-left: 10px ridge pink;
+  border-right: 10px ridge pink;
+  padding: 20px;
+  font-weight: 500;
+}
+P {
+  background-color: beige;
+}
+
+.imagen {
+  height: 100vh;
+}
+.side {
+  margin: 0%;
+}
+
+.url > * {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.url:hover {
+  background-color: bisque;
+  padding: 10px;
+  color: black;
+}
+
+.noticias {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 17px;
+}
+
+.noti{
+  margin-left: 17px;
+
+}
+
+nav {
+  border-bottom: 3px solid #ffc400;
+}
+.escudo {
+}
