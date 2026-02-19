@@ -158,7 +158,8 @@
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  justify-content: center;
+  gap: 15px;
 }
 
 .filter-chip {

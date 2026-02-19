@@ -23,13 +23,13 @@
     </div>
 
     <!-- Filtros por categorÃ­a -->
-    <div class="sidebar-filters">
+    <div class="sidebar-filters ">
         <h3 class="filter-title">Categorías</h3>
-        <div class="filter-chips">
+        <div class="filter-chips row">
             <div class="chip filter-chip active" data-category="todas">
                 <i class="material-icons tiny">done_all</i> Todas
             </div>
-            <div class="chip filter-chip" data-category="institucional">
+            <div class="chip filter-chip " data-category="institucional">
                 <i class="material-icons tiny">account_balance</i> Institucional
             </div>
             <div class="chip filter-chip" data-category="deportes">
@@ -45,151 +45,150 @@
                 <i class="material-icons tiny">event</i> Eventos
             </div>
         </div>
-    </div>
 
-    <!-- Lista de noticias -->
-    <div class="sidebar-noticias-list">
-        <h3 class="section-title">
-            <i class="material-icons">article</i>
-            Ultimas Noticias
-        </h3>
+        <!-- Lista de noticias -->
+        <div class="sidebar-noticias-list">
+            <h3 class="section-title">
+                <i class="material-icons">article</i>
+                Ultimas Noticias
+            </h3>
 
-        <?php
-        // ============================================
-        // CARGA AUTOMÃTICA DE NOTICIAS
-        // ============================================
-        
-        $noticias_dir = 'noticias/';
-        $noticias = [];
+            <?php
+            // ============================================
+            // CARGA AUTOMÃTICA DE NOTICIAS
+            // ============================================
+            
+            $noticias_dir = 'noticias/';
+            $noticias = [];
 
-        // Verificar si existe el directorio
-        if (is_dir($noticias_dir)) {
-            // Obtener todos los archivos PHP del directorio
-            $archivos = glob($noticias_dir . '*.php');
+            // Verificar si existe el directorio
+            if (is_dir($noticias_dir)) {
+                // Obtener todos los archivos PHP del directorio
+                $archivos = glob($noticias_dir . '*.php');
 
-            // Ordenar por fecha (mÃ¡s reciente primero)
-            usort($archivos, function ($a, $b) {
-                return filemtime($b) - filemtime($a);
-            });
+                // Ordenar por fecha (mÃ¡s reciente primero)
+                usort($archivos, function ($a, $b) {
+                    return filemtime($b) - filemtime($a);
+                });
 
-            // Extraer metadata de cada noticia
-            foreach ($archivos as $archivo) {
-                // Capturar las variables definidas en cada noticia
-                ob_start();
-                include $archivo;
-                ob_end_clean();
+                // Extraer metadata de cada noticia
+                foreach ($archivos as $archivo) {
+                    // Capturar las variables definidas en cada noticia
+                    ob_start();
+                    include $archivo;
+                    ob_end_clean();
 
-                // Crear objeto de noticia con metadata
-                $noticia = [
-                    'archivo' => basename($archivo),
-                    'titulo' => isset($page_title) ? $page_title : 'Sin título',
-                    'fecha' => isset($fecha) ? $fecha : date('Y-m-d'),
-                    'autor' => isset($autor) ? $autor : 'Redacción',
-                    'categoria' => isset($categoria) ? strtolower($categoria) : 'general',
-                    'imagen' => isset($imagen_destacada) ? $imagen_destacada : 'default.jpg',
-                    'resumen' => isset($resumen) ? $resumen : '',
-                    'destacada' => isset($destacada) ? $destacada : false
-                ];
+                    // Crear objeto de noticia con metadata
+                    $noticia = [
+                        'archivo' => basename($archivo),
+                        'titulo' => isset($page_title) ? $page_title : 'Sin título',
+                        'fecha' => isset($fecha) ? $fecha : date('Y-m-d'),
+                        'autor' => isset($autor) ? $autor : 'Redacción',
+                        'categoria' => isset($categoria) ? strtolower($categoria) : 'general',
+                        'imagen' => isset($imagen_destacada) ? $imagen_destacada : 'default.jpg',
+                        'resumen' => isset($resumen) ? $resumen : '',
+                        'destacada' => isset($destacada) ? $destacada : false
+                    ];
 
-                $noticias[] = $noticia;
+                    $noticias[] = $noticia;
 
-                // Limpiar variables para la siguiente iteración
-                unset($page_title, $fecha, $autor, $categoria, $imagen_destacada, $resumen, $destacada);
+                    // Limpiar variables para la siguiente iteración
+                    unset($page_title, $fecha, $autor, $categoria, $imagen_destacada, $resumen, $destacada);
+                }
             }
-        }
 
-        // ============================================
-        // MOSTRAR NOTICIAS EN EL SIDEBAR
-        // ============================================
-        
-        if (count($noticias) > 0) {
-            foreach ($noticias as $index => $noticia) {
-                $fecha_formateada = date('d/m/Y', strtotime($noticia['fecha']));
-                $es_destacada = $noticia['destacada'] ? 'noticia-destacada' : '';
-                $animation_delay = $index * 0.1;
+            // ============================================
+            // MOSTRAR NOTICIAS EN EL SIDEBAR
+            // ============================================
+            
+            if (count($noticias) > 0) {
+                foreach ($noticias as $index => $noticia) {
+                    $fecha_formateada = date('d/m/Y', strtotime($noticia['fecha']));
+                    $es_destacada = $noticia['destacada'] ? 'noticia-destacada' : '';
+                    $animation_delay = $index * 0.1;
+                    ?>
+
+                    <article class="sidebar-noticia-card <?php echo $es_destacada; ?>"
+                        data-category="<?php echo $noticia['categoria']; ?>" data-aos="fade-left"
+                        data-aos-delay="<?php echo $animation_delay * 100; ?>">
+
+                        <!-- Indicador de destacada -->
+                        <?php if ($noticia['destacada']): ?>
+                            <div class="badge-destacada">
+                                <i class="material-icons tiny">star</i>
+                                Destacada
+                            </div>
+                        <?php endif; ?>
+
+                        <!-- Imagen de la noticia -->
+                        <a href="ver-noticia.php?n=<?php echo str_replace('.php', '', $noticia['archivo']); ?>"
+                            class="noticia-link">
+                            <div class="noticia-imagen">
+                                <img src="images/noticias/<?php echo $noticia['imagen']; ?>"
+                                    alt="<?php echo htmlspecialchars($noticia['titulo']); ?>" loading="lazy">
+                                <div class="noticia-overlay">
+                                    <i class="material-icons">arrow_forward</i>
+                                </div>
+                            </div>
+
+                            <!-- Contenido de la noticia -->
+                            <div class="noticia-content">
+                                <div class="noticia-meta">
+                                    <span class="noticia-categoria categoria-<?php echo $noticia['categoria']; ?>">
+                                        <?php echo ucfirst($noticia['categoria']); ?>
+                                    </span>
+                                    <span class="noticia-fecha">
+                                        <i class="material-icons tiny">calendar_today</i>
+                                        <?php echo $fecha_formateada; ?>
+                                    </span>
+                                </div>
+
+                                <h4 class="noticia-titulo">
+                                    <?php echo htmlspecialchars($noticia['titulo']); ?>
+                                </h4>
+
+                                <?php if (!empty($noticia['resumen'])): ?>
+                                    <p class="noticia-resumen">
+                                        <?php echo substr(htmlspecialchars($noticia['resumen']), 0, 100) . '...'; ?>
+                                    </p>
+                                <?php endif; ?>
+
+                                <div class="noticia-footer">
+                                    <span class="noticia-autor">
+                                        <i class="material-icons tiny">person</i>
+                                        <?php echo htmlspecialchars($noticia['autor']); ?>
+                                    </span>
+                                    <span class="noticia-leer-mas">
+                                        Leer más
+                                        <i class="material-icons tiny">chevron_right</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <?php
+                }
+            } else {
+                // Mensaje cuando no hay noticias
                 ?>
-
-                <article class="sidebar-noticia-card <?php echo $es_destacada; ?>"
-                    data-category="<?php echo $noticia['categoria']; ?>" data-aos="fade-left"
-                    data-aos-delay="<?php echo $animation_delay * 100; ?>">
-
-                    <!-- Indicador de destacada -->
-                    <?php if ($noticia['destacada']): ?>
-                        <div class="badge-destacada">
-                            <i class="material-icons tiny">star</i>
-                            Destacada
-                        </div>
-                    <?php endif; ?>
-
-                    <!-- Imagen de la noticia -->
-                    <a href="ver-noticia.php?n=<?php echo str_replace('.php', '', $noticia['archivo']); ?>"
-                        class="noticia-link">
-                        <div class="noticia-imagen">
-                            <img src="images/noticias/<?php echo $noticia['imagen']; ?>"
-                                alt="<?php echo htmlspecialchars($noticia['titulo']); ?>" loading="lazy">
-                            <div class="noticia-overlay">
-                                <i class="material-icons">arrow_forward</i>
-                            </div>
-                        </div>
-
-                        <!-- Contenido de la noticia -->
-                        <div class="noticia-content">
-                            <div class="noticia-meta">
-                                <span class="noticia-categoria categoria-<?php echo $noticia['categoria']; ?>">
-                                    <?php echo ucfirst($noticia['categoria']); ?>
-                                </span>
-                                <span class="noticia-fecha">
-                                    <i class="material-icons tiny">calendar_today</i>
-                                    <?php echo $fecha_formateada; ?>
-                                </span>
-                            </div>
-
-                            <h4 class="noticia-titulo">
-                                <?php echo htmlspecialchars($noticia['titulo']); ?>
-                            </h4>
-
-                            <?php if (!empty($noticia['resumen'])): ?>
-                                <p class="noticia-resumen">
-                                    <?php echo substr(htmlspecialchars($noticia['resumen']), 0, 100) . '...'; ?>
-                                </p>
-                            <?php endif; ?>
-
-                            <div class="noticia-footer">
-                                <span class="noticia-autor">
-                                    <i class="material-icons tiny">person</i>
-                                    <?php echo htmlspecialchars($noticia['autor']); ?>
-                                </span>
-                                <span class="noticia-leer-mas">
-                                    Leer más
-                                    <i class="material-icons tiny">chevron_right</i>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
+                <div class="no-noticias" data-aos="fade-up">
+                    <i class="material-icons large">assignment</i>
+                    <h4>No hay noticias disponibles</h4>
+                    <p>Pronto publicaremos nuevas noticias escolares.</p>
+                </div>
                 <?php
             }
-        } else {
-            // Mensaje cuando no hay noticias
             ?>
-            <div class="no-noticias" data-aos="fade-up">
-                <i class="material-icons large">assignment</i>
-                <h4>No hay noticias disponibles</h4>
-                <p>Pronto publicaremos nuevas noticias escolares.</p>
-            </div>
-            <?php
-        }
-        ?>
-    </div>
+        </div>
 
-    <!-- BotÃ³n para crear nueva noticia (solo para administradores) -->
-    <div class="sidebar-footer">
-        <a href="nueva-noticia.php" class="btn-nueva-noticia waves-effect waves-light">
-            <i class="material-icons left">add_circle</i>
-            Nueva Noticia
-        </a>
-    </div>
+        <!-- BotÃ³n para crear nueva noticia (solo para administradores) -->
+        <div class="sidebar-footer">
+            <a href="nueva-noticia.php" class="btn-nueva-noticia waves-effect waves-light">
+                <i class="material-icons left">add_circle</i>
+                Nueva Noticia
+            </a>
+        </div>
 </aside>
 
 <!-- ============================================
