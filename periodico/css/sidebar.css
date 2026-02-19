@@ -156,11 +156,12 @@
 }
 
 .filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;   /* centra el bloque completo */
+  gap: 12px 20px;            /* fila / columna */
 }
+
 
 .filter-chip {
   cursor: pointer;
@@ -173,6 +174,7 @@
   font-size: 0.85rem;
   padding: 8px 12px;
   margin: 0;
+  justify-content: center;
 }
 
 .filter-chip i {

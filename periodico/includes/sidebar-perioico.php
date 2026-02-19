@@ -25,7 +25,7 @@
     <!-- Filtros por categorÃ­a -->
     <div class="sidebar-filters ">
         <h3 class="filter-title">Categorías</h3>
-        <div class="filter-chips row">
+        <div class="filter-chips">
             <div class="chip filter-chip active" data-category="todas">
                 <i class="material-icons tiny">done_all</i> Todas
             </div>
