@@ -10,95 +10,241 @@ $row = NULL;
 foreach($result as $row){
 echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "</h4>";
 }*/
-
 ?>
 
-
 <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<!-- Inicializa los JavaScript -->
+
+<!-- ============================================
+     JAVASCRIPT GLOBAL
+     ============================================ -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        M.AutoInit(); // Inicializa todos los componentes
+    // ============================================
+    // INICIALIZACIÓN MATERIALIZE
+    // ============================================
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
+            hover: false,
+            coverTrigger: false,
+            constrainWidth: false
+        });
+
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+        M.Parallax.init(document.querySelectorAll('.parallax'));
+
+        M.Carousel.init(document.querySelectorAll('.carousel'));
+        M.Tooltip.init(document.querySelectorAll('.tooltipped'));
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        var instances = M.Dropdown.init(elems);
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-    });
-
-    //js fixed header
-    window.onscroll = function() {
-        myFunction();
+    // ============================================
+    // HEADER STICKY CON LOGO
+    // ============================================
+    window.onscroll = function () {
+        stickyHeader();
     };
 
     var header = document.getElementById("myHeader");
     var logo = document.getElementById("logo");
-    var sticky = header.offsetTop;
+    var sticky = header ? header.offsetTop : 0;
 
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-            logo.classList.remove("hide");
-        } else {
-            header.classList.remove("sticky");
-            logo.classList.add("hide");
+    function stickyHeader() {
+        if (header && logo) {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                logo.classList.remove("hide");
+            } else {
+                header.classList.remove("sticky");
+                logo.classList.add("hide");
+            }
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
+    // ============================================
+    // PARALLAX
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.parallax');
         var instances = M.Parallax.init(elems);
     });
 
-    // js Slider
-    var slideIndex = 0;
-    showSlides();
+    // ============================================
+    // SLIDER (solo si existe)
+    // ============================================
+    if (document.getElementsByClassName("mySlides").length > 0) {
+        var slideIndex = 0;
+        showSlides();
 
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            if (slides[slideIndex - 1]) {
+                slides[slideIndex - 1].style.display = "block";
+            }
+            setTimeout(showSlides, 2500);
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2500); // Change image every 2 seconds
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
+    // ============================================
+    // CAROUSEL
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems);
     });
-
-
 </script>
-<footer class="p-0" data-aos="fade-up" data-aos-duration="2500">
-    <div class="row valign-wrapper m-0">
-        <div class="col s12 m4  center">
-            <h4 class="white-text center"><b>Contacto:</b></h4>
-            <h6><b>Celular: <br>(+57)</b> 321 222 2082</h6>
-            <h6><b>E - mail:</b> <br>tuta_colsannicolas@hotmail.com</h6>
-            <h6><b>Dirección</b> <br>Vda. El Arenal - Tuta</h6>
-        </div>
-        <div class="col s12 m8 p-0 valign-wrapper">
-            <iframe class="p-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.978313165623!2d-73.22735148532549!3d5.716261833606349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a6e896ba57b19%3A0xa2950f5e2a24f373!2sInstituci%C3%B3n%20Educativa%20San%20Nicolas%2C%20Sede%20Sider%C3%BArgica!5e0!3m2!1ses!2sco!4v1680283187306!5m2!1ses!2sco" style="width: 100%; height: 350px; border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+
+<!-- ============================================
+     FOOTER PREMIUM
+     ============================================ -->
+<footer class="footer-premium">
+
+    <!-- Wave Divisor -->
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25" class="wave-shape-fill"></path>
+            <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5" class="wave-shape-fill"></path>
+            <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                class="wave-shape-fill"></path>
+        </svg>
     </div>
-    <div class="row foot-dev m-0">
-        <div class="col s12">
-            <div class="container center p-0 ">
-                <h6>© 2024 | <b>Copyright © 2025 |  Todos los derechos reservados.</b></h6>
-                <h6><b>Powered By:</b> <a href="https://ingjefersonfonsecasoto.com.co" target="_blank">&lt; Mg. Ing. Jeferson Fonseca Soto &gt;</a></h6>
+
+    <!-- Contenido Principal del Footer -->
+    <div class="footer-content">
+        <div class="container">
+            <div class="row">
+
+                <!-- COLUMNA 1: Información de Contacto -->
+                <div class="col s12 m12 l4 footer-section" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-info-box">
+                        <div class="footer-icon-header">
+                            <i class="material-icons">contact_phone</i>
+                            <h4>Contacto</h4>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="material-icons">phone</i>
+                            <div class="contact-text">
+                                <span class="contact-label">Celular</span>
+                                <a href="tel:+573212222082">(+57) 321 222 2082</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="material-icons">email</i>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:tuta_colsannicolas@hotmail.com">tuta_colsannicolas@hotmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="material-icons">location_on</i>
+                            <div class="contact-text">
+                                <span class="contact-label">Dirección</span>
+                                <p>Vda. El Arenal - Tuta, Boyacá</p>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/ietsannicolas" target="_blank" rel="noopener noreferrer"
+                                class="social-icon facebook" title="Facebook">
+                                <i class="material-icons">thumb_up</i>
+                            </a>
+                            <a href="mailto:tuta_colsannicolas@hotmail.com" class="social-icon email" title="Email">
+                                <i class="material-icons">email</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA 2: Mapa -->
+                <div class="col s12 m12 l8 footer-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="footer-map-wrapper">
+                        <div class="map-header">
+                            <i class="material-icons">map</i>
+                            <h4>Ubicación</h4>
+                        </div>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.978313165623!2d-73.22735148532549!3d5.716261833606349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a6e896ba57b19%3A0xa2950f5e2a24f373!2sInstituci%C3%B3n%20Educativa%20San%20Nicolas%2C%20Sede%20Sider%C3%BArgica!5e0!3m2!1ses!2sco!4v1680283187306!5m2!1ses!2sco"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación IET San Nicolás" aria-label="Mapa de ubicación de IET San Nicolás">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <!-- Footer Bottom (Copyright) -->
+    <div class="footer-bottom">
+        <div class="footer-copyright">
+            <p>
+                © 2024-2025 | <strong>IET San Nicolás</strong><br>
+                Todos los derechos reservados
+            </p>
+        </div>
+        <div class="footer-credits">
+            <p>
+                <span class="powered-label">Powered By:</span>
+                <a href="https://ingjefersonfonsecasoto.com.co" target="_blank" rel="noopener noreferrer"
+                    class="developer-link">
+                    <i class="material-icons tiny">code</i>
+                    Mg. Ing. Jeferson Fonseca Soto
+                </a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <!-- Botón Volver Arriba -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
 </footer>
+
+<!-- ============================================
+     JAVASCRIPT DEL FOOTER
+     ============================================ -->
+<script>
+    // Botón "Volver arriba"
+    window.addEventListener('scroll', function () {
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            if (window.pageYOffset > 500) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        }
+    });
+
+    document.getElementById('backToTop')?.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+
+</html>

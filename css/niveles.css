@@ -1,0 +1,869 @@
+/* ============================================
+   NIVELES.PHP - ESTILOS PERSONALIZADOS
+   Página de niveles académicos por grado
+   ============================================ */
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --color-verde: #056245;
+  --color-amarillo: #ffc400;
+  --color-verde-hover: #044535;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+  /* Colores por grado */
+  --grado-6: #2196f3; /* Azul */
+  --grado-7: #4caf50; /* Verde */
+  --grado-8: #ff9800; /* Naranja */
+  --grado-9: #9c27b0; /* Púrpura */
+  --grado-10: #f44336; /* Rojo */
+  --grado-11: #ffd700; /* Dorado */
+}
+
+/* ============================================
+   PÁGINA GENERAL
+   ============================================ */
+.niveles-page {
+  min-height: 100vh;
+}
+
+/* ============================================
+   HEADER DE LA PÁGINA
+   ============================================ */
+.niveles-header {
+  padding: 80px 0 60px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.titulo-principal::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-amarillo),
+    transparent
+  );
+}
+
+.titulo-principal i {
+  font-size: 4rem !important;
+  animation: pulse-school 2s ease-in-out infinite;
+}
+
+@keyframes pulse-school {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.subtitulo-pagina {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  line-height: 1.8;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   SECCIÓN DE NIVELES
+   ============================================ */
+.niveles-section {
+  padding: 80px 0 100px 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ============================================
+   GRID DE NIVELES
+   ============================================ */
+.niveles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ============================================
+   CARDS DE NIVELES
+   ============================================ */
+.nivel-card {
+  background: rgba(5, 98, 69, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: var(--shadow-card);
+  border: 3px solid rgba(255, 196, 0, 0.3);
+  transition: all var(--transition-smooth);
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.nivel-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-amarillo);
+}
+
+/* Efecto de brillo al hover */
+.nivel-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.nivel-card:hover::before {
+  opacity: 1;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ============================================
+   BADGE DEL GRADO (NÚMERO)
+   ============================================ */
+.nivel-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all var(--transition-smooth);
+}
+
+.nivel-card:hover .nivel-badge {
+  transform: scale(1.2) rotate(360deg);
+}
+
+/* Colores específicos por grado */
+.nivel-badge.grado-6 {
+  background: linear-gradient(135deg, var(--grado-6), #1976d2);
+}
+
+.nivel-badge.grado-7 {
+  background: linear-gradient(135deg, var(--grado-7), #388e3c);
+}
+
+.nivel-badge.grado-8 {
+  background: linear-gradient(135deg, var(--grado-8), #f57c00);
+}
+
+.nivel-badge.grado-9 {
+  background: linear-gradient(135deg, var(--grado-9), #7b1fa2);
+}
+
+.nivel-badge.grado-10 {
+  background: linear-gradient(135deg, var(--grado-10), #d32f2f);
+}
+
+.nivel-badge.grado-11 {
+  background: linear-gradient(135deg, var(--grado-11), #ffa000);
+}
+
+/* Badge destacado (para 10° y 11°) */
+.nivel-badge-destacado {
+  position: absolute;
+  top: 5px;
+  right: -43px;
+  background: linear-gradient(135deg, var(--color-amarillo), #ffb700);
+  color: var(white);
+  padding: 12px 45px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 15px rgba(255, 196, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nivel-badge-destacado i {
+  font-size: 1.8rem !important;
+  animation: pulse-star 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-star {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Nivel destacado (10° y 11°) */
+.nivel-destacado {
+  border-color: var(--color-amarillo);
+  border-width: 4px;
+  background: rgba(255, 196, 0, 0.1);
+}
+
+/* ============================================
+   HEADER DE LA CARD
+   ============================================ */
+.nivel-header {
+  padding: 60px 30px 30px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   ICONO DEL NIVEL
+   ============================================ */
+.nivel-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-smooth);
+  position: relative;
+  z-index: 2;
+}
+
+.nivel-card:hover .nivel-icon {
+  transform: scale(1.15) rotate(-10deg);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nivel-icon i {
+  font-size: 3.5rem !important;
+  color: white;
+  transition: all var(--transition-smooth);
+}
+
+.nivel-card:hover .nivel-icon i {
+  transform: scale(1.1);
+}
+
+/* Iconos específicos por grado */
+.nivel-icon.grado-6-icon {
+  background: linear-gradient(135deg, var(--grado-6), #1976d2);
+  border-color: var(--grado-6);
+}
+
+.nivel-icon.grado-7-icon {
+  background: linear-gradient(135deg, var(--grado-7), #388e3c);
+  border-color: var(--grado-7);
+}
+
+.nivel-icon.grado-8-icon {
+  background: linear-gradient(135deg, var(--grado-8), #f57c00);
+  border-color: var(--grado-8);
+}
+
+.nivel-icon.grado-9-icon {
+  background: linear-gradient(135deg, var(--grado-9), #7b1fa2);
+  border-color: var(--grado-9);
+}
+
+.nivel-icon.grado-10-icon {
+  background: linear-gradient(135deg, var(--grado-10), #d32f2f);
+  border-color: var(--grado-10);
+}
+
+.nivel-icon.grado-11-icon {
+  background: linear-gradient(135deg, var(--grado-11), #ffa000);
+  border-color: var(--grado-11);
+}
+
+/* ============================================
+   TÍTULO DEL NIVEL
+   ============================================ */
+.nivel-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.nivel-subtitulo {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+}
+
+/* ============================================
+   CONTENIDO DE LA CARD
+   ============================================ */
+.nivel-content {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.nivel-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid rgba(255, 196, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.nivel-content h3 i {
+  font-size: 1.8rem !important;
+}
+
+/* ============================================
+   SECCIONES DE TEMAS
+   ============================================ */
+.tema-section {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-amarillo);
+  transition: all var(--transition-smooth);
+}
+
+.tema-section:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-left-width: 6px;
+  transform: translateX(5px);
+}
+
+.tema-section h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: var(--color-amarillo);
+}
+
+/* ============================================
+   LISTAS DE TEMAS
+   ============================================ */
+.lista-temas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-temas li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.lista-temas li:last-child {
+  border-bottom: none;
+}
+
+.lista-temas li:hover {
+  padding-left: 10px;
+  color: var(--color-amarillo);
+}
+
+.lista-temas li i {
+  color: var(--color-verde);
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 1.2rem !important;
+}
+
+.lista-temas li:hover i {
+  color: var(--color-amarillo);
+}
+
+.lista-temas strong {
+  color: var(--color-amarillo);
+  font-weight: 700;
+}
+
+/* ============================================
+   RESUMEN BOX
+   ============================================ */
+.resumen-box {
+  background: rgba(5, 98, 69, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 196, 0, 0.5);
+  margin-top: auto;
+  transition: all var(--transition-smooth);
+}
+
+.resumen-box:hover {
+  border-color: var(--color-amarillo);
+  background: rgba(5, 98, 69, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 196, 0, 0.3);
+}
+
+.resumen-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.resumen-box strong {
+  color: var(--color-amarillo);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.resumen-box.destacado {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 196, 0, 0.2),
+    rgba(255, 196, 0, 0.1)
+  );
+  border-color: var(--color-amarillo);
+  border-width: 3px;
+}
+
+/* ============================================
+   LENGUAJES SECTION (GRADO 11°)
+   ============================================ */
+.lenguajes-section {
+  background: rgba(255, 196, 0, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 196, 0, 0.4);
+  margin-top: 20px;
+}
+
+.lenguajes-section h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.lenguajes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.lenguaje-item {
+  background: rgba(5, 98, 69, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all var(--transition-smooth);
+  border: 2px solid rgba(255, 196, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
+}
+
+.lenguaje-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-amarillo);
+  background: rgba(5, 98, 69, 0.5);
+  box-shadow: 0 8px 20px rgba(255, 196, 0, 0.4);
+}
+
+.lenguaje-item i {
+  font-size: 2.5rem !important;
+  color: var(--color-amarillo);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.lenguaje-item span {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+.pinned {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  z-index: 100;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.pinned.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.toc-wrapper {
+  background: rgba(5, 98, 69, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-card);
+  border: 3px solid var(--color-amarillo);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  width: 180px;
+}
+
+.toc-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid var(--color-amarillo);
+  padding-bottom: 15px;
+}
+
+.toc-title i {
+  font-size: 1.8rem !important;
+}
+
+.table-of-contents a {
+  color: white !important;
+  font-size: 1rem;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 5px 0;
+}
+
+.table-of-contents a:hover {
+  background: rgba(255, 196, 0, 0.2);
+  transform: translateX(8px);
+  padding-left: 22px;
+}
+
+.table-of-contents a.active {
+  background: var(--color-amarillo);
+  color: var(--color-verde) !important;
+  font-weight: 700;
+  border-left: 5px solid var(--color-verde);
+}
+
+.table-of-contents i {
+  font-size: 1.2rem !important;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+  .titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .niveles-grid {
+    gap: 20px;
+  }
+
+  .nivel-card {
+    margin-bottom: 30px;
+  }
+
+  .nivel-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nivel-icon i {
+    font-size: 2.8rem !important;
+  }
+
+  .nivel-badge {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .lenguajes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+  .niveles-header {
+    padding: 60px 0 40px 0;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .titulo-principal i {
+    font-size: 2.5rem !important;
+  }
+
+  .subtitulo-pagina {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .niveles-section {
+    padding: 60px 0;
+  }
+
+  .nivel-card {
+    margin-bottom: 30px;
+  }
+
+  .nivel-header {
+    padding: 50px 20px 20px 20px;
+  }
+
+  .nivel-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nivel-icon i {
+    font-size: 2.5rem !important;
+  }
+
+  .nivel-badge {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    top: 15px;
+    right: 15px;
+  }
+
+  .nivel-badge-destacado {
+    padding: 10px 35px;
+    font-size: 1.2rem;
+  }
+
+  .nivel-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .nivel-subtitulo {
+    font-size: 1rem;
+  }
+
+  .nivel-content {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .nivel-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .tema-section {
+    padding: 15px;
+  }
+
+  .tema-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .lista-temas li {
+    font-size: 0.95rem;
+  }
+
+  .resumen-box {
+    padding: 15px;
+  }
+
+  .resumen-box p {
+    font-size: 1rem;
+  }
+
+  .lenguajes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .lenguaje-item {
+    padding: 12px;
+  }
+
+  .lenguaje-item i {
+    font-size: 2rem !important;
+  }
+
+  .lenguaje-item span {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nivel-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Delays escalonados por grado */
+.niveles-grid .col:nth-child(1) .nivel-card {
+  animation-delay: 0.1s;
+}
+
+.niveles-grid .col:nth-child(2) .nivel-card {
+  animation-delay: 0.2s;
+}
+
+.niveles-grid .col:nth-child(3) .nivel-card {
+  animation-delay: 0.3s;
+}
+
+.niveles-grid .col:nth-child(4) .nivel-card {
+  animation-delay: 0.4s;
+}
+
+.niveles-grid .col:nth-child(5) .nivel-card {
+  animation-delay: 0.5s;
+}
+
+.niveles-grid .col:nth-child(6) .nivel-card {
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+.nivel-card:focus-within {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 4px;
+}
+
+/* ============================================
+   OPTIMIZACIONES DE RENDIMIENTO
+   ============================================ */
+.nivel-card,
+.nivel-icon,
+.nivel-badge,
+.lenguaje-item {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   SCROLL SUAVE
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .pinned,
+  .nivel-badge,
+  .nivel-badge-destacado {
+    display: none;
+  }
+
+  .nivel-card {
+    page-break-inside: avoid;
+    border: 1px solid #000;
+  }
+
+  .nivel-icon {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

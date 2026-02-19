@@ -10,9 +10,9 @@ $selectedFolder = isset($_POST['folder']) ? htmlspecialchars($_POST['folder']) :
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>San Nico | Cloud 360</title>
   <!-- Materialize CSS -->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
-  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
-  <link rel="stylesheet" href="./../../../css/header.css">
+  <link type="text/css" rel="stylesheet" href="/sannicolas-tuta/css/materialize.min.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="/sannicolas-tuta/css/style.css" media="screen,projection">
+  <link rel="stylesheet" href="./../../..//sannicolas-tuta/css/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- jQuery y Materialize JS -->

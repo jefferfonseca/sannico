@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondos de Pantalla - Desarrollo de Aplicaciones Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            color: #999;
+            font-size: 16px;
+        }
+        
+        .wallpapers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .wallpaper-card {
+            background: #2a2a2a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .wallpaper-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .wallpaper-preview {
+            width: 100%;
+            height: 250px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wallpaper-preview svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .wallpaper-info {
+            padding: 20px;
+        }
+        
+        .wallpaper-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .wallpaper-info p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .tip {
+            background: #2a2a2a;
+            border-left: 4px solid #3B82F6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px auto;
+            max-width: 1400px;
+        }
+        
+        .tip strong {
+            color: #3B82F6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Fondos de Pantalla de Bloqueo</h1>
+        <p>Desarrollo de Aplicaciones Web - Especialidad Técnica</p>
+    </div>
+
+    <div class="wallpapers">
+        <!-- Wallpaper 1: Centrado Oscuro -->
+        <div class="wallpaper-card">
+            <div class="wallpaper-preview">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="primaryGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="accentGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <rect width="1920" height="1080" fill="url(#bg1)"/>
+                    
+                    <!-- Logo centrado -->
+                    <g transform="translate(960, 540)">
+                        <g transform="translate(-400, -200)">
+                            <!-- Laptop -->
+                            <g opacity="0.9">
+                                <rect x="20" y="60" width="140" height="90" rx="4" fill="none" stroke="url(#primaryGradient1)" stroke-width="3"/>
+                                <rect x="20" y="150" width="140" height="8" rx="2" fill="url(#primaryGradient1)"/>
+                                <line x1="15" y1="158" x2="165" y2="158" stroke="url(#primaryGradient1)" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+                            
+                            <!-- Tablet -->
+                            <g opacity="0.85">
+                                <rect x="180" y="50" width="90" height="120" rx="6" fill="none" stroke="url(#accentGradient1)" stroke-width="3"/>
+                                <circle cx="225" cy="160" r="4" fill="url(#accentGradient1)"/>
+                            </g>
+                            
+                            <!-- Móvil -->
+                            <g opacity="0.8">
+                                <rect x="290" y="70" width="60" height="100" rx="8" fill="none" stroke="#10B981" stroke-width="3"/>
+                                <line x1="305" y1="82" x2="335" y2="82" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="320" cy="160" r="3" fill="#10B981"/>
+                            </g>
+                            
+                            <!-- </> -->
+                            <g transform="translate(370, 80)">
+                                <path d="M 20 20 L 0 40 L 20 60" fill="none" stroke="url(#primaryGradient1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="30" y1="55" x2="50" y2="25" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M 60 20 L 80 40 L 60 60" fill="none" stroke="url(#primaryGradient1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            
+                            <!-- {} -->
+                            <g transform="translate(460, 90)" opacity="0.7">
+                                <path d="M 10 0 Q 0 0 0 10 L 0 20 Q 0 30 -10 30 Q 0 30 0 40 L 0 50 Q 0 60 10 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M 30 0 Q 40 0 40 10 L 40 20 Q 40 30 50 30 Q 40 30 40 40 L 40 50 Q 40 60 30 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+                            
+                            <!-- Nodos -->
+                            <g opacity="0.6">
+                                <circle cx="530" cy="60" r="8" fill="#3B82F6"/>
+                                <circle cx="570" cy="90" r="8" fill="#8B5CF6"/>
+                                <circle cx="550" cy="130" r="8" fill="#10B981"/>
+                                <line x1="530" y1="60" x2="570" y2="90" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+                                <line x1="570" y1="90" x2="550" y2="130" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+                                <line x1="530" y1="60" x2="550" y2="130" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Texto -->
+                        <g transform="translate(-400, 60)">
+                            <text x="0" y="0" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#475569">
+                                DESARROLLO DE
+                            </text>
+                            <text x="0" y="50" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" fill="url(#primaryGradient1)">
+                                APLICACIONES WEB
+                            </text>
+                            <text x="0" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#64748b" letter-spacing="2">
+                                ESPECIALIDAD TÉCNICA
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="wallpaper-info">
+                <h3>Centrado Oscuro</h3>
+                <p>1920x1080 (Full HD) - Fondo degradado oscuro</p>
+                <button class="download-btn" onclick="downloadWallpaper(1)">Descargar Wallpaper</button>
+            </div>
+        </div>
+
+        <!-- Wallpaper 2: Minimalista Negro -->
+        <div class="wallpaper-card">
+            <div class="wallpaper-preview">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="primaryGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="accentGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <rect width="1920" height="1080" fill="#000000"/>
+                    
+                    <!-- Logo centrado -->
+                    <g transform="translate(960, 540)">
+                        <g transform="translate(-400, -200)">
+                            <g opacity="0.9">
+                                <rect x="20" y="60" width="140" height="90" rx="4" fill="none" stroke="url(#primaryGradient2)" stroke-width="3"/>
+                                <rect x="20" y="150" width="140" height="8" rx="2" fill="url(#primaryGradient2)"/>
+                                <line x1="15" y1="158" x2="165" y2="158" stroke="url(#primaryGradient2)" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+                            <g opacity="0.85">
+                                <rect x="180" y="50" width="90" height="120" rx="6" fill="none" stroke="url(#accentGradient2)" stroke-width="3"/>
+                                <circle cx="225" cy="160" r="4" fill="url(#accentGradient2)"/>
+                            </g>
+                            <g opacity="0.8">
+                                <rect x="290" y="70" width="60" height="100" rx="8" fill="none" stroke="#10B981" stroke-width="3"/>
+                                <line x1="305" y1="82" x2="335" y2="82" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="320" cy="160" r="3" fill="#10B981"/>
+                            </g>
+                            <g transform="translate(370, 80)">
+                                <path d="M 20 20 L 0 40 L 20 60" fill="none" stroke="url(#primaryGradient2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="30" y1="55" x2="50" y2="25" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M 60 20 L 80 40 L 60 60" fill="none" stroke="url(#primaryGradient2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <g transform="translate(460, 90)" opacity="0.7">
+                                <path d="M 10 0 Q 0 0 0 10 L 0 20 Q 0 30 -10 30 Q 0 30 0 40 L 0 50 Q 0 60 10 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M 30 0 Q 40 0 40 10 L 40 20 Q 40 30 50 30 Q 40 30 40 40 L 40 50 Q 40 60 30 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+                            <g opacity="0.6">
+                                <circle cx="530" cy="60" r="8" fill="#3B82F6"/>
+                                <circle cx="570" cy="90" r="8" fill="#8B5CF6"/>
+                                <circle cx="550" cy="130" r="8" fill="#10B981"/>
+                                <line x1="530" y1="60" x2="570" y2="90" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+                                <line x1="570" y1="90" x2="550" y2="130" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+                                <line x1="530" y1="60" x2="550" y2="130" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+                            </g>
+                        </g>
+                        <g transform="translate(-400, 60)">
+                            <text x="0" y="0" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#333333">
+                                DESARROLLO DE
+                            </text>
+                            <text x="0" y="50" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" fill="url(#primaryGradient2)">
+                                APLICACIONES WEB
+                            </text>
+                            <text x="0" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#4a4a4a" letter-spacing="2">
+                                ESPECIALIDAD TÉCNICA
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="wallpaper-info">
+                <h3>Negro Profundo</h3>
+                <p>1920x1080 (Full HD) - Fondo negro puro</p>
+                <button class="download-btn" onclick="downloadWallpaper(2)">Descargar Wallpaper</button>
+            </div>
+        </div>
+
+        <!-- Wallpaper 3: Con Elementos de Fondo -->
+        <div class="wallpaper-card">
+            <div class="wallpaper-preview">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0f0f0f;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="primaryGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="accentGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <rect width="1920" height="1080" fill="url(#bg3)"/>
+                    
+                    <!-- Elementos decorativos de fondo -->
+                    <circle cx="200" cy="150" r="100" fill="#3B82F6" opacity="0.03"/>
+                    <circle cx="1700" cy="200" r="150" fill="#8B5CF6" opacity="0.03"/>
+                    <circle cx="300" cy="900" r="120" fill="#10B981" opacity="0.03"/>
+                    <circle cx="1600" cy="850" r="180" fill="#3B82F6" opacity="0.03"/>
+                    
+                    <!-- Logo centrado -->
+                    <g transform="translate(960, 540)">
+                        <g transform="translate(-400, -200)">
+                            <g opacity="0.9">
+                                <rect x="20" y="60" width="140" height="90" rx="4" fill="none" stroke="url(#primaryGradient3)" stroke-width="3"/>
+                                <rect x="20" y="150" width="140" height="8" rx="2" fill="url(#primaryGradient3)"/>
+                                <line x1="15" y1="158" x2="165" y2="158" stroke="url(#primaryGradient3)" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+                            <g opacity="0.85">
+                                <rect x="180" y="50" width="90" height="120" rx="6" fill="none" stroke="url(#accentGradient3)" stroke-width="3"/>
+                                <circle cx="225" cy="160" r="4" fill="url(#accentGradient3)"/>
+                            </g>
+                            <g opacity="0.8">
+                                <rect x="290" y="70" width="60" height="100" rx="8" fill="none" stroke="#10B981" stroke-width="3"/>
+                                <line x1="305" y1="82" x2="335" y2="82" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="320" cy="160" r="3" fill="#10B981"/>
+                            </g>
+                            <g transform="translate(370, 80)">
+                                <path d="M 20 20 L 0 40 L 20 60" fill="none" stroke="url(#primaryGradient3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="30" y1="55" x2="50" y2="25" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M 60 20 L 80 40 L 60 60" fill="none" stroke="url(#primaryGradient3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <g transform="translate(460, 90)" opacity="0.7">
+                                <path d="M 10 0 Q 0 0 0 10 L 0 20 Q 0 30 -10 30 Q 0 30 0 40 L 0 50 Q 0 60 10 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M 30 0 Q 40 0 40 10 L 40 20 Q 40 30 50 30 Q 40 30 40 40 L 40 50 Q 40 60 30 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+                            <g opacity="0.6">
+                                <circle cx="530" cy="60" r="8" fill="#3B82F6"/>
+                                <circle cx="570" cy="90" r="8" fill="#8B5CF6"/>
+                                <circle cx="550" cy="130" r="8" fill="#10B981"/>
+                                <line x1="530" y1="60" x2="570" y2="90" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+                                <line x1="570" y1="90" x2="550" y2="130" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+                                <line x1="530" y1="60" x2="550" y2="130" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+                            </g>
+                        </g>
+                        <g transform="translate(-400, 60)">
+                            <text x="0" y="0" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#3a3a3a">
+                                DESARROLLO DE
+                            </text>
+                            <text x="0" y="50" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" fill="url(#primaryGradient3)">
+                                APLICACIONES WEB
+                            </text>
+                            <text x="0" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="500" fill="#555555" letter-spacing="2">
+                                ESPECIALIDAD TÉCNICA
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="wallpaper-info">
+                <h3>Con Elementos Decorativos</h3>
+                <p>1920x1080 (Full HD) - Fondo con círculos sutiles</p>
+                <button class="download-btn" onclick="downloadWallpaper(3)">Descargar Wallpaper</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tip">
+        <p><strong>💡 Instrucciones de uso:</strong></p>
+        <p style="margin-top: 10px; color: #ccc;">
+            1. Haz clic en "Descargar Wallpaper" del diseño que prefieras<br>
+            2. Guarda la imagen en tu computadora<br>
+            3. En Windows: Click derecho en el escritorio → Personalizar → Fondo → Selecciona tu imagen<br>
+            4. En la pantalla de bloqueo: Configuración → Personalización → Pantalla de bloqueo → Selecciona tu imagen
+        </p>
+    </div>
+
+    <script>
+        function downloadWallpaper(version) {
+            const wallpapers = document.querySelectorAll('.wallpaper-preview svg');
+            const svg = wallpapers[version - 1];
+            
+            // Crear un canvas temporal para convertir SVG a imagen
+            const canvas = document.createElement('canvas');
+            canvas.width = 1920;
+            canvas.height = 1080;
+            const ctx = canvas.getContext('2d');
+            
+            // Serializar el SVG
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = `wallpaper_desarrollo_web_${version}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(url);
+                });
+            };
+            img.src = url;
+        }
+    </script>
+</body>
+</html>

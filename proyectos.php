@@ -1,718 +1,568 @@
-<?php $menu = "Institución";
-include('includes/header.php'); ?>
+<?php
+$menu = "Institución";
 
-<div class=" section">
-    <h3 class="center yellow-text m-0 pt"><b>PROYECTOS INSTITUCIONALES</b></h3>
-    <!--  -->
-    <div id="democracia" class="scrollspy  valign-wrapper">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto Pedagógico de Democracia y Derechos Humanos</b>
-                </h4>
-                <div class="col s12 m6">
+// Meta tags específicos
+$page_title = "Proyectos Institucionales - IET San Nicolás | Proyectos Pedagógicos";
+$page_description = "Conoce los proyectos institucionales de la IET San Nicolás: Democracia, Orientación Vocacional, Dirección de Grado, Escuela de Padres y más.";
+$page_keywords = "proyectos IET San Nicolás, democracia escolar, orientación vocacional, escuela de padres, tiempo libre";
+$page_image = "https://ietsannicolas.edu.co/images/parallax/14.jpg";
+$css = "proyectos.css"; // Archivo CSS específico para esta página
 
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">Comité de democracia</p>
-                    <!--linea azul decorativa-->
-                    <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        Problemática que convoca: La obligatoriedad del gobierno escolar con
-                        participación
-                        democrática según Art. 142 de la ley 115 de 1994 y Art. 19 del decreto 1860
-                        de
-                        1994. El
-                        derecho constitucional de participar en las
-                        decisiones de la escuela le permite a los padres y madres de familia asumir
-                        la
-                        responsabilidad que tienen en la educación de sus hijos y es una posibilidad
-                        de
-                        ejercicio de
-                        la democracia al interior de la institución
-                        y hace posible la participación de los niños, niñas, padres de familia y de
-                        maestros esto
-                        permite tomar conciencia de los problemas que se viven, promueve los
-                        intereses
-                        colectivos
-                        los intereses particulares. La
-                        institución educativa ofrece estos espacios públicos para lograr así la
-                        participación.
-                    </p>
-                </div>
+include('includes/header.php');
+?>
 
-                <!--Cuerpo de articulo-->
-                <div class="col s12 m6">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        El proyecto tiene como finalidad la profundización y práctica de la
-                        democracia
-                        en la
-                        institución para ello es necesario el reconocimiento de los derechos y el
-                        cumplimiento de
-                        los deberes de todos los miembros,
-                        ofrecer las condiciones para el desarrollo de una personalidad responsable y
-                        autónoma,
-                        consciente del valor de su dignidad. En el proceso de conformación del
-                        gobierno
-                        escolar, del
-                        consejo estudiantil, elección de
-                        personero estudiantil, consejo de padres de familia, y comisiones de
-                        evaluación
-                        y promoción,
-                        se respetan los procedimientos democráticos para su elección.
-                        <br />
-                        <br />
-                        <b>Logro general:</b>
-                        <br />
-                    </p>
+<!-- ============================================
+     PÁGINA: PROYECTOS INSTITUCIONALES
+     ============================================ -->
+<main id="main-content" class="proyectos-page" role="main">
 
-                    <ul style="padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        <li>• Desarrollar en la comunidad educativa la participación democrática, un
-                            pensamiento
-                            autónomo, crítico y de juicio político.</li>
-                        <li>• Fortalecer y promover en los estudiantes su identidad personal y
-                            social y
-                            el sentido
-                            de pertenencia en los diferentes espacios en los que interactúa.</li>
-                        <li>• Rescatar y promover la identidad boyacense.</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- ============================================
+         TÍTULO PRINCIPAL
+         ============================================ -->
+    <section class="proyectos-header">
+        <div class="container">
+            <h1 class="titulo-principal yellow-text center" data-aos="fade-down">
+                <i class="material-icons large">folder_special</i>
+                PROYECTOS INSTITUCIONALES
+            </h1>
+            <p class="subtitulo-pagina white-text center" data-aos="fade-up" data-aos-delay="200">
+                Iniciativas pedagógicas que fortalecen la formación integral de nuestra comunidad educativa
+            </p>
         </div>
-    </div>
+    </section>
 
-    <!--  -->
-    <div id="competencias" class="scrollspy ">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <div class="row">
-                    <!--titulo de articulo-->
-                    <div class="col s12">
-                        <h5 class="green-text "><b>Competencias a desarrollar.</b></h5>
+    <!-- ============================================
+         PROYECTOS - COLLAPSIBLE CARDS
+         ============================================ -->
+    <section class="proyectos-section">
+        <div class="container">
 
-                        <!--linea azul decorativa-->
-                        <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
+            <ul class="collapsible proyectos-collapsible" data-collapsible="accordion">
 
-                        <!--Col 1-->
-                        <div class="col s12 m4 center white-text"  data-aos="fade-right" data-aos-duration="2500">
-                            <br />
-                            <b class="center-align" style="font-size: 20px;">Desarrollo de la Autonomía
-                                Y
-                                Del Juicio
-                                Político:</b>
-
-                            <p>
-                                • Capacidad de pensar y actuar con criterios propios teniendo en cuenta
-                                diferentes
-                                puntos de vista. <br />
-                                • Capacidad de asumir con responsabilidad sus derechos políticos: elegir
-                                y
-                                ser elegido.
-                                <br />
-                                • Capacidad de asumir con responsabilidad las funciones propias de los
-                                cargos para los
-                                cuales fueron elegidos.
-                            </p>
+                <!-- ============================================
+                     PROYECTO 1: DEMOCRACIA Y DERECHOS HUMANOS
+                     ============================================ -->
+                <li id="democracia" class="scrollspy" data-aos="fade-up" data-aos-delay="100">
+                    <div class="collapsible-header proyecto-header active">
+                        <div class="header-icon">
+                            <i class="material-icons">how_to_vote</i>
                         </div>
-
-                        <!--Col 2-->
-                        <div class=" col s12 m4 center white-text"  data-aos="fade-right" data-aos-duration="2500">
-                            <br />
-                            <b class="center-align" style="font-size: 20px;">Competencias
-                                Comunicativas:</b>
-
-                            <p>
-                                <br />
-                                • Capacidad de comunicarse con los otros y resolver conflictos en forma
-                                dialogada.
-                                <br />
-                                • Capacidad de respeto y valoración de las diferencias. <br />
-                                • Capacidad para participar de manera libre y consciente en la
-                                deliberación
-                                pública en
-                                torno a los asuntos de interés común. <br />
-                                • Capacidad para aplicar en la vida diaria los conocimientos adquiridos.
-                            </p>
-                            <br />
-                            <br />
+                        <div class="header-content">
+                            <h2>Democracia y Derechos Humanos</h2>
+                            <p>Participación democrática y formación ciudadana</p>
                         </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-                        <!--Col 3-->
-                        <div class=" col s12 m4 center white-text"  data-aos="fade-right" data-aos-duration="2500">
-                            <br />
-                            <b class="center-align" style="font-size: 20px;">Competencias
-                                Socializadoras:</b>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="row">
+                            <!-- Comité -->
+                            <div class="col s12 m6">
+                                <div class="proyecto-card">
+                                    <h3 class="yellow-text">
+                                        <i class="material-icons">groups</i>
+                                        Comité de Democracia
+                                    </h3>
+                                    <p class="white-text">
+                                        <strong>Problemática que convoca:</strong> La obligatoriedad del gobierno
+                                        escolar
+                                        con participación democrática según <strong>Art. 142 de la Ley 115 de
+                                            1994</strong>
+                                        y <strong>Art. 19 del Decreto 1860 de 1994</strong>.
+                                    </p>
+                                    <p class="white-text">
+                                        El derecho constitucional de participar en las decisiones de la escuela le
+                                        permite
+                                        a los padres y madres de familia asumir la responsabilidad que tienen en la
+                                        educación
+                                        de sus hijos y es una posibilidad de ejercicio de la democracia al interior de
+                                        la
+                                        institución. Hace posible la participación de niños, niñas, padres de familia y
+                                        maestros,
+                                        permitiendo tomar conciencia de los problemas que se viven, promoviendo los
+                                        intereses
+                                        colectivos sobre los intereses particulares.
+                                    </p>
+                                </div>
+                            </div>
 
-                            <p>
-                                <br />
-                                • Capacidad de construir identidades. <br />
-                                • Capacidad de compartir y configurar los rasgos de su identidad
-                                personal y
-                                el
-                                sentimiento de pertenencia a la institución, a su región y a su país.
-                                <br />
-                                • Capacidad de respetar el pensamiento político de los demás evitando
-                                cualquier tipo de
-                                agresión.
-                            </p>
+                            <!-- Finalidad -->
+                            <div class="col s12 m6">
+                                <div class="proyecto-card">
+                                    <h3 class="yellow-text">
+                                        <i class="material-icons">emoji_events</i>
+                                        Finalidad y Logros
+                                    </h3>
+                                    <p class="white-text">
+                                        El proyecto tiene como finalidad la <strong>profundización y práctica de la
+                                            democracia</strong>
+                                        en la institución. Para ello es necesario el reconocimiento de los derechos y el
+                                        cumplimiento de los deberes de todos los miembros, ofrecer las condiciones para
+                                        el
+                                        desarrollo de una personalidad responsable y autónoma, consciente del valor de
+                                        su dignidad.
+                                    </p>
+
+                                    <h4 class="yellow-text">Logros Generales:</h4>
+                                    <ul class="proyecto-lista">
+                                        <li>
+                                            <i class="material-icons tiny">check_circle</i>
+                                            Desarrollar en la comunidad educativa la participación democrática, un
+                                            pensamiento
+                                            autónomo, crítico y de juicio político
+                                        </li>
+                                        <li>
+                                            <i class="material-icons tiny">check_circle</i>
+                                            Fortalecer y promover en los estudiantes su identidad personal y social
+                                        </li>
+                                        <li>
+                                            <i class="material-icons tiny">check_circle</i>
+                                            Rescatar y promover la identidad boyacense
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Competencias -->
+                            <div class="col s12" id="competencias">
+                                <div class="proyecto-card competencias-card">
+                                    <h3 class="yellow-text center">
+                                        <i class="material-icons">psychology</i>
+                                        Competencias a Desarrollar
+                                    </h3>
+
+                                    <div class="row">
+                                        <!-- Autonomía -->
+                                        <div class="col s12 m4">
+                                            <div class="competencia-item">
+                                                <div class="competencia-icon">
+                                                    <i class="material-icons">person</i>
+                                                </div>
+                                                <h4 class="yellow-text">Desarrollo de la Autonomía y del Juicio Político
+                                                </h4>
+                                                <ul class="white-text">
+                                                    <li>Capacidad de pensar y actuar con criterios propios</li>
+                                                    <li>Capacidad de asumir con responsabilidad sus derechos políticos
+                                                    </li>
+                                                    <li>Capacidad de asumir funciones de los cargos elegidos</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Comunicativas -->
+                                        <div class="col s12 m4">
+                                            <div class="competencia-item">
+                                                <div class="competencia-icon">
+                                                    <i class="material-icons">forum</i>
+                                                </div>
+                                                <h4 class="yellow-text">Competencias Comunicativas</h4>
+                                                <ul class="white-text">
+                                                    <li>Capacidad de comunicarse y resolver conflictos</li>
+                                                    <li>Capacidad de respeto y valoración de las diferencias</li>
+                                                    <li>Capacidad para participar en la deliberación pública</li>
+                                                    <li>Capacidad para aplicar conocimientos adquiridos</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Socializadoras -->
+                                        <div class="col s12 m4">
+                                            <div class="competencia-item">
+                                                <div class="competencia-icon">
+                                                    <i class="material-icons">diversity_3</i>
+                                                </div>
+                                                <h4 class="yellow-text">Competencias Socializadoras</h4>
+                                                <ul class="white-text">
+                                                    <li>Capacidad de construir identidades</li>
+                                                    <li>Capacidad de compartir rasgos de identidad personal</li>
+                                                    <li>Capacidad de respetar el pensamiento político de los demás</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </li>
 
-    <!--  -->
-    <div id="orientacion" class="scrollspy  valign-wrapper">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto de Orientación Vocacional y Proyecto de Vida</b>
-                </h4>
+                <!-- ============================================
+                     PROYECTO 2: ORIENTACIÓN VOCACIONAL
+                     ============================================ -->
+                <li id="orientacion" class="scrollspy" data-aos="fade-up" data-aos-delay="200">
+                    <div class="collapsible-header proyecto-header">
+                        <div class="header-icon">
+                            <i class="material-icons">explore</i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Proyecto de Vida y Orientación Vocacional</h2>
+                            <p>Construcción del proyecto de vida de los estudiantes</p>
+                        </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-                <!--titulo de articulo-->
-                <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">Psicoorientación.</p>
-                <!--linea azul decorativa-->
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="proyecto-card">
+                            <h3 class="yellow-text">
+                                <i class="material-icons">account_balance</i>
+                                Objetivo General
+                            </h3>
+                            <p class="white-text flow-text">
+                                Contribuir a la <strong>construcción del proyecto de vida</strong> de los estudiantes
+                                de la Institución Educativa San Nicolás - Tuta, mediante la orientación académica,
+                                vocacional y profesional, para responder a las necesidades del contexto y aprovechar
+                                las oportunidades que este les ofrece.
+                            </p>
 
-                <!--Cuerpo de articulo-->
-                <div class="col s12 m6">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
+                            <h3 class="yellow-text">
+                                <i class="material-icons">assignment_turned_in</i>
+                                Objetivos Específicos
+                            </h3>
+                            <ul class="proyecto-lista">
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Ofrecer espacios donde el estudiante descubra sus habilidades, competencias e
+                                    intereses
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Realizar talleres para motivar a los estudiantes en la construcción de su proyecto
+                                    de vida
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Generar espacios de reflexión sobre la importancia de un proyecto de vida coherente
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Incentivar el deseo de superación personal mediante el reconocimiento de sus
+                                    potencialidades
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
 
-                        Lo correspondiente a Orientación Vocacional se diseñará de tal forma que abarque
-                        desde grado
-                        cero a
-                        undécimo, realizando actividades periódicas que permitan ir sembrando la
-                        inquietud
-                        en la
-                        población
-                        escolar de la
-                        Institución Educativa desde edades tempranas, para ello se trabajara desde el
-                        área
-                        de ética en
-                        apoyo
-                        con los directores de grado, docentes de la materia y padres de familia, para
-                        ello
-                        se plantean
-                        las
-                        siguientes
-                        actividades:
-                        <br />
-                        • <b>Mis proyectos:</b> Se solicitara un cuaderno que el estudiante manejara
-                        desde
-                        grado cero y
-                        por
-                        el tiempo que permanezca en la IE, donde desarrollara cada año las actividades
-                        que
-                        plantean el
-                        proyecto de
-                        Orientación Vocacional.
-                        <br />
-                        • <b>Intereses de los alumnos:</b> Orientada a la identificación de las
-                        profesiones
-                        u
-                        ocupaciones
-                        que llaman la atención de los estudiantes desde el grado cero en cuyo caso la
-                        intención se
-                        enfoca a
-                        construir un
-                        registro de los cambios que presentan a lo largo de su proceso de crecimiento de
-                        tal
-                        forma que
-                        en
-                        los grados superiores se pueda consolidar de forma más estable sus intereses.
-                        Actividad:
-                        Registrar
-                        la profesión u
-                        ocupación o lo que sueña ser y colocar una imagen de esa profesión, registrando
-                        porque le
-                        interesa.
-                        Esta debe ser renovada cada año pues puede modificarse, si el interés sigue
-                        siendo
-                        el mismo
-                        deben
-                        escribir cuales
-                        son las razones que tienen.
-                        <br />
-                    </p>
-                </div>
+                <!-- ============================================
+                     PROYECTO 3: DIRECCIÓN DE GRADO
+                     ============================================ -->
+                <li id="direccion-grado" class="scrollspy" data-aos="fade-up" data-aos-delay="300">
+                    <div class="collapsible-header proyecto-header">
+                        <div class="header-icon">
+                            <i class="material-icons">school</i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Proyecto de Dirección de Grado</h2>
+                            <p>Acompañamiento pedagógico y formativo</p>
+                        </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-                <!--Cuerpo de articulo-->
-                <div class="col s12 m6">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        • <b>Acercamiento a las Profesiones:</b> Busca que los estudiantes conozcan las
-                        profesiones a
-                        las que pueden tener acceso y abrir su pensamiento frente al futuro y las
-                        posibilidades. <br />
-                        <br />
-                        • <b>Actividad:</b> Durante cada año se trabajara en un grupo de profesiones,
-                        para
-                        hacerlo un
-                        poco dinámico cada periodo se realizara una actividad Conversatorio donde se
-                        invite
-                        a un
-                        profesional para que comparta
-                        información relacionada con la carrera u ocupación, contemplando los siguientes
-                        aspectos:
-                    </p>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="proyecto-card">
+                            <h3 class="yellow-text">
+                                <i class="material-icons">school</i>
+                                Descripción
+                            </h3>
+                            <p class="white-text flow-text">
+                                El proyecto de dirección de grado busca <strong>fortalecer el acompañamiento
+                                    pedagógico</strong>
+                                de los estudiantes en su proceso formativo, promoviendo valores, convivencia y
+                                rendimiento académico.
+                            </p>
 
-                    <ul style=" padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        <li>• Objetivo de la Carrera</li>
-                        <li>• Perfil del Estudiante</li>
-                        <li>• Pensum académico</li>
-                        <li>• Campo de desempeño</li>
-                        <li>• Universidades que la ofrecen</li>
-                        <li>• Formas de financiación</li>
-                        <li>• Demás inquietudes que presenten los estudiantes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                            <h3 class="yellow-text">
+                                <i class="material-icons">track_changes</i>
+                                Estrategias
+                            </h3>
+                            <ul class="proyecto-lista">
+                                <li>
+                                    <i class="material-icons tiny">check_circle</i>
+                                    Seguimiento académico personalizado
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">check_circle</i>
+                                    Acompañamiento en convivencia escolar
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">check_circle</i>
+                                    Comunicación constante con padres de familia
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">check_circle</i>
+                                    Promoción de valores institucionales
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
 
-    <!--Cuerpo de articulo-->
+                <!-- ============================================
+                     PROYECTO 4: ESCUELA DE PADRES
+                     ============================================ -->
+                <li id="escuela-padres" class="scrollspy" data-aos="fade-up" data-aos-delay="400">
+                    <div class="collapsible-header proyecto-header">
+                        <div class="header-icon">
+                            <i class="material-icons">family_restroom</i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Escuela de Padres de Familia</h2>
+                            <p>Fortalecimiento del vínculo familia-escuela</p>
+                        </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-    <div id="direccion-grado" class="scrollspy container">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto de Dirección de Grado</b></h4>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="proyecto-card">
+                            <h3 class="yellow-text">
+                                <i class="material-icons">psychology_alt</i>
+                                Justificación
+                            </h3>
+                            <p class="white-text flow-text">
+                                La <strong>Escuela de Padres</strong> busca fortalecer el vínculo entre la familia y
+                                la institución educativa, brindando herramientas para el acompañamiento efectivo en el
+                                proceso formativo de los estudiantes.
+                            </p>
 
-                <!--linea azul decorativa-->
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
-                <!--Cuerpo de articulo-->
-                <div class="col s12 m6">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500"> Teniendo en cuenta la situaciones vividas por los estudiantes
-                        en
-                        los
-                        diferentes momentos, que como
-                        ser
-                        humano debe compartir y vivenciar tanto en clases, fuera de ellas, en descansos,
-                        en
-                        la familia,
-                        su
-                        comunidad y
-                        otros espacios de acción se evidencia la necesidad de implementar el desarrollo
-                        de
-                        actividades
-                        que
-                        contribuyan al mejoramiento de la convivencia, la cual conlleve a una mejor
-                        calidad
-                        de vida y
-                        formación
-                        integral como
-                        estudiante.
-                        <br />
-                        Los estudiantes deben ser orientados y guiados para transformar con el diálogo,
-                        respeto al otro
-                        y la
-                        solidaridad, participar de manera tal que rindan intelectualmente, según sus
-                        capacidades
-                        individuales,
-                        alcanzando
-                        un legado de valores que le permitan un crecimiento personal, desarrollando
-                        sentido
-                        de
-                        pertenencia
-                        por
-                        su entorno, puesto que es de vital importancia para mejorar su autoestima,
-                        convivencia social y
-                        rendimiento
-                        escolar. <br />
-                        <br />
-                        La dirección de grado es el espacio adecuado para darle cabida a la democracia,
-                        formación
-                        ciudadana,
-                        convivencia escolar, para escuchar inquietudes, sugerencias, conocer sus
-                        dificultades a las
-                        cuales
-                        se
-                        darán
-                        posibles soluciones a través del diálogo y la concertación.<br />
-                        <br />
-                    </p>
-                </div>
+                            <h3 class="yellow-text">
+                                <i class="material-icons">lightbulb</i>
+                                Objetivos
+                            </h3>
+                            <ul class="proyecto-lista">
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Sensibilizar a los padres sobre su rol en la educación de sus hijos
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Brindar herramientas para el manejo de situaciones familiares
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Fortalecer la comunicación familia-institución
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">arrow_right</i>
+                                    Promover la participación activa de los padres
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
 
-                <!--Cuerpo de articulo-->
-                <div class="col s12 m6">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        <b>JUSTIFICACIÓN</b>
-                        <br />
-                        Este proyecto se realiza con el fin de brindar un espacio de encuentro entre el
-                        director de
-                        grado y
-                        sus
-                        estudiantes para analizar temas de interés general, problemáticas que se
-                        presentan
-                        en el ámbito
-                        escolar
-                        y en las
-                        relaciones interpersonales, reforzar valores, dar información sobre actividades
-                        o
-                        decisiones
-                        institucionales, drogadicción, embarazos a temprana edad, proyecto de vida y la
-                        transversalización
-                        de
-                        los diferentes
-                        proyectos pedagógicos. <br />
-                        <br />
-                        <b>OBJETIVOS</b> <br />
-                        <br />
-                        Fomentar y afianzar valores, en los estudiantes para fortalecer su formación
-                        integral como
-                        miembro
-                        activo de la institución.
-                        <br />
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id=" escuela-padres" class="scrollspy container">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto de Escuela para Padres</b></h4>
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
-            </div>
-            <div class="col s12 m5 offset-l2 ">
+                <!-- ============================================
+                     PROYECTO 5: ATENCIÓN A PADRES
+                     ============================================ -->
+                <li id="atencion-padres" class="scrollspy" data-aos="fade-up" data-aos-delay="500">
+                    <div class="collapsible-header proyecto-header">
+                        <div class="header-icon">
+                            <i class="material-icons">support_agent</i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Atención a Padres de Familia</h2>
+                            <p>Seguimiento y comunicación efectiva</p>
+                        </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-                <!--linea azul decorativa-->
-                <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    Desarrollar procesos educativos de calidad exige la creación y promoción de
-                    espacios
-                    donde, no
-                    solamente
-                    los estudiantes, sino además los padres de familia y la comunidad en general,
-                    tengan
-                    la
-                    posibilidad
-                    de
-                    construir aprendizajes a partir de cada una de las vivencias que de manera
-                    paulatina
-                    se generan
-                    en
-                    el
-                    diálogo continuo con el otro. Pensar en el qué, el para qué y el cómo de aquel
-                    pilar
-                    de la
-                    educación
-                    donde Jacques
-                    Delors hace referencia a la necesidad de orientar desde el entorno escolar el
-                    “Aprender a
-                    Convivir”,
-                    nos
-                    enfrenta como profesionales de la educación a un gran desafío que implica
-                    proyectar
-                    estrategias
-                    que
-                    involucren
-                    al estudiante en un proceso de autoconocimiento, pero a la vez de conocimiento
-                    del
-                    otro, desde
-                    una
-                    perspectiva que hable de la integralidad del ser humano como ser social y que
-                    otorgue un nuevo
-                    sentido
-                    al rol que
-                    está llamada a desempeñar la familia como aquel espacio de promoción de valores
-                    y
-                    actitudes
-                    tendientes a
-                    favorecer la vida en comunidad de cada individuo.
-                </p>
-            </div>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="proyecto-card">
+                            <h3 class="yellow-text">
+                                <i class="material-icons">date_range</i>
+                                Estrategias de Implementación
+                            </h3>
+                            <ul class="proyecto-lista">
+                                <li>
+                                    <i class="material-icons tiny">event</i>
+                                    Promover la asistencia constante de los padres a las jornadas de atención según
+                                    cronograma
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">assignment</i>
+                                    Realizar seguimiento continuo a la asistencia mediante formato diseñado
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">phone</i>
+                                    Establecer relación directa con padres de estudiantes con dificultades
+                                </li>
+                                <li>
+                                    <i class="material-icons tiny">campaign</i>
+                                    Generar estrategias que motiven la asistencia de los padres
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
 
-            <!--Cuerpo de articulo-->
-            <div class=" col s12 m5">
-                <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    A la luz del lema “Las Tics transforman el mundo; úsalas adecuadamente para
-                    transformar tu vida”
-                    y
-                    partiendo de las ideas planteadas anteriormente, para el presente año, en el
-                    marco
-                    del Proyecto
-                    Transversal de
-                    “Educación sexual para la construcción de ciudadanía”, se ha planteado un
-                    trabajo
-                    orientado a
-                    dar
-                    continuidad a los procesos de apoyo y orientación tanto a estudiantes como a
-                    padres
-                    de familia
-                    en
-                    torno
-                    al estudio y
-                    reflexión acerca de diversas temáticas seleccionadas a partir de la
-                    participación
-                    directa de la
-                    comunidad.
-                    <br>
-                    Con la aplicación de encuestas dirigidas tanto a padres de familia como a
-                    estudiantes, el grupo
-                    de
-                    trabajo ha podido detectar dentro de la población, un interés creciente en el
-                    estudio de las
-                    siguientes temáticas
-                    distribuidas por grados y cursos así: <br />
-                </p>
-                <ul style=" padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    <li>• Nivel de Preescolar y grado 1: Comunicación Padres e Hijos.</li>
-                    <li>• Grados 2° a 5°: Proyecto de vida.</li>
-                    <li>• Nivel de Educación Básica Secundaria y Media: Manejos de TICS.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                <!-- ============================================
+                     PROYECTO 6: APROVECHAMIENTO DEL TIEMPO LIBRE
+                     ============================================ -->
+                <li id="tiempo-libre" class="scrollspy" data-aos="fade-up" data-aos-delay="600">
+                    <div class="collapsible-header proyecto-header">
+                        <div class="header-icon">
+                            <i class="material-icons">sports_soccer</i>
+                        </div>
+                        <div class="header-content">
+                            <h2>Aprovechamiento del Tiempo Libre</h2>
+                            <p>Recreación y deporte para el desarrollo integral</p>
+                        </div>
+                        <i class="material-icons expand-icon">expand_more</i>
+                    </div>
 
-    <div id="atencion-padres" class=" scrollspy container">
-        <div class="row">
-            <!--titulo de articulo-->
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto Institucional de Atención a Padres de Familia</b>
-                </h4>
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
-            </div>
+                    <div class="collapsible-body proyecto-body">
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <div class="proyecto-card">
+                                    <h3 class="yellow-text">
+                                        <i class="material-icons">info</i>
+                                        Contexto
+                                    </h3>
+                                    <p class="white-text">
+                                        La juventud actual atraviesa por diferentes situaciones que dispersan la
+                                        atención
+                                        en actividades inoficiosas y poco productivas, como el <strong>mal uso del
+                                            celular
+                                            y los videojuegos</strong>.
+                                    </p>
+                                    <p class="white-text">
+                                        De otra parte, algunas situaciones de índole familiar afectan emocional y
+                                        actitudinalmente a los estudiantes.
+                                    </p>
+                                    <p class="white-text">
+                                        Se hace necesario implementar diferentes actividades que motiven y vinculen a
+                                        los
+                                        estudiantes de manera activa y participativa, desarrollando todas sus
+                                        potencialidades
+                                        y aprendiendo a emplear el <strong>tiempo libre de forma provechosa y
+                                            recreativa</strong>.
+                                    </p>
+                                </div>
+                            </div>
 
-            <div class="col s12 l5 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    La integración del colegio y la familia permite una coherencia en la información
-                    y
-                    educación que
-                    se
-                    imparte y, por tanto, en la construcción y puesta en práctica de un proyecto
-                    común.
-                    La comunidad
-                    debe tener una alta
-                    participación en la vida institucional, y dentro de ella, en el proceso de
-                    enseñanza
-                    aprendizaje
-                    de
-                    sus hijos, para poder realizar acciones conjuntas que propendan por el éxito
-                    escolar
-                    y el
-                    desarrollo
-                    personal de
-                    todos los estudiantes.
-                    <br />
-                    En nuestra comunidad se puede observar desinterés por conocer y apoyar el
-                    progreso o
-                    dificultades
-                    que presentan los estudiantes, en un buen número de padres de familia, unido a
-                    ese
-                    aspecto hay
-                    una
-                    serie de
-                    limitaciones y riesgos en la relación y la colaboración entre la familia y el
-                    centro
-                    educativo
-                    que
-                    tienen que ver con:
-                    <br />
+                            <div class="col s12 m6">
+                                <div class="proyecto-card">
+                                    <h3 class="yellow-text">
+                                        <i class="material-icons">emoji_events</i>
+                                        Objetivo General
+                                    </h3>
+                                    <p class="white-text">
+                                        Brindar a los estudiantes un <strong>espacio de esparcimiento y aprovechamiento
+                                            del tiempo libre</strong> en la práctica recreo-deportiva durante los
+                                        descansos
+                                        en los diferentes espacios que ofrece la institución.
+                                    </p>
 
+                                    <h3 class="yellow-text">
+                                        <i class="material-icons">track_changes</i>
+                                        Objetivos Específicos
+                                    </h3>
+                                    <ul class="proyecto-lista">
+                                        <li>
+                                            <i class="material-icons tiny">directions_run</i>
+                                            Promover en los estudiantes la práctica de la actividad física
+                                        </li>
+                                        <li>
+                                            <i class="material-icons tiny">schedule</i>
+                                            Fomentar en la comunidad educativa el aprovechamiento del tiempo libre
+                                        </li>
+                                        <li>
+                                            <i class="material-icons tiny">sports</i>
+                                            Incentivar la práctica del juego limpio y el cumplimiento de normas
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
-                <ul style=" padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    <li>• Su trabajo, dentro y fuera de la casa, tienen poco tiempo para dedicarle a
-                        la
-                        educación de
-                        sus
-                        hijos.</li>
-                    <li>• La incomodidad que sienten muchos padres con respecto al centro y deciden
-                        no
-                        acudir.</li>
-                    <li>• La creencia de muchos profesores que no es su obligación la de organizar
-                        actividades para
-                        los
-                        padres.</li>
-                    <li>• La insuficiencia de recursos materiales y personales para llegar a
-                        conseguir
-                        la
-                        participación
-                        familiar en la escuela.</li>
-                </ul>
-                </p>
-            </div>
-            <div class=" col s12 m5">
-                <p class="white-text"  data-aos="fade-right" data-aos-duration="2500" style="font-size: 24px;">
-                    Esto genera poco contacto con la institución educativa, generalmente la relación
-                    docente padres
-                    de
-                    familia se limita a la entrega de boletines, organización de algún evento
-                    social, o
-                    citaciones
-                    que
-                    hacen los docentes
-                    <br />
-                    Por lo tanto, se hace necesario buscar un espacio para permitir a los padres de
-                    familia y a los
-                    docentes tener una comunicación más ágil y fluida sobre el proceso académico y
-                    disciplinario de
-                    los
-                    estudiantes que
-                    facilitaría acciones en la solución oportuna de las situaciones problemáticas
-                    que se
-                    presentan.
-                    <br />
-
-                <h5>OBJETIVO GENERAL</h5>
-                <ul style=" padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    <li>•Informar detalladamente a los padres acerca del comportamiento
-                        disciplinario y
-                        el desempeño
-                        académico en las diferentes áreas.
-                    </li>
-                </ul>
-                <h5>OBJETIVOS ESPECIFICOS</h5>
-                <ul style=" padding-left: 25px; font-size: 24px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    <li>• Promover la asistencia constante de los padres de familia a las jornadas
-                        de
-                        atención a
-                        padres
-                        según el cronograma establecido por la institución.</li>
-                    <li>• Realizar seguimiento continuo a la asistencia de atención a padres
-                        mediante el
-                        formato
-                        diseñado para tal fin.</li>
-                    <li>• Establecer una relación directa con los padres de familia de los
-                        estudiantes
-                        que presenten
-                        dificultades académicas y disciplinarias.</li>
-                    <li>• Generar estrategias que motiven la asistencia de los padres.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="tiempo-libre" class="scrollspy container">
-        <div class="row">
-            <!--titulo de articulo-->
-            <div class="col s12 l10 offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <h4 class="yellow-text"  data-aos="fade-right" data-aos-duration="2500"><b>Proyecto de Aprovechamiento del Tiempo Libre</b></h4>
-                <div class="col s12 green darken-4" style="font-size: 6px;"><br /></div>
-            </div>
-
-            <div class="col s12  offset-l2 center"  data-aos="fade-left" data-aos-duration="2500">
-                <!--linea azul decorativa-->
-                <div class=" col s12 m5">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500" style="font-size: 24px;">
-                        La juventud actual, atraviesa por diferentes situaciones que dispersan la
-                        atención en otras
-                        actividades inoficiosas y poco productivas. Es el caso del mal uso del
-                        celular y
-                        los video
-                        juegos.
-                        De otra parte, algunas
-                        situaciones de índole familiar que los afecta emocional y actitudinal a los
-                        estudiantes.
-                        <br />
-                        Con base en lo anterior se hace necesario implementar diferentes actividades
-                        que
-                        motiven y
-                        vinculen
-                        a los estudiantes de una manera activa y participativa, desarrollando todas
-                        sus
-                        potencialidades y
-                        aprendan a emplear
-                        el tiempo libre de forma provechosa y recreativa. <br />
-
-                    </p>
-                </div>
-                <div class=" col s12 m5" style="font-size: 24px; text-align: justify;">
-                    <p class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                    <h5>OBJETIVO GENERAL</h5>
-                    Brindar a los estudiantes un espacio de esparcimiento y aprovechamiento del
-                    tiempo
-                    libre en
-                    la
-                    práctica recreo deportivo durante los descansos en los diferentes espacios que
-                    ofrece la
-                    institución.
-                    <br />
-                    <h5>OBJETIVOS ESPECIFICOS</h5>
-                    </p>
-                    <ul style=" padding-left: 25px;" class="white-text"  data-aos="fade-right" data-aos-duration="2500">
-                        <li>• Promover en los estudiantes la práctica de la actividad física.</li>
-                        <br />
-                        <li>• Fomentar en la comunidad educativa el aprovechamiento del tiempo
-                            libre.
-                        </li>
-                        <br />
-                        <li>• Incentivar la práctica del juego limpio y el cumplimiento de normas.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- cierre de Contents-->
-
-<!-- Table of Contents -->
-<div class=" col hide-on-small-only m3">
-    <div class="toc-wrapper pinned">
-        <div style="height: 1px;">
-            <ul class=" table-of-contents">
-                <li><a href="#democracia">Democracia y derecho humanos</a></li>
-                <li style="padding-left: 30px;"><a href="#competencias">Competencias a
-                        desarrollar </a></li>
-                <li><a href="#orientacion">Vida y orientación vocacional</a></li>
-                <li><a href="#direccion-grado">Dirección de grado</a></li>
-                <li><a href="#escuela-padres">Escuela de padres de familia</a></li>
-                <li><a href="#atencion-padres">Atención a padres de familia</a></li>
-                <li><a href="#tiempo-libre">Aprovechamiento del tiempo libre</a></li>
             </ul>
+
         </div>
+    </section>
+
+</main>
+
+<!-- ============================================
+     TABLE OF CONTENTS (SCROLLSPY)
+     ============================================ -->
+<aside class="col hide-on-small-only m3 pinned" data-aos="fade-left" role="navigation"
+    aria-label="Navegación de proyectos">
+    <div class="toc-wrapper">
+        <h5 class="toc-title yellow-text">
+            <i class="material-icons">list</i>
+            Proyectos
+        </h5>
+        <ul class="table-of-contents">
+            <li><a href="#democracia">
+                    <i class="material-icons tiny">how_to_vote</i> Democracia y DDHH
+                </a></li>
+            <li style="padding-left: 30px;"><a href="#competencias">
+                    <i class="material-icons tiny">psychology</i> Competencias
+                </a></li>
+            <li><a href="#orientacion">
+                    <i class="material-icons tiny">explore</i> Orientación Vocacional
+                </a></li>
+            <li><a href="#direccion-grado">
+                    <i class="material-icons tiny">school</i> Dirección de Grado
+                </a></li>
+            <li><a href="#escuela-padres">
+                    <i class="material-icons tiny">family_restroom</i> Escuela de Padres
+                </a></li>
+            <li><a href="#atencion-padres">
+                    <i class="material-icons tiny">support_agent</i> Atención a Padres
+                </a></li>
+            <li><a href="#tiempo-libre">
+                    <i class="material-icons tiny">sports_soccer</i> Tiempo Libre
+                </a></li>
+        </ul>
     </div>
-</div>
-</div>
+</aside>
 
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script src="js/materialize.min.js"></script>
+     
 <script>
+    // Inicializar collapsible
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems, {
+            accordion: false // Permite abrir múltiples a la vez
+        });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
+        // Abrir el primero por defecto
+        var instance = M.Collapsible.getInstance(elems[0]);
+        if (instance) {
+            instance.open(0);
+        }
     });
 
-    // JavaScript para cambiar el fondo dependiendo de la sección visible
-    document.addEventListener("scroll", function () {
-        const sections = document.querySelectorAll(".section");
-        const scrollPosition = window.scrollY;
-
-        sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop - 20;
-            const sectionHeight = section.offsetHeight;
-
-            if (
-                scrollPosition >= sectionTop &&
-                scrollPosition < sectionTop + sectionHeight
-            ) {
-                switch (index) {
-                    case 0:
-                        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
-                        break;
-                    case 1:
-                        document.body.style.backgroundImage = "url('./images/parallax/10.jpg')";
-                        break;
-                    case 2:
-                        document.body.style.backgroundImage = "url('./images/parallax/17.jpg')";
-                        break;
-                    case 3:
-                        document.body.style.backgroundImage = "url('./images/parallax/6.jpg')";
-                        break;
-                    default:
-                        break;
-                }
-            }
+    // ScrollSpy
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(elems, {
+            scrollOffset: 100
         });
     });
 
-     document.addEventListener("scroll", function () {
-        const toc = document.querySelector(".pinned"); // Scrollspy
+    // Background dinámico
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";
+        document.body.style.transition = "background-image 0.8s ease-in-out";
+    });
+
+    // Ocultar TOC al llegar al footer
+    document.addEventListener("scroll", function () {
+        const toc = document.querySelector(".pinned");
         const footer = document.querySelector("footer");
+
+        if (!toc || !footer) return;
 
         const footerTop = footer.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
 
-        // Si el footer entra en pantalla, ocultamos el menú
         if (footerTop < viewportHeight) {
             toc.classList.add("hidden");
         } else {
@@ -720,12 +570,19 @@ include('includes/header.php'); ?>
         }
     });
 
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.scrollspy');
-        var instances = M.ScrollSpy.init(elems);
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 </script>
-
 
 <?php include('includes/footer.php'); ?>

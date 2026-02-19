@@ -1,0 +1,761 @@
+/* ============================================
+   PROYECTOS.PHP - ESTILOS PERSONALIZADOS
+   Página de proyectos institucionales
+   ============================================ */
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --color-verde: #056245;
+  --color-amarillo: #ffc400;
+  --color-verde-hover: #044535;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --gradient-verde: linear-gradient(135deg, #056245, #044535);
+}
+
+/* ============================================
+   PÁGINA GENERAL
+   ============================================ */
+.proyectos-page {
+  min-height: 100vh;
+}
+
+/* ============================================
+   HEADER DE LA PÁGINA
+   ============================================ */
+.proyectos-header {
+  padding: 80px 0 60px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.titulo-principal::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-amarillo),
+    transparent
+  );
+}
+
+.titulo-principal i {
+  font-size: 4rem !important;
+  animation: rotate-slow 6s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.subtitulo-pagina {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  line-height: 1.8;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   SECCIÓN DE PROYECTOS
+   ============================================ */
+.proyectos-section {
+  padding: 60px 0 100px 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ============================================
+   COLLAPSIBLE - ESTRUCTURA GENERAL
+   ============================================ */
+.proyectos-collapsible {
+  border: none;
+  box-shadow: none;
+}
+
+.proyectos-collapsible > li {
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 2px solid rgba(255, 196, 0, 0.3);
+  background: rgba(5, 98, 69, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all var(--transition-smooth);
+}
+
+.proyectos-collapsible > li:hover {
+  border-color: var(--color-amarillo);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.proyectos-collapsible > li.active {
+  border-color: var(--color-amarillo);
+  box-shadow: 0 15px 40px rgba(255, 196, 0, 0.4);
+}
+
+/* ============================================
+   COLLAPSIBLE HEADER (CLICKEABLE)
+   ============================================ */
+.proyecto-header {
+  background: var(--gradient-verde) !important;
+  padding: 25px 30px !important;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-bottom: 3px solid var(--color-amarillo);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo al pasar el mouse */
+.proyecto-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+}
+
+.proyecto-header:hover::before {
+  opacity: 1;
+  animation: shine-move 1.5s infinite;
+}
+
+@keyframes shine-move {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.proyecto-header:hover {
+  background: linear-gradient(135deg, #044535, #056245) !important;
+  padding-left: 40px !important;
+}
+
+.proyecto-header.active {
+  background: linear-gradient(
+    135deg,
+    var(--color-amarillo),
+    #ffb700
+  ) !important;
+}
+
+.proyecto-header.active h2,
+.proyecto-header.active p {
+  color: var(--color-verde) !important;
+}
+
+.proyecto-header.active .header-icon i {
+  color: var(--color-verde) !important;
+}
+
+/* Icono del header */
+.header-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 196, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-amarillo);
+  transition: all var(--transition-smooth);
+}
+
+.proyecto-header:hover .header-icon {
+  transform: scale(1.1) rotate(10deg);
+  background: rgba(255, 196, 0, 0.4);
+}
+
+.proyecto-header.active .header-icon {
+  background: var(--color-verde);
+  border-color: var(--color-verde);
+}
+
+.header-icon i {
+  font-size: 2.5rem !important;
+  color: var(--color-amarillo);
+  transition: all var(--transition-smooth);
+}
+
+/* Contenido del header */
+.header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-content h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.header-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+/* Icono de expandir */
+.expand-icon {
+  flex-shrink: 0;
+  font-size: 2.5rem !important;
+  color: var(--color-amarillo);
+  transition: transform var(--transition-smooth);
+}
+
+.proyecto-header.active .expand-icon {
+  transform: rotate(180deg);
+  color: var(--color-verde) !important;
+}
+
+/* ============================================
+   COLLAPSIBLE BODY (CONTENIDO)
+   ============================================ */
+.proyecto-body {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px 30px !important;
+  border: none !important;
+}
+
+/* ============================================
+   PROYECTO CARDS (CONTENIDO INTERNO)
+   ============================================ */
+.proyecto-card {
+  background: rgba(5, 98, 69, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--color-amarillo);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  transition: all var(--transition-smooth);
+}
+
+.proyecto-card:hover {
+  transform: translateX(10px);
+  border-left-width: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(5, 98, 69, 0.3);
+}
+
+.proyecto-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proyecto-card h3 i {
+  font-size: 2rem !important;
+}
+
+.proyecto-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
+}
+
+.proyecto-card p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.proyecto-card strong {
+  color: var(--color-amarillo);
+  font-weight: 700;
+}
+
+/* ============================================
+   LISTAS DE PROYECTOS
+   ============================================ */
+.proyecto-lista {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.proyecto-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border-left: 3px solid var(--color-verde);
+  transition: all var(--transition-smooth);
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.proyecto-lista li:hover {
+  background: rgba(255, 196, 0, 0.1);
+  border-left-color: var(--color-amarillo);
+  border-left-width: 5px;
+  transform: translateX(5px);
+}
+
+.proyecto-lista li i {
+  color: var(--color-verde);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.proyecto-lista li:hover i {
+  color: var(--color-amarillo);
+}
+
+/* ============================================
+   CARD DE COMPETENCIAS (ESPECIAL)
+   ============================================ */
+.competencias-card {
+  background: rgba(255, 196, 0, 0.1);
+  border-left-color: var(--color-amarillo);
+  border-width: 3px;
+  margin-top: 40px;
+}
+
+.competencias-card h3 {
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.competencia-item {
+  background: rgba(5, 98, 69, 0.3);
+  padding: 25px;
+  border-radius: 15px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 196, 0, 0.2);
+  transition: all var(--transition-smooth);
+}
+
+.competencia-item:hover {
+  border-color: var(--color-amarillo);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 196, 0, 0.3);
+}
+
+.competencia-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.competencia-icon i {
+  font-size: 4rem !important;
+  color: var(--color-amarillo);
+  filter: drop-shadow(0 4px 12px rgba(255, 196, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.competencia-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.competencia-item ul {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.competencia-item ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.competencia-item ul li:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+.pinned {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  z-index: 1000;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.pinned.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+aside{
+  width: 250px;
+
+}
+.toc-wrapper {
+  background: rgba(5, 98, 69, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-card);
+  border: 3px solid var(--color-amarillo);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  width: 250px;
+}
+
+.toc-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid var(--color-amarillo);
+  padding-bottom: 15px;
+}
+
+.toc-title i {
+  font-size: 1.8rem !important;
+}
+
+.table-of-contents a {
+  color: white !important;
+  font-size: 1rem;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 5px 0;
+}
+
+.table-of-contents a:hover {
+  background: rgba(255, 196, 0, 0.2);
+  transform: translateX(8px);
+  padding-left: 22px;
+}
+
+.table-of-contents a.active {
+  background: var(--color-amarillo);
+  color: var(--color-verde) !important;
+  font-weight: 700;
+  border-left: 5px solid var(--color-verde);
+}
+
+.table-of-contents i {
+  font-size: 1.2rem !important;
+}
+
+/* ============================================
+   FLOW TEXT (RESPONSIVE)
+   ============================================ */
+.flow-text {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+  .titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .proyecto-header {
+    padding: 20px !important;
+    gap: 15px;
+  }
+
+  .header-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-icon i {
+    font-size: 2rem !important;
+  }
+
+  .header-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .proyecto-body {
+    padding: 30px 20px !important;
+  }
+
+  .proyecto-card {
+    padding: 20px;
+  }
+
+  .competencia-item {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+  .proyectos-header {
+    padding: 60px 0 40px 0;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .titulo-principal i {
+    font-size: 2.5rem !important;
+  }
+
+  .subtitulo-pagina {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .proyectos-collapsible > li {
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+
+  .proyecto-header {
+    padding: 15px !important;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .header-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header-icon i {
+    font-size: 1.8rem !important;
+  }
+
+  .header-content {
+    flex: 1 1 calc(100% - 100px);
+    min-width: 150px;
+  }
+
+  .header-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .header-content p {
+    font-size: 0.85rem;
+  }
+
+  .expand-icon {
+    font-size: 2rem !important;
+  }
+
+  .proyecto-body {
+    padding: 20px 15px !important;
+  }
+
+  .proyecto-card {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .proyecto-card h3 {
+    font-size: 1.3rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .proyecto-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .proyecto-card p {
+    font-size: 1rem;
+  }
+
+  .proyecto-lista li {
+    font-size: 0.95rem;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .competencia-item {
+    padding: 20px 15px;
+  }
+
+  .competencia-icon i {
+    font-size: 3rem !important;
+  }
+
+  .competencia-item h4 {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .flow-text {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   ANIMACIONES ADICIONALES
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.proyectos-collapsible > li {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.proyectos-collapsible > li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.proyectos-collapsible > li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.proyectos-collapsible > li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.proyectos-collapsible > li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.proyectos-collapsible > li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.proyectos-collapsible > li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+.proyecto-header:focus {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 4px;
+}
+
+/* ============================================
+   OPTIMIZACIONES DE RENDIMIENTO
+   ============================================ */
+.proyecto-header,
+.proyecto-card,
+.competencia-item {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .pinned,
+  .expand-icon {
+    display: none;
+  }
+
+  .proyecto-header {
+    background: white !important;
+    color: black !important;
+  }
+
+  .proyectos-collapsible > li {
+    page-break-inside: avoid;
+  }
+}

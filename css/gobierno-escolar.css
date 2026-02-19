@@ -1,0 +1,653 @@
+/* ============================================
+   GOBIERNO-ESCOLAR.PHP - CSS PREMIUM
+   Página de gobierno escolar con tabs
+   ============================================ */
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --color-verde: #056245;
+  --color-amarillo: #ffc400;
+  --color-verde-hover: #044535;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   PÁGINA GENERAL
+   ============================================ */
+.gobierno-page {
+  min-height: 100vh;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.gobierno-header {
+  padding: 80px 0 60px 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);*/
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.titulo-principal::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-amarillo),
+    transparent
+  );
+}
+
+.titulo-principal i {
+  font-size: 4rem !important;
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.subtitulo-pagina {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  line-height: 1.8;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   TABS SECTION
+   ============================================ */
+.tabs-section {
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Tabs compactos al hacer scroll */
+.tabs-section.scrolled {
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.tabs-section.scrolled .tabs-gobierno .tab a {
+  padding: 12px 10px !important;
+  font-size: 0.8rem;
+}
+
+.tabs-section.scrolled .tabs-gobierno .tab a i {
+  font-size: 1.5rem !important;
+}
+
+.tabs-section.scrolled .tabs-gobierno .tab a span {
+  display: none;
+}
+
+/* Tabs de Materialize personalizados */
+.tabs-gobierno {
+  background: rgba(5, 98, 69, 0.3);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 196, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* CENTRAR TABS */
+  max-width: 900px; /* LIMITAR ANCHO */
+  margin: 0 auto; /* CENTRAR CONTENEDOR */
+}
+
+.tabs-gobierno .tab {
+  flex: 1;
+  min-width: 150px;
+}
+
+.tabs-gobierno .tab a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px !important;
+  transition: all var(--transition-smooth);
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.tabs-gobierno .tab a:hover {
+  background: rgba(255, 196, 0, 0.2);
+  color: var(--color-amarillo) !important;
+}
+
+.tabs-gobierno .tab a.active {
+  background: rgba(255, 196, 0, 0.2);
+  color: var(--color-amarillo) !important;
+  font-weight: 700;
+}
+
+.tabs-gobierno .tab a i {
+  font-size: 2rem !important;
+  transition: transform var(--transition-smooth);
+}
+
+.tabs-gobierno .tab a:hover i,
+.tabs-gobierno .tab a.active i {
+  transform: scale(1.15);
+}
+
+/* Indicador del tab */
+.tabs .indicator {
+  background-color: transparent !important;
+}
+
+/* ============================================
+   TAB CONTENT
+   ============================================ */
+.tab-content {
+  padding: 80px 0 100px 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);*/
+}
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-amarillo),
+    transparent
+  );
+}
+
+.section-title i {
+  font-size: 3rem !important;
+}
+
+/* ============================================
+   GRID DE MIEMBROS
+   ============================================ */
+.miembros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 990px; /* 3 * 300 + gaps */
+  margin: 0 auto;
+}
+
+.miembro-item {
+  width: 300px;
+}
+
+
+
+/* ============================================
+   CARDS DE MIEMBROS
+   ============================================ */
+.miembro-card {
+  background: rgba(5, 98, 69, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 3px solid rgba(255, 196, 0, 0.3);
+  transition: all var(--transition-smooth);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.miembro-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-amarillo);
+}
+
+/* Card destacado (Directivos) */
+.miembro-card.destacado {
+  border-width: 4px;
+  background: rgba(255, 196, 0, 0.1);
+}
+
+.miembro-card.destacado:hover {
+  background: rgba(255, 196, 0, 0.15);
+}
+
+/* Card estudiantes */
+.miembro-card.estudiante {
+  border-color: rgba(0, 217, 255, 0.3);
+}
+
+.miembro-card.estudiante:hover {
+  border-color: #00d9ff;
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+}
+
+/* ============================================
+   FOTO DEL MIEMBRO
+   ============================================ */
+.miembro-foto-wrapper {
+  position: relative;
+  padding: 40px 40px 20px 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(5, 98, 69, 0.3), transparent);
+}
+
+.miembro-foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--color-amarillo);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-smooth);
+  background: white;
+}
+
+.miembro-card:hover .miembro-foto {
+  transform: scale(1.1);
+  border-width: 6px;
+  box-shadow: 0 12px 35px rgba(255, 196, 0, 0.5);
+}
+
+/* Badge para directivos destacados */
+.miembro-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-amarillo), #ffb700);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 196, 0, 0.5);
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(255, 196, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(255, 196, 0, 0.8);
+  }
+}
+
+.miembro-badge i {
+  font-size: 1.8rem !important;
+  color: var(--color-verde);
+}
+
+/* Grado para estudiantes */
+.miembro-grado {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.5);
+}
+
+/* ============================================
+   INFO DEL MIEMBRO
+   ============================================ */
+.miembro-info {
+  padding: 20px 30px 30px 30px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.miembro-nombre {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miembro-cargo {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 60px;
+  flex-wrap: wrap;
+}
+
+.miembro-cargo i {
+  color: var(--color-verde);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+  .titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .tabs-section {
+    top: 56px;
+  }
+
+  .tabs-gobierno .tab a {
+    padding: 15px 10px !important;
+    font-size: 0.85rem;
+  }
+
+  .tabs-gobierno .tab a i {
+    font-size: 1.8rem !important;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .miembro-foto {
+    width: 140px;
+    height: 140px;
+  }
+
+  .miembro-nombre {
+    font-size: 1.2rem;
+    min-height: 50px;
+  }
+
+  .miembro-cargo {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+  .gobierno-header {
+    padding: 60px 0 40px 0;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .titulo-principal i {
+    font-size: 2.5rem !important;
+  }
+
+  .subtitulo-pagina {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .tabs-section {
+    padding: 20px 0;
+    position: sticky;
+    top: 56px;
+  }
+
+  .tabs-section.scrolled {
+    padding: 10px 0;
+  }
+
+  .tabs-gobierno {
+    flex-direction: row; /* MANTENER HORIZONTAL */
+    border-radius: 10px;
+    max-width: 100%;
+    overflow-x: auto; /* SCROLL HORIZONTAL SI ES NECESARIO */
+    justify-content: flex-start; /* ALINEAR AL INICIO EN MOBILE */
+  }
+
+  .tabs-gobierno .tab {
+    flex: 0 0 auto; /* NO CRECER, TAMAÑO FIJO */
+    min-width: 80px; /* ANCHO MÍNIMO */
+  }
+
+  .tabs-gobierno .tab a {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px !important;
+    gap: 5px;
+  }
+
+  .tabs-gobierno .tab a i {
+    font-size: 1.8rem !important;
+  }
+
+  .tabs-gobierno .tab a span {
+    font-size: 0.7rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Tabs scrolled en mobile */
+  .tabs-section.scrolled .tabs-gobierno .tab a {
+    padding: 10px 8px !important;
+  }
+
+  .tabs-section.scrolled .tabs-gobierno .tab a i {
+    font-size: 1.5rem !important;
+  }
+
+  .tabs-section.scrolled .tabs-gobierno .tab a span {
+    font-size: 0.65rem;
+  }
+
+  .tab-content {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .section-title i {
+    font-size: 2rem !important;
+  }
+
+  .miembro-card {
+    margin-bottom: 20px;
+    width: 100%; /* ANCHO COMPLETO DE LA COLUMNA */
+  }
+
+  .miembro-foto-wrapper {
+    padding: 30px 20px 15px 20px;
+  }
+
+  .miembro-foto {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+
+  .miembro-badge {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .miembro-badge i {
+    font-size: 1.5rem !important;
+  }
+
+  .miembro-grado {
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .miembro-info {
+    padding: 15px 20px 25px 20px;
+  }
+
+  .miembro-nombre {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .miembro-cargo {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.miembro-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+.tabs-gobierno .tab a:focus {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 4px;
+}
+
+.miembro-card:focus-within {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 4px;
+}
+
+/* ============================================
+   OPTIMIZACIONES
+   ============================================ */
+.miembro-card,
+.miembro-foto,
+.miembro-badge {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   SCROLL SUAVE
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .tabs-section {
+    display: none;
+  }
+
+  .miembro-card {
+    page-break-inside: avoid;
+    border: 1px solid #000;
+  }
+
+  .miembro-foto {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

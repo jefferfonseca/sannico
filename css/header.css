@@ -1,97 +1,203 @@
-@font-face {
-  font-family: Avenir;
-  src: url(./../assets/fonts/FontsFree-Net-Avenir-Light.woff);
+/* ============================================
+   VARIABLES CSS PARA CONSISTENCIA
+   ============================================ */
+:root {
+  --verde-principal: #056245;
+  --amarillo-acento: #ffc400d5;
+  --verde-hover: #97ab97;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-elegant: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* ============================================
+   TRANSICIONES SUAVES GLOBALES
+   ============================================ */
 header * {
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+  transition: var(--transition-elegant) !important;
 }
 
-
-
+/* ============================================
+   BARRA DE NAVEGACIÓN PRINCIPAL
+   ============================================ */
 .nav * {
-  background: #056245 !important;
+  background: var(--verde-principal) !important;
   color: #fff !important;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+  transition: var(--transition-elegant) !important;
 }
 
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
 .dropdown-content {
   min-height: max-content !important;
+  box-shadow: var(--shadow-elevated);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
 }
 
 .dropdown-content li > a {
   font-size: 14px !important;
+  padding: 14px 16px !important;
+  transition: var(--transition-smooth) !important;
+}
+
+/* Efecto hover mejorado en dropdown */
+.dropdown-content li > a:hover {
+  background: var(--verde-hover) !important;
+  color: var(--verde-principal) !important;
+  padding-left: 24px !important;
+  font-weight: 600;
+}
+
+/* ============================================
+   NAVEGACIÓN - HOVER STATES
+   ============================================ */
+.nav ul li a {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover mejorado con subrayado animado */
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--amarillo-acento);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nav ul li a:hover {
-  color: #056245 !important;
-  background: #97ab97 !important; /* fallback for old browsers */
+  color: var(--verde-principal) !important;
+  background: var(--verde-hover) !important;
   font-size: 15px;
   font-weight: 600;
-  border-bottom: 3px ridge #ffc400d5;
+  transform: translateY(-2px);
+}
+
+.nav ul li a:hover::after {
+  width: 80%;
 }
 
 .nav ul li a:hover i {
-  color: #056245 !important;
-  background: #97ab97 !important; /* fallback for old browsers */
+  color: var(--verde-principal) !important;
+  background: var(--verde-hover) !important;
   font-size: 15px;
   font-weight: 600;
+  transform: rotate(180deg);
 }
+
+/* ============================================
+   ITEM ACTIVO EN NAVEGACIÓN
+   ============================================ */
 nav ul li.active a {
-  color: #ffffff; /* Color del texto del enlace activo */
-  font-weight: bold; /* Aumenta el grosor del texto */
-  background: linear-gradient(
-    90deg,
-    #ff562244,
-    #ff980044
-  ) !important; /* Fondo degradado */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-  border-bottom: 3px ridge #ffc400d5;
+  color: #ffffff !important;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff562244, #ff980044) !important;
+  border-radius: 8px;
+  border-bottom: 3px solid var(--amarillo-acento);
+  transform: scale(1.05);
 }
+
+/* ============================================
+   CLASES UTILITARIAS
+   ============================================ */
 .green {
-  background-color: #056245 !important;
+  background-color: var(--verde-principal) !important;
 }
+
 .green-line {
-  background-color: #056245 !important;
+  background-color: var(--verde-principal) !important;
   min-height: 5px;
+  box-shadow: 0 2px 4px rgba(5, 98, 69, 0.3);
 }
+
 .m-0 {
   margin: 0 !important;
 }
+
 .p-0 {
   padding: 0 !important;
 }
+
 .pt {
   padding-top: 50px !important;
 }
 
+/* ============================================
+   HEADER PRINCIPAL
+   ============================================ */
 header {
-  background-color: var(--verde);
+  background-color: var(--verde-principal);
   position: relative;
-  border-bottom: 3px ridge #ffc400d5;
-  transition: all 0.7s ease !important;
+  border-bottom: 3px ridge var(--amarillo-acento);
+  transition: var(--transition-elegant) !important;
+  box-shadow: var(--shadow-subtle);
 }
 
 div.row {
   margin: 0px;
 }
 
-/* fixed navbar */
+/* ============================================
+   HEADER STICKY/FIXED (MEJORADO)
+   ============================================ */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-  border-bottom: 3px solid #ffc400;
+  z-index: 1000;
+  border-bottom: 3px solid var(--amarillo-acento);
+  box-shadow: var(--shadow-elevated);
+  animation: slideDown 0.4s ease-out;
 }
 
-/*super pone el menú responsive*/
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   LOGO (MEJORADO - MÁS SUAVE)
+   ============================================ */
+#logo {
+  transition: opacity 0.4s ease, transform 0.4s ease !important;
+  transform-origin: left center;
+}
+
+#logo img {
+  transition: all 0.3s ease;
+}
+
+#logo:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Mejora: Logo visible pero más pequeño cuando no es sticky */
+.navbar img {
+  transition: all 0.4s ease;
+}
+
+/* ============================================
+   MENÚ RESPONSIVE
+   ============================================ */
 #lista_responsive {
-  z-index: inherit;
+  z-index: 1001;
 }
 
 ul > .dropdown-content #institucion {
@@ -99,42 +205,170 @@ ul > .dropdown-content #institucion {
   background-color: transparent;
 }
 
+/* ============================================
+   HOVER EFFECTS GENERALES
+   ============================================ */
 .navbar ul > li:hover {
-  background-color: #ffc400;
+  background-color: var(--amarillo-acento);
+  transform: translateY(-2px);
 }
 
 .li {
-  background-color: #056245;
+  background-color: var(--verde-principal);
 }
 
 .dropdown-content > .li > a:hover {
-  background-color: #ffc400;
+  background-color: var(--amarillo-acento);
+  color: var(--verde-principal) !important;
 }
 
-footer {
-  background-color: #056245;
-  padding-top: 20px;
-  color: #fff;
-  border-top: 4px ridge #ffc400d5;
-}
+/* ============================================
+   FOOTER
+   ============================================ */
 
-footer .footer-copyright {
-  overflow: hidden;
-  min-height: 50px;
-  display: flex;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: #181717;
-}
+/* ============================================
+   RESPONSIVE - MOBILE OPTIMIZATIONS
+   ============================================ */
 
-/* On smaller screens, decrease text size */
-/*para fijar el header con el nombre del colegio  el escudo
- @media only screen and (max-width: 300px) {
+/* Tablets */
+@media only screen and (max-width: 992px) {
   header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    padding-bottom: 10px;
   }
- } */
-#logo {
-  transition: opacity 10s ease !important; /* duración y suavidad */
+  
+  .navbar img {
+    height: 70px !important;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .navbar img {
+    height: 60px !important;
+  }
+  
+  header h5 {
+    font-size: 1.2rem !important;
+  }
+  
+  header p {
+    font-size: 0.9rem !important;
+  }
+  
+  .nav ul li a {
+    font-size: 13px !important;
+  }
+  
+  /* Menú lateral más elegante */
+  .sidenav {
+    background: linear-gradient(180deg, var(--verde-principal) 0%, #044535 100%);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .sidenav li a {
+    color: #fff !important;
+    font-weight: 500;
+    transition: var(--transition-smooth) !important;
+  }
+  
+  .sidenav li a:hover {
+    background: rgba(255, 196, 0, 0.2) !important;
+    padding-left: 32px !important;
+  }
+}
+
+/* ============================================
+   ACCESIBILIDAD Y UX
+   ============================================ */
+
+/* Focus states mejorados para navegación por teclado */
+.nav ul li a:focus,
+.dropdown-content li a:focus {
+  outline: 2px solid var(--amarillo-acento);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll para anclas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   ANIMACIONES ADICIONALES
+   ============================================ */
+
+/* Animación de carga del header */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ripple effect en botones del menú */
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.nav ul li:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+/* ============================================
+   MEJORAS DE RENDIMIENTO
+   ============================================ */
+
+/* GPU acceleration para animaciones suaves */
+.nav ul li a,
+#logo,
+.dropdown-content {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   DARK MODE SUPPORT (OPCIONAL - COMENTADO)
+   ============================================ */
+/*
+@media (prefers-color-scheme: dark) {
+  header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+*/
+/* FIX DEFINITIVO DROPDOWN */
+
+header,
+nav,
+.nav-wrapper {
+  overflow: visible !important;
+}
+
+.dropdown-content {
+  position: absolute !important;
+  z-index: 99999 !important;
+}
+
+.sticky {
+  z-index: 2000 !important;
 }

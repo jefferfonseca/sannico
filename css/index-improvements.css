@@ -1,0 +1,1361 @@
+/* ============================================
+   INDEX.PHP - MEJORAS VISUALES Y ANIMACIONES
+   Archivo complementario para style.css
+   ============================================ */
+
+/* ============================================
+   VARIABLES ADICIONALES PARA INDEX
+   ============================================ */
+/* Estilo global para todas las fuentes del documento */
+* {
+  font-family: Avenir;
+}
+:root {
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.3, 1);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.25);
+  --verde: #056245 !important;
+  --amarillo: #ffc400d5 !important;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  /* background: url("images/parallax/1.jpg") no-repeat center center fixed;
+  background-size: cover; */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+  color: white;
+  overflow-x: hidden !important;
+}
+
+/* ============================================
+   TÍTULOS DE SECCIÓN CON ICONOS
+   ============================================ */
+.titulo-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.section-destacados {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+.sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
+}
+
+:root {
+  /*--verde: var(--verde);  green darken-4*/
+}
+/* Fondo inicial */
+
+.scrollspy {
+  width: 100%; /* O un ancho específico, como 80% */
+  max-width: 1200px; /* Ajusta esto según el diseño deseado */
+  margin: 0 auto; /* Centra las secciones */
+}
+
+.botones {
+  padding: 20px 0;
+  margin: 0;
+}
+
+.botones div {
+  padding: 20px;
+}
+
+.borde-dorado {
+  border-radius: 10px;
+  border-bottom: 5px ridge var(--amarillo);
+  height: 100%;
+  width: 100%;
+}
+.botones .img_enlaces {
+  height: 100px !important;
+  width: 200px;
+  border-radius: 10px;
+}
+.img_enlaces a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.img_enlaces {
+  height: 100px !important;
+  width: 260px;
+  object-fit: cover;
+}
+.img_enlaces a > img {
+  height: 80px !important;
+  width: 260px;
+  object-fit: cover;
+}
+.green-text {
+  color: var(--verde) !important;
+  text-shadow: #000000 1px 1px 2px;
+}
+
+.container {
+  text-shadow: #000000 1px 1px 4px;
+  padding-bottom: 30px;
+}
+
+.parallax-container {
+  min-height: 500px;
+}
+
+.yellow-text {
+  color: var(--amarillo);
+  text-shadow: #8baaa0 1px 1px 2px;
+}
+.justify-text {
+  text-align: justify;
+  text-shadow: #000000 1px 1px 2px;
+}
+.left-text {
+  text-align: left !important;
+  text-shadow: #000000 1px 1px 2px;
+}
+.center,
+.center-align {
+  text-align: center !important;
+}
+
+.cent {
+  display: flex;
+}
+
+/*Cards de destacados*/
+
+/* Estilo para las tarjetas destacadas */
+.destacados {
+  position: relative;
+  border-radius: 20px;
+  width: 80%; /* Ancho relativo al contenedor padre */
+  overflow: hidden; /* Esconde el contenido desbordado */
+  margin: 0px 20px;
+}
+
+/* Imagen dentro de .destacados */
+.destacados .image {
+  height: 100%; /* Ajusta la altura de la imagen */
+  width: 100%;
+  object-fit: cover; /* Mantiene las proporciones sin deformar */
+  object-position: center; /* Centra la imagen */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1) !important;
+}
+
+/* Efecto al pasar el mouse sobre .destacados */
+.destacados:hover .image {
+  opacity: 0.3; /* Reduce la opacidad */
+}
+
+.destacados:hover .middle {
+  opacity: 1; /* Muestra el contenido central */
+}
+
+.text {
+  background-color: var(--verde);
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  padding: 16px 32px;
+  text-shadow: 1px 1px 1px black;
+  border-top: 5px ridge var(--amarillo);
+}
+
+.historia {
+  column-count: 2;
+  /* Espacio entre las columnas */
+  column-gap: 30px;
+  padding: 0 40px;
+  text-shadow: #000 1px 1px 1px;
+}
+.columnas p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+/* --- Estilos Específicos para las Cards de Uniformes --- */
+
+/* Forzamos el texto oscuro dentro de las tarjetas porque el body es blanco */
+#uniformes .card .card-content span,
+#uniformes .card .card-content p,
+#uniformes .card .card-reveal span,
+#uniformes .card .card-reveal li {
+  color: #212121 !important; /* Gris muy oscuro casi negro */
+  text-shadow: none !important; /* Quitamos la sombra para lectura limpia */
+  text-align: left;
+}
+
+/* Estilo para los items de la lista de ropa */
+#uniformes .collection-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px; /* Tamaño legible */
+}
+
+/* Color del enlace "Ver prendas" usando tu variable verde */
+#uniformes .link-verde {
+  color: var(--verde) !important;
+  font-weight: bold;
+}
+
+/* Ajuste fino para la imagen dentro de la card */
+#uniformes .card-image img {
+  /* Esto asegura que si las fotos tienen tamaños distintos, 
+       se recorten para llenar el espacio sin deformarse */
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .historia {
+    column-count: 1;
+  }
+  .mision {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+p {
+  text-align: justify;
+  font-size: 24px;
+}
+.mision {
+  display: flex;
+  align-items: center;
+}
+
+.vision {
+  background-color: #262137;
+}
+
+.img {
+  /* --- Máscaras (gradientes) --- */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-in;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-composite: intersect;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-in;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-composite: intersect;
+  filter: contrast(0.95) brightness(1.02) saturate(0.95);
+  filter: contrast(1.06) brightness(1.01);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.28));
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+.soft-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 200, 120, 0.06),
+    rgba(255, 160, 80, 0.06)
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.foot-dev * {
+  background: #212121 !important;
+  color: aliceblue;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes circle-out-hesitate {
+  0% {
+    clip-path: circle(125%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-out-hesitate both;
+}
+
+/*Slider items*/
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+}
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
+}
+
+/*docentes*/
+/* Contenedor para controlar la posición relativa */
+.position-container {
+  position: relative;
+}
+
+/* Rectángulo verde */
+.green-rectangle {
+  position: absolute;
+  top: 50%; /* Coloca el rectángulo en la mitad vertical de la imagen */
+  left: 0;
+  width: 100%;
+  height: 80%; /* Altura del rectángulo */
+  background-color: #056245;
+  z-index: -1; /* Detrás de la imagen */
+  border-radius: 20px;
+  transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+}
+.image-container img {
+  height: 100px;
+  width: auto;
+}
+#directivos-img img {
+  height: 150px;
+  width: auto;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
+  overflow: hidden; /* Evita desbordamientos */
+}
+/* Centrar las filas y columnas */
+.row.valign-wrapper {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+.center-align {
+  display: flex !important;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.contenedor {
+  display: flex !important;
+  justify-items: center !important;
+  align-items: center;
+  padding: 20px 40px !important;
+}
+
+.apellidos {
+  font-size: 22px;
+}
+
+.cargo {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 18px;
+}
+
+button:focus {
+  background: var(--verde);
+  color: aliceblue;
+}
+
+.table-of-contents a {
+  transition: all 0.2s cubic-bezier(1, -0.73, 0.25, 1.52);
+  height: auto;
+  width: 150px;
+  font-size: 18px;
+  color: white;
+  text-shadow: #000 1px 1px 1px;
+}
+
+.yellow-text {
+  color: #d49114 !important;
+  text-shadow: black 1px 1px 1px;
+}
+
+.white-text {
+  text-shadow: #000 1px 1px 1px;
+  color: white;
+  text-align: justify;
+}
+
+.table-of-contents a:hover {
+  border-left: 4px solid #ffc40063;
+  background: #05624428;
+  padding: 5px;
+  font-size: 20px;
+  color: #d49114;
+}
+
+.table-of-contents a.active {
+  border-left: 4px solid #ffc4009d;
+  background: #05624457;
+  padding: 8px;
+  color: #d49114;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: #000 1px 1px 1px;
+}
+
+/* Estilos para el contenedor del reproductor */
+audio {
+  width: 100%; /* Hace que ocupe todo el ancho disponible */
+  max-width: 600px; /* Limita el tamaño máximo */
+  border-radius: 10px; /* Bordes redondeados */
+  background: #ffc40060; /* Gradiente de fondo */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  border: none; /* Quitar bordes predeterminados */
+  outline: none; /* Quitar borde de enfoque */
+  transition: transform 0.3s ease-in-out; /* Animación de transformación */
+}
+
+/* Efecto de enfoque */
+audio:focus {
+  box-shadow: 0 0 10px 4px #05624470; /* Resalta el reproductor con un borde azul cuando tiene foco */
+}
+
+/* Estilo para los controles del audio */
+audio::-webkit-media-controls-panel {
+  background-color: var(--verde); /* Fondo oscuro para el panel de controles */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-volume-slider:hover,
+audio::-webkit-media-controls-mute-button:hover,
+audio::-webkit-media-controls-fullscreen-button:hover {
+  background-color: var(--amarillo);
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  /* Para dispositivos medianos y pequeños */
+  .valign-wrapper,
+  .center-align {
+    display: block !important; /* Quita el efecto de alineación vertical */
+  }
+}
+
+.pinned {
+  position: absolute;
+  top: 163px; /* Altura inicial alineada con el header */
+  left: 80px;
+  z-index: 1000;
+  transition: top 0.5s ease-in-out; /* Suaviza la transición */
+}
+.pinned.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+.section {
+  min-height: max-content !important;
+  backdrop-filter: blur(3px); /* Desenfoque aplicado al fondo */
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5); /* Efecto de fondo sobre la imagen */
+  padding: 50px 0 !important;
+  transition: top 0.5s ease-in-out; /* Suaviza la transición */
+}
+
+.titulo-seccion::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--amarillo), transparent);
+  border-radius: 2px;
+}
+
+.titulo-seccion i {
+  font-size: 2.5rem !important;
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ============================================
+   SLIDER - MEJORAS
+   ============================================ */
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mySlides {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.slider-image {
+  filter: brightness(0.9) contrast(1.05);
+  transition: filter var(--transition-slow);
+}
+
+.slideshow-container:hover .slider-image {
+  filter: brightness(1) contrast(1.1);
+}
+
+/* ============================================
+   BOTONES DE CONVENIOS - EFECTOS HOVER MEJORADOS
+   ============================================ */
+.enlace-convenio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform var(--transition-medium);
+}
+
+.enlace-convenio:hover {
+  transform: translateY(-8px);
+}
+
+/* Imagen con zoom al hover */
+.hover-zoom {
+  transition:
+    transform var(--transition-slow),
+    filter var(--transition-medium);
+}
+
+.enlace-convenio:hover .hover-zoom {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Overlay con texto al hover */
+.enlace-overlay {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(5, 98, 69, 0.95), transparent);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: bottom var(--transition-medium);
+  text-transform: uppercase;
+}
+
+.enlace-convenio:hover .enlace-overlay {
+  bottom: 0;
+}
+
+/* Mejorar borde dorado con glow */
+.borde-dorado {
+  box-shadow: 0 4px 12px rgba(255, 196, 0, 0.3);
+  transition: box-shadow var(--transition-medium);
+}
+
+.enlace-convenio:hover .borde-dorado {
+  box-shadow:
+    0 8px 24px rgba(255, 196, 0, 0.6),
+    0 0 40px rgba(255, 196, 0, 0.3);
+}
+
+/* ============================================
+   CARDS DESTACADOS - EFECTOS MODERNOS
+   ============================================ */
+.card-link {
+  display: block;
+  transition: transform var(--transition-medium);
+}
+
+.card-destacado {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-medium);
+  transform-style: preserve-3d;
+}
+
+.card-destacado:hover {
+  box-shadow: var(--shadow-hover);
+  transform: scale(1.03) rotateY(2deg);
+}
+
+/* Efecto de luz que sigue el cursor */
+.card-destacado::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 196, 0, 0.2) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card-destacado:hover::before {
+  opacity: 1;
+}
+
+/* Imagen con parallax interno */
+.card-destacado .image {
+  transition: transform var(--transition-slow);
+}
+
+.card-destacado:hover .image {
+  transform: scale(1.15);
+}
+
+/* Overlay mejorado */
+.card-destacado .middle {
+  transition:
+    opacity var(--transition-medium),
+    transform var(--transition-medium);
+  transform: translateY(20px);
+}
+
+.card-destacado:hover .middle {
+  transform: translateY(0);
+}
+
+/* Texto con animación */
+.card-destacado .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.card-destacado .text i {
+  font-size: 2rem;
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   SECCIÓN PERFIL DEL EGRESADO
+   ============================================ */
+.perfil-wrapper {
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.perfil-texto {
+  background: rgba(5, 98, 69, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--amarillo);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-medium);
+}
+
+.perfil-texto:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-hover);
+  border-left-width: 8px;
+}
+
+.perfil-texto p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.perfil-texto strong {
+  color: var(--amarillo);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del perfil */
+.perfil-img {
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Efecto de brillo en la imagen */
+.perfil-img::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ============================================
+   PARALLAX - MEJORAS
+   ============================================ */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 98, 69, 0.3),
+    transparent 30%,
+    transparent 70%,
+    rgba(5, 98, 69, 0.3)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ============================================
+   BOTONES (GENERAL)
+   ============================================ */
+.botones {
+  padding: 20px 0;
+}
+
+.botones div {
+  padding: 15px;
+}
+
+/* ============================================
+   SECCIONES CON BACKDROP BLUR
+   ============================================ */
+.section {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: backdrop-filter var(--transition-slow);
+}
+
+.section:hover {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .titulo-seccion {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .titulo-seccion i {
+    font-size: 2rem !important;
+  }
+
+  .perfil-texto {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .perfil-texto p {
+    font-size: 1rem;
+  }
+
+  .card-destacado .text {
+    font-size: 22px;
+  }
+
+  .enlace-overlay {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .perfil-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   ANIMACIONES DE ENTRADA AOS
+   ============================================ */
+[data-aos="zoom-in"] {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ============================================
+   MEJORAS DE ACCESIBILIDAD
+   ============================================ */
+.card-link:focus,
+.enlace-convenio:focus {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* Skip link mejorado */
+.skip-link:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: var(--verde-principal);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ============================================
+   OPTIMIZACIONES DE RENDIMIENTO
+   ============================================ */
+.card-destacado,
+.enlace-convenio,
+.perfil-img {
+  will-change: transform;
+}
+
+/* Desactivar animaciones en modo de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   EFECTOS DE CARGA PROGRESIVA
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ============================================
+   MEJORAS DE TIPOGRAFÍA
+   ============================================ */
+.flow-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .flow-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .flow-text {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   SOMBRAS Y PROFUNDIDAD
+   ============================================ */
+.section1 {
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.section2 {
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+/* ============================================
+   INDEX-IMPROVEMENTS.CSS - VERSIÓN SIMPLIFICADA
+   Sin efectos que rompen el layout
+   ============================================ */
+
+:root {
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   TÍTULOS DE SECCIÓN
+   ============================================ */
+.titulo-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.titulo-seccion i {
+  font-size: 2.5rem !important;
+}
+
+/* ============================================
+   BOTONES DE CONVENIOS - EFECTOS SIMPLES
+   ============================================ */
+.enlace-convenio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform var(--transition-medium);
+}
+
+.enlace-convenio:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.hover-zoom {
+  transition: transform var(--transition-medium);
+}
+
+.enlace-convenio:hover .hover-zoom {
+  transform: scale(1.05);
+}
+
+.borde-dorado {
+  border: 3px solid var(--amarillo, #ffc400d5);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 196, 0, 0.3);
+  transition: box-shadow var(--transition-medium);
+}
+
+.enlace-convenio:hover .borde-dorado {
+  box-shadow: 0 8px 20px rgba(255, 196, 0, 0.5);
+}
+
+/* ============================================
+   CARDS DESTACADOS - ALTURA IGUAL + EFECTOS
+   ============================================ */
+
+/* Asegurar altura igual */
+.destacados {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 300px !important;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-medium);
+}
+
+.destacados .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition-slow);
+}
+
+/* Hover suave */
+.destacados:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.destacados:hover .image {
+  transform: scale(1.1);
+}
+
+.destacados:hover .middle {
+  opacity: 1;
+}
+
+/* Texto del overlay */
+.destacados .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.destacados .text i {
+  font-size: 2rem;
+}
+
+/* ============================================
+   PERFIL DEL EGRESADO - LAYOUT CORRECTO
+   ============================================ */
+
+/* Wrapper con flexbox */
+.perfil-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Texto del perfil */
+.perfil-texto {
+  background: rgba(5, 98, 69, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--amarillo);
+  backdrop-filter: blur(5px);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-medium);
+}
+
+.perfil-texto:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-hover);
+  border-left-width: 7px;
+}
+
+.perfil-texto p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.perfil-texto strong {
+  color: var(--amarillo);
+  font-weight: 700;
+}
+
+/* Imagen del perfil */
+.perfil-img {
+  display: block !important;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-medium);
+}
+
+.perfil-img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+.section {
+  padding: 50px 0;
+  min-height: max-content;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.section-destacados {
+  padding: 50px 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+  .perfil-wrapper {
+    flex-direction: column;
+  }
+
+  .perfil-wrapper .col.s12.m8,
+  .perfil-wrapper .col.s12.m4 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .perfil-img {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .perfil-texto {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .titulo-seccion i {
+    font-size: 2rem !important;
+  }
+
+  .destacados {
+    height: 250px !important;
+  }
+
+  .destacados .text {
+    font-size: 22px;
+  }
+
+  .perfil-texto p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .destacados {
+    height: 200px !important;
+    margin-bottom: 20px;
+  }
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+.card-link:focus,
+.enlace-convenio:focus {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* ============================================
+   ANIMACIONES SUAVES
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+.flow-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .flow-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .flow-text {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   PREVENIR PROBLEMAS DE LAYOUT
+   ============================================ */
+body,
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ============================================
+   COLORES Y CONTRASTE
+   ============================================ */
+.yellow-text {
+  color: #ffc400 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.white-text {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.justify-text {
+  text-align: justify !important;
+}
+
+/* ============================================
+   BOTONES GENERALES
+   ============================================ */
+.botones {
+  padding: 20px 0;
+}
+
+.botones div {
+  padding: 15px;
+}
+
+.img_enlaces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================================
+   PARALLAX
+   ============================================ */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
