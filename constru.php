@@ -16,13 +16,13 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/sannicolas-tuta/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="includes//sannicolas-tuta/css/style.css">
-    <link rel="stylesheet" href="/sannicolas-tuta/css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 

@@ -18,89 +18,78 @@ echo "<h4 class='center-align'>Número de visitas: 0000" . $row['Contador'] . "<
      JAVASCRIPT GLOBAL
      ============================================ -->
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+
     // ============================================
-    // INICIALIZACIÓN MATERIALIZE
+    // MATERIALIZE COMPONENTS
     // ============================================
 
-    document.addEventListener('DOMContentLoaded', function () {
-
-        M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
-            hover: false,
-            coverTrigger: false,
-            constrainWidth: false
-        });
-
-        M.Sidenav.init(document.querySelectorAll('.sidenav'));
-
-        M.Parallax.init(document.querySelectorAll('.parallax'));
-
-        M.Carousel.init(document.querySelectorAll('.carousel'));
-        M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+    M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
+        hover: false,
+        coverTrigger: false,
+        constrainWidth: false
     });
 
-    // ============================================
-    // HEADER STICKY CON LOGO
-    // ============================================
-    window.onscroll = function () {
-        stickyHeader();
-    };
-
-    var header = document.getElementById("myHeader");
-    var logo = document.getElementById("logo");
-    var sticky = header ? header.offsetTop : 0;
-
-    function stickyHeader() {
-        if (header && logo) {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-                logo.classList.remove("hide");
-            } else {
-                header.classList.remove("sticky");
-                logo.classList.add("hide");
-            }
-        }
-    }
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    M.Parallax.init(document.querySelectorAll('.parallax'));
+    M.Carousel.init(document.querySelectorAll('.carousel'));
+    M.Tooltip.init(document.querySelectorAll('.tooltipped'));
 
     // ============================================
-    // PARALLAX
+    // SLIDER PERSONALIZADO (SI EXISTE)
     // ============================================
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.parallax');
-        var instances = M.Parallax.init(elems);
-    });
 
-    // ============================================
-    // SLIDER (solo si existe)
-    // ============================================
     if (document.getElementsByClassName("mySlides").length > 0) {
-        var slideIndex = 0;
+
+        let slideIndex = 0;
         showSlides();
 
         function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
+            let slides = document.getElementsByClassName("mySlides");
+
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+
             slideIndex++;
             if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
+
             if (slides[slideIndex - 1]) {
                 slides[slideIndex - 1].style.display = "block";
             }
+
             setTimeout(showSlides, 2500);
         }
     }
 
-    // ============================================
-    // CAROUSEL
-    // ============================================
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems);
-    });
+});
+
+// ============================================
+// HEADER STICKY
+// ============================================
+
+window.addEventListener('scroll', function () {
+
+    const header = document.getElementById("myHeader");
+    const logo = document.getElementById("logo");
+
+    if (!header || !logo) return;
+
+    const sticky = header.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        logo.classList.remove("hide");
+    } else {
+        header.classList.remove("sticky");
+        logo.classList.add("hide");
+    }
+
+});
 </script>
+
 
 <!-- ============================================
      FOOTER PREMIUM

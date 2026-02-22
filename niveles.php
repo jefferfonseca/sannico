@@ -42,8 +42,8 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 6° - SEXTO
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="sexto" data-aos="fade-up" data-aos-delay="100">
-                    <article class="nivel-card scrollspy">
+                <div class="col s12 m8 offset-m3 scrollspy" id="sexto" data-aos="fade-up" data-aos-delay="100">
+                    <article class="nivel-card ">
                         <div class="nivel-badge grado-6">
                             <span>6°</span>
                         </div>
@@ -95,8 +95,8 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 7° - SÉPTIMO
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="septimo" data-aos="fade-up" data-aos-delay="200">
-                    <article class="nivel-card scrollspy">
+                <div class="col s12 m8 offset-offset-m3 scrollspy" id="septimo" data-aos="fade-up" data-aos-delay="200">
+                    <article class="nivel-card">
                         <div class="nivel-badge grado-7">
                             <span>7°</span>
                         </div>
@@ -139,8 +139,8 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 8° - OCTAVO
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="octavo" data-aos="fade-up" data-aos-delay="300">
-                    <article class="nivel-card scrollspy">
+                <div class="col s12 m8 offset-offset-m3 scrollspy" id="octavo" data-aos="fade-up" data-aos-delay="300">
+                    <article class="nivel-card">
                         <div class="nivel-badge grado-8">
                             <span>8°</span>
                         </div>
@@ -183,8 +183,8 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 9° - NOVENO
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="noveno" data-aos="fade-up" data-aos-delay="400">
-                    <article class="nivel-card scrollspy">
+                <div class="col s12 m8 offset-offset-m3 scrollspy" id="noveno" data-aos="fade-up" data-aos-delay="400">
+                    <article class="nivel-card">
                         <div class="nivel-badge grado-9">
                             <span>9°</span>
                         </div>
@@ -227,7 +227,7 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 10° - DÉCIMO (DESTACADO)
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="decimo" data-aos="fade-up" data-aos-delay="500">
+                <div class="col s12 m8 offset-offset-m3 scrollspy" id="decimo" data-aos="fade-up" data-aos-delay="500">
                     <article class="nivel-card nivel-destacado scrollspy">
                         <div class="nivel-badge-destacado grado-10">
                             <i class="material-icons">star</i>
@@ -281,7 +281,7 @@ include('includes/header.php');
                 <!-- ============================================
                      GRADO 11° - ONCE (DESTACADO)
                      ============================================ -->
-                <div class="col s12 m8 offset-m3" id="once" data-aos="fade-up" data-aos-delay="600">
+                <div class="col s12 m8 offset-offset-m3 scrollspy" id="once" data-aos="fade-up" data-aos-delay="600">
                     <article class="nivel-card nivel-destacado scrollspy">
                         <div class="nivel-badge-destacado grado-11">
                             <i class="material-icons">star</i>
@@ -382,11 +382,11 @@ include('includes/header.php');
 <!-- ============================================
      TABLE OF CONTENTS (SCROLLSPY)
      ============================================ -->
-<aside class="col hide-on-small-only m3 l2 pinned" 
+<aside class="row hide-on-small-only pinned" 
        data-aos="fade-left"
        role="navigation"
        aria-label="Navegación de niveles">
-    <div class="toc-wrapper">
+    <div class="toc-wrapper col m3 l2">
         <h5 class="toc-title yellow-text">
             <i class="material-icons">list</i>
             Grados

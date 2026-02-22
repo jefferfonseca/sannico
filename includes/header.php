@@ -120,15 +120,15 @@
     <!-- ============================================
          MATERIALIZE CSS
          ============================================ -->
-    <link type="text/css" rel="stylesheet" href="/sannicolas-tuta/css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection">
 
     <!-- ============================================
          CUSTOM CSS (EN ORDEN DE CARGA)
          ============================================ -->
-    <link rel="stylesheet" href="/sannicolas-tuta/css/style.css">
-    <link rel="stylesheet" href="/sannicolas-tuta/css/header.css">
-    <link rel="stylesheet" href="/sannicolas-tuta/css/footer.css">
-    <link rel="stylesheet" href="/sannicolas-tuta/css/<?php echo $css; ?>">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/<?php echo $css; ?>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- ============================================
          AOS (ANIMATE ON SCROLL)
@@ -159,146 +159,173 @@
     <!-- ============================================
          HEADER PRINCIPAL
          ============================================ -->
-    <header role="banner">
-        <!-- Barra superior con logos y nombre -->
-        <div class="navbar">
-            <div class="row center valign-wrapper">
-                <!-- Logo San Nicolás -->
-                <div class="col s12 m4">
-                    <img src="./images/Escudo.png" alt="Escudo Institución Educativa Técnica San Nicolás" height="90"
-                        width="90" loading="eager">
-                </div>
+<header role="banner">
 
-                <!-- Nombre de la institución -->
-                <div class="col s12 m4 center">
-                    <h1 style="font-size: 1.5rem; margin: 10px 0;">
-                        Institución Educativa Técnica<br>San Nicolás - Tuta
-                    </h1>
-                    <p class="center m-0" style="font-size: 1rem; font-style: italic;">
-                        "Queremos y Podemos"
-                    </p>
-                </div>
+    <!-- ============================================
+         CONFIGURACIÓN CENTRAL DEL MENÚ
+         ============================================ -->
+    <?php
+    $menu_institucion = [
+        ["nosotros.php", "Reseña Histórica", "history_edu"],
+        ["simbolos.php", "Símbolos Institucionales", "flag"],
+        ["sedes.php", "Sedes", "location_on"],
+        ["docentes.php", "Docentes", "people"],
+        ["gobierno-escolar.php", "Gobierno Escolar", "gavel"],
+        ["proyectos.php", "Proyectos", "folder_special"]
+    ];
 
-                <!-- Logo Tuta -->
-                <div class="col s12 m4">
-                    <img src="./images/Escudo-tuta.png" alt="Escudo Municipio de Tuta, Boyacá" height="90" width="90"
-                        loading="eager">
-                </div>
+    $menu_especialidad = [
+        ["tecnico-web.php", "Desarrollo de Aplicaciones Web", "computer"],
+        ["niveles.php", "Asignaturas", "menu_book"]
+    ];
+    ?>
+
+    <!-- ============================================
+         BARRA SUPERIOR
+         ============================================ -->
+    <div class="navbar">
+        <div class="row center valign-wrapper">
+            <div class="col s12 m4">
+                <img src="./images/Escudo.png" height="90" width="auto">
+            </div>
+
+            <div class="col s12 m4 center">
+                <h1 style="font-size: 1.5rem; margin: 10px 0;">
+                    Institución Educativa Técnica<br>San Nicolás - Tuta
+                </h1>
+                <p style="font-size: 1rem; font-style: italic; text-align: center;">
+                    "Queremos y Podemos"
+                </p>
+            </div>
+
+            <div class="col s12 m4">
+                <img src="./images/Escudo-tuta.png" height="90" width="auto">
             </div>
         </div>
+    </div>
 
-        <!-- ============================================
-             NAVEGACIÓN PRINCIPAL
-             ============================================ -->
-        <nav id="myHeader" class="nav z-depth-0" role="navigation" aria-label="Navegación principal">
-            <div class="nav-wrapper">
-                <!-- Logo sticky (visible solo al hacer scroll) -->
-                <a href="index.php" id="logo" class="hide" aria-label="Inicio - IET San Nicolás">
-                    <img style="padding: 10px;" src="./images/Escudo.png" alt="IET San Nicolás" height="100%"
-                        width="auto">
+    <!-- ============================================
+         NAV PRINCIPAL
+         ============================================ -->
+    <nav id="myHeader" class="nav z-depth-0">
+        <div class="nav-wrapper">
+
+            <a href="index.php" id="logo" class="hide">
+                <img style="padding:10px;" src="./images/Escudo.png" height="100%">
+            </a>
+
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger right">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <!-- MENÚ DESKTOP -->
+            <ul class="right hide-on-med-and-down">
+
+                <li><a href="index.php">Inicio</a></li>
+
+                <li>
+                    <a href="#" class="dropdown-trigger" data-target="institucion">
+                        Institución
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="constru.php" target="_blank">Radio</a>
+                </li>
+
+                <li>
+                    <a href="#" class="dropdown-trigger" data-target="esp">
+                        Especialidad
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank">
+                        Sistema de Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacto.php">Contáctenos</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         DROPDOWNS DESKTOP
+         ============================================ -->
+    <ul id="institucion" class="dropdown-content">
+        <?php foreach ($menu_institucion as $item): ?>
+            <li><a href="<?= $item[0] ?>"><?= $item[1] ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+
+    <ul id="esp" class="dropdown-content">
+        <?php foreach ($menu_especialidad as $item): ?>
+            <li><a href="<?= $item[0] ?>"><?= $item[1] ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+
+    <!-- ============================================
+         MENÚ MOBILE
+         ============================================ -->
+    <ul class="sidenav" id="menu-responsive">
+
+        <li><a href="index.php"><i class="material-icons left">home</i>Inicio</a></li>
+
+        <li class="divider"></li>
+        <li><a class="subheader">Institución</a></li>
+
+        <?php foreach ($menu_institucion as $item): ?>
+            <li>
+                <a href="<?= $item[0] ?>">
+                    <i class="material-icons left"><?= $item[2] ?></i>
+                    <?= $item[1] ?>
                 </a>
+            </li>
+        <?php endforeach; ?>
 
-                <!-- Botón menú responsive -->
-                <a href="#" data-target="menu-responsive" class="sidenav-trigger right"
-                    aria-label="Abrir menú de navegación" aria-controls="menu-responsive" aria-expanded="false">
-                    <i class="material-icons">menu</i>
+        <li class="divider"></li>
+        <li>
+            <a href="constru.php" target="_blank">
+                <i class="material-icons left">radio</i>Radio
+            </a>
+        </li>
+
+        <li class="divider"></li>
+        <li><a class="subheader">Especialidad</a></li>
+
+        <?php foreach ($menu_especialidad as $item): ?>
+            <li>
+                <a href="<?= $item[0] ?>">
+                    <i class="material-icons left"><?= $item[2] ?></i>
+                    <?= $item[1] ?>
                 </a>
+            </li>
+        <?php endforeach; ?>
 
-                <!-- Menú principal (desktop) -->
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="index.php" title="Página de inicio">Inicio</a></li>
+        <li class="divider"></li>
 
-                    <li>
-                        <a href="#" class="dropdown-trigger" data-target="institucion" title="Información institucional"
-                            aria-haspopup="true" aria-expanded="false">
-                            Institución
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                    </li>
+        <li>
+            <a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank">
+                <i class="material-icons left">assignment</i>Sistema de Notas
+            </a>
+        </li>
 
-                    <li>
-                        <a href="constru.php" target="_blank" rel="noopener noreferrer" title="Emisora institucional">
-                            Radio
-                        </a>
-                    </li>
+        <li>
+            <a href="contacto.php">
+                <i class="material-icons left">email</i>Contáctenos
+            </a>
+        </li>
 
-                    <li>
-                        <a href="#" class="dropdown-trigger" data-target="esp" title="Especialidad técnica de los estudiantes"
-                            aria-haspopup="true" aria-expanded="false">
-                            Especialidad
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                    </li>
+    </ul>
 
-                    <li>
-                        <a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank"
-                            rel="noopener noreferrer" title="Consultar notas académicas">
-                            Sistema de Notas
-                        </a>
-                    </li>
+</header>
 
-                    <li>
-                        <a href="contacto.php" title="Información de contacto">
-                            Contáctenos
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- ============================================
-             SUBMENÚS DROPDOWN
-             ============================================ -->
-
-        <!-- Dropdown: Institución -->
-        <ul id="institucion" class="dropdown-content">
-            <li><a href="nosotros.php" title="Historia de la institución">Reseña Histórica</a></li>
-            <li><a href="simbolos.php" title="Himno, bandera y escudo">Símbolos Institucionales</a></li>
-            <li><a href="sedes.php" title="Ubicación de sedes">Sedes</a></li>
-            <li><a href="docentes.php" title="Planta docente">Docentes</a></li>
-            <li><a href="gobierno-escolar.php" title="Gobierno escolar">Gobierno Escolar</a></li>
-            <li><a href="proyectos.php" title="Proyectos institucionales">Proyectos</a></li>
-            <li><a href="#" target="_blank" title="Servicio de psicoorientación">Psicoorientación</a></li>
-        </ul>
-
-        <!-- Dropdown: Especialidad -->
-        <ul id="esp" class="dropdown-content">
-            <li><a href="tecnico-web.php" title="Especialidad en Desarrollo de Aplicaciones Web">Desarrollo de Aplicaciones Web</a></li>
-            <li><a href="niveles.php" title="Asignaturas de la especialidad">Asignaturas</a></li>
-        </ul>
-
-        <!-- ============================================
-             MENÚ LATERAL RESPONSIVE (MOBILE)
-             ============================================ -->
-        <ul class="sidenav" id="menu-responsive">
-            <li><a href="index.php"><i class="material-icons left">home</i>Inicio</a></li>
-
-            <li class="divider"></li>
-            <li><a class="subheader">Institución</a></li>
-            <li><a href="nosotros.php"><i class="material-icons left">history_edu</i>Reseña Histórica</a></li>
-            <li><a href="simbolos.php"><i class="material-icons left">flag</i>Símbolos Institucionales</a></li>
-            <li><a href="sedes.php"><i class="material-icons left">location_on</i>Sedes</a></li>
-            <li><a href="docentes.php"><i class="material-icons left">people</i>Docentes</a></li>
-            <li><a href="gobierno-escolar.php"><i class="material-icons left">gavel</i>Gobierno Escolar</a></li>
-            <li><a href="proyectos.php"><i class="material-icons left">folder_special</i>Proyectos</a></li>
-
-            <li class="divider"></li>
-            <li><a class="subheader">Servicios</a></li>
-            <li><a href="constru.php" target="_blank"><i class="material-icons left">radio</i>Radio</a></li>
-
-            <li class="divider"></li>
-            <li><a class="subheader">Especialidades</a></li>
-            <li><a href="redes.php"><i class="material-icons left">computer</i>Redes y Sistemas</a></li>
-            <li><a href="salud.php"><i class="material-icons left">local_hospital</i>Salud</a></li>
-            <li><a href="turismo.php"><i class="material-icons left">landscape</i>Turismo</a></li>
-
-            <li class="divider"></li>
-            <li><a href="https://compucol.co/colegios/tutaiesannicolas/" target="_blank" rel="noopener noreferrer">
-                    <i class="material-icons left">assignment</i>Sistema de Notas
-                </a></li>
-            <li><a href="contacto.php"><i class="material-icons left">email</i>Contáctenos</a></li>
-        </ul>
-    </header>
 
     <!-- ============================================
          SKIP TO CONTENT (ACCESIBILIDAD)
