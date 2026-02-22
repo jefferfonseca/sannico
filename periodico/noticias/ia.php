@@ -2,7 +2,7 @@
 // ============================================
 // METADATA DE LA NOTICIA
 // ============================================
-$titulo = "Inteligencia Artificial: La Revolución Tecnológica que Transforma Nuestro Mundo";
+$titulo = "IETSN | Inteligencia Artificial: La Revolución Tecnológica que Transforma Nuestro Mundo";
 $page_title = $titulo;
 $fecha = "2024-11-12";
 $autor = "Liseth Mariana Ayure Aguilar";

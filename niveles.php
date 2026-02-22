@@ -3,7 +3,7 @@ $menu = "Especialidades";
 $css = "niveles.css"; // CSS específico para esta página
 
 // Meta tags específicos
-$page_title = "Niveles Académicos - Técnico en Desarrollo Web | IET San Nicolás";
+$page_title = "IETSN | Niveles Académicos";
 $page_description = "Conoce el plan de estudios del técnico en desarrollo web por grados: desde informática básica en 6° hasta proyectos complejos en 11°.";
 $page_keywords = "plan de estudios desarrollo web, asignaturas técnico IET, programación por grados, informática Tuta";
 $page_image = "https://ietsannicolas.edu.co/images/12.png";

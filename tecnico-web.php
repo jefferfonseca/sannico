@@ -3,7 +3,7 @@ $menu = "Especialidades";
 $css = "tecnico-web.css"; // CSS específico para esta página
 
 // Meta tags específicos
-$page_title = "Técnico en Desarrollo de Aplicaciones Web - IET San Nicolás";
+$page_title = "IETSN | Técnico en Desarrollo de Aplicaciones Web";
 $page_description = "Conoce el Técnico en Desarrollo de Aplicaciones Web de la IET San Nicolás, especialización implementada desde 2023 con enfoque en programación y diseño web.";
 $page_keywords = "técnico desarrollo web, programación IET San Nicolás, aplicaciones web Tuta, diseño web Boyacá";
 $page_image = "https://ietsannicolas.edu.co/images/12.png";
@@ -31,7 +31,7 @@ include('includes/header.php');
             <div class="container center">
                 <div class="hero-badge" data-aos="zoom-in">
                     <i class="material-icons">verified</i>
-                    <span>Certificado Oficial</span>
+                    <span class="white-text">Certificado Oficial</span>
                 </div>
                 <h1 class="hero-title" data-aos="fade-down" data-aos-delay="200">
                     <span class="code-symbol">&lt;</span>

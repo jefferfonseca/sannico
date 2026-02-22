@@ -2,7 +2,7 @@
 // ============================================
 // METADATA DE LA NOTICIA
 // ============================================
-$titulo = "Leyendas del Fútbol Colombiano: Los Mejores Jugadores de Nuestra Historia";
+$titulo = "IETSN | Leyendas del Fútbol Colombiano: Los Mejores Jugadores de Nuestra Historia";
 $page_title = $titulo;
 $fecha = "2024-11-15";
 $autor = "Maria Angelica Figueredo Fonseca";

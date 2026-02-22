@@ -3,7 +3,7 @@ $menu = "Contacto";
 $css = "contacto.css"; // CSS específico
 
 // Meta tags específicos
-$page_title = "Contáctenos - IET San Nicolás | Tuta, Boyacá";
+$page_title = "IETSN | Contáctenos - Tuta, Boyacá";
 $page_description = "Ponte en contacto con la Institución Educativa Técnica San Nicolás. Envíanos tus consultas, sugerencias o solicitudes de información.";
 $page_keywords = "contacto IET San Nicolás, información colegio Tuta, escribir IET San Nicolás";
 $page_image = "https://ietsannicolas.edu.co/images/Escudo.png";

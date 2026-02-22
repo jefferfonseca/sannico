@@ -1,4 +1,6 @@
 <?php $menu = "Institución";
+$page_title = "IETSN | Docentes";
+
 include('includes/header.php'); ?>
 
 <div class="section ">
@@ -227,6 +229,7 @@ include('includes/header.php'); ?>
     </div>
 </div>
 
+<script src="js/materialize.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.body.style.backgroundImage = "url('./images/parallax/14.jpg')";

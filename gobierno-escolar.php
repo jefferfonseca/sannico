@@ -3,7 +3,7 @@ $menu = "Institución";
 $css = "gobierno-escolar.css"; // CSS específico
 
 // Meta tags específicos
-$page_title = "Gobierno Escolar - IET San Nicolás | Directivos y Consejo";
+$page_title = "IETSN | Gobierno Escolar";
 $page_description = "Conoce el gobierno escolar de la IET San Nicolás: directivos docentes, consejo directivo, consejo académico y gobierno estudiantil.";
 $page_keywords = "gobierno escolar IET San Nicolás, consejo directivo, consejo académico, personero estudiantil";
 $page_image = "https://ietsannicolas.edu.co/images/Escudo.png";

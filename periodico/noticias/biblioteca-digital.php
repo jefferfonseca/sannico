@@ -1,5 +1,5 @@
 <?php
-$page_title = "Nueva Biblioteca Digital: Un Espacio Moderno para el Aprendizaje";
+$page_title = "IETSN | Nueva Biblioteca Digital: Un Espacio Moderno para el Aprendizaje";
 $fecha = "2026-02-18";
 $autor = "Jinneth Sofia Diaz Castro";
 $categoria = "Institucional";

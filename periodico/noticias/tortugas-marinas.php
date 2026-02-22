@@ -2,7 +2,7 @@
 // ============================================
 // METADATA DE LA NOTICIA
 // ============================================
-$titulo = "Tortugas Marinas: Guardianas Ancestrales de Nuestros Océanos";
+$titulo = "IETSN | Tortugas Marinas: Guardianas Ancestrales de Nuestros Océanos";
 $page_title = $titulo;
 $fecha = "2024-10-20";
 $autor = "Yerly Johana Robles Cepeda";

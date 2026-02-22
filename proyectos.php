@@ -2,7 +2,7 @@
 $menu = "Institución";
 
 // Meta tags específicos
-$page_title = "Proyectos Institucionales - IET San Nicolás | Proyectos Pedagógicos";
+$page_title = "IETSN | Proyectos Institucionales";
 $page_description = "Conoce los proyectos institucionales de la IET San Nicolás: Democracia, Orientación Vocacional, Dirección de Grado, Escuela de Padres y más.";
 $page_keywords = "proyectos IET San Nicolás, democracia escolar, orientación vocacional, escuela de padres, tiempo libre";
 $page_image = "https://ietsannicolas.edu.co/images/parallax/14.jpg";

@@ -2,7 +2,7 @@
 // ============================================
 // CONFIGURACIÓN DE LA PÁGINA
 // ============================================
-$page_title = "Periódico Escolar - Voces Nicolaitas | IET San Nicolás";
+$page_title = "IETSN | Periódico Escolar - Voces Nicolaitas";
 
 $page_description = "Periódico escolar digital de la Institución Educativa Técnica San Nicolás. Noticias, eventos y actividades de nuestra comunidad educativa.";
 $page_keywords = "periódico escolar, noticias IET San Nicolás, voces nicolaitas, Tuta, Boyacá";

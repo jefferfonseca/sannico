@@ -1,7 +1,7 @@
 <?php 
 $menu = "Inicio";
 
-$page_title = "Inicio - IET San Nicolás | Institución Educativa Técnica Tuta";
+$page_title = "IETSN | Home";
 $page_description = "Bienvenidos a la Institución Educativa Técnica San Nicolás...";
 $page_keywords = "IET San Nicolás inicio, colegio Tuta, educación técnica Boyacá";
 $page_image = "https://ietsannicolas.edu.co/images/Escudo.png";
@@ -164,7 +164,7 @@ include 'includes/header.php';
 
                 <!-- Card: Especialidades -->
                 <div class="col s12 m4 p-0 m-0" data-aos="zoom-in" data-aos-delay="300">
-                    <a href="redes.php" title="Conoce nuestras especialidades técnicas" class="card-link">
+                    <a href="tecnico-web.php" title="Conoce nuestras especialidades técnicas" class="card-link">
                         <article class="destacados card-destacado">
                             <img src="./images/destacados/especialidad.jpeg"
                                 alt="Especialidades Técnicas - Redes, Salud, Turismo" class="image borde-dorado"

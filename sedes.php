@@ -3,7 +3,7 @@ $menu = "Institución";
 $css = "sedes.css"; // CSS específico para esta página
 
 // Meta tags específicos
-$page_title = "Sedes - IET San Nicolás | Ubicaciones y Contacto";
+$page_title = "IETSN | Sedes - Ubicaciones y Contacto";
 $page_description = "Conoce las sedes de la Institución Educativa Técnica San Nicolás: Sede Central, Siderúrgica, Salvial y Jorge Eliécer Gaitán.";
 $page_keywords = "sedes IET San Nicolás, ubicación colegio Tuta, sedes rurales, Siderúrgica, Salvial";
 $page_image = "https://ietsannicolas.edu.co/images/Escudo.png";
@@ -243,6 +243,7 @@ include('includes/header.php');
 <!-- ============================================
      JAVASCRIPT
      ============================================ -->
+<script src="js/materialize.min.js"></script>
 <script>
     // Background
     document.addEventListener("DOMContentLoaded", function () {

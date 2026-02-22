@@ -2,7 +2,7 @@
 // ============================================
 // METADATA DE LA NOTICIA
 // ============================================
-$titulo = "Día de la Familia 2024: Un Encuentro de Amor y Unión";
+$titulo = "IETSN | Día de la Familia 2024: Un Encuentro de Amor y Unión";
 $page_title = $titulo;
 $fecha = "2024-06-09";
 $autor = "Yerly Johana Robles Cepeda";

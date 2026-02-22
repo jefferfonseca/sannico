@@ -2,7 +2,7 @@
 $menu = "Nosotros";
 
 // Meta tags específicos
-$page_title = "Reseña Histórica - IET San Nicolás | Historia, Misión y Visión";
+$page_title = "IETSN | Reseña Histórica";
 $page_description = "Conoce la historia de la Institución Educativa Técnica San Nicolás desde su fundación en 1957, nuestra misión, visión, principios y filosofía institucional.";
 $page_keywords = "historia IET San Nicolás, fundación 1957, misión visión colegio Tuta, principios institucionales";
 $page_image = "https://ietsannicolas.edu.co/images/nosotros/h2.jpeg";
