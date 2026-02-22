@@ -147,7 +147,7 @@ include 'includes/header.php';
 
                 <!-- Card: Periódico Escolar -->
                 <div class="col s12 m4 p-0 m-0" data-aos="zoom-in" data-aos-delay="200">
-                    <a href="periodico/index.html" target="_blank" rel="noopener noreferrer"
+                    <a href="periodico/index.php" target="_blank" rel="noopener noreferrer"
                         title="Lee nuestro periódico escolar" class="card-link">
                         <article class="destacados card-destacado">
                             <img src="./images/destacados/periodico.jpg" alt="Periódico Escolar IET San Nicolás"

@@ -5,7 +5,7 @@ $autor = "Jinneth Sofia Diaz Castro";
 $categoria = "Institucional";
 $imagen_destacada = "biblioteca.jpg";
 $resumen = "La IET San Nicolás inauguró su nueva biblioteca digital equipada con tecnología de última generación.";
-$destacada = true;
+$destacada = false;
 $css = "noticia-biblioteca.css";
 ?>
 
@@ -16,7 +16,7 @@ $css = "noticia-biblioteca.css";
         <!-- Header de la noticia -->
         <header class="noticia-header" data-aos="fade-down">
             <div class="noticia-breadcrumb">
-                <a href="../index.php"><i class="material-icons">home</i> Inicio</a>
+                <a href="./index.php"><i class="material-icons">home</i> Inicio</a>
                 <i class="material-icons">chevron_right</i>
                 <span><?php echo $categoria; ?></span>
             </div>

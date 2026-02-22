@@ -22,7 +22,7 @@ $css = "noticia-biblioteca.css";
         <!-- Header de la noticia -->
         <header class="noticia-header" data-aos="fade-down">
             <div class="noticia-breadcrumb">
-                <a href="../index.php"><i class="material-icons">home</i> Inicio</a>
+                <a href="./index.php"><i class="material-icons">home</i> Inicio</a>
                 <i class="material-icons">chevron_right</i>
                 <span><?php echo $categoria; ?></span>
             </div>
@@ -52,7 +52,7 @@ $css = "noticia-biblioteca.css";
 
         <!-- Imagen destacada -->
         <figure class="noticia-imagen-destacada" data-aos="zoom-in">
-            <img src="../imagenes/noticias/<?php echo $imagen_destacada; ?>" alt="<?php echo $titulo; ?>">
+            <img src="./images/noticias/dia-familia/<?php echo $imagen_destacada; ?>" alt="<?php echo $titulo; ?>">
             <figcaption>Celebración del Día de la Familia en la IET San Nicolás - Junio 2024</figcaption>
         </figure>
 
@@ -134,10 +134,10 @@ $css = "noticia-biblioteca.css";
             <div class="noticia-galeria">
                 <h3><i class="material-icons">photo_library</i> Momentos Memorables</h3>
                 <div class="galeria-grid">
-                    <img src="../imagenes/noticias/vaile.jpg" alt="Presentación de danza folclórica">
-                    <img src="../imagenes/noticias/hola.jpg" alt="Saludo entre familias">
-                    <img src="../imagenes/noticias/famili.jpg" alt="Familia unida celebrando">
-                    <img src="../imagenes/noticias/ejje.jpg" alt="Charla de acompañamiento">
+                    <img src="./images/noticias/dia-familia/baile.jpg" alt="Presentación de danza folclórica">
+                    <img src="./images/noticias/dia-familia/hola.jpg" alt="Saludo entre familias">
+                    <img src="./images/noticias/dia-familia/famili.jpg" alt="Familia unida celebrando">
+                    <img src="./images/noticias/dia-familia/ejje.jpg" alt="Charla de acompañamiento">
                 </div>
             </div>
 
@@ -337,7 +337,7 @@ $css = "noticia-biblioteca.css";
             <h3><i class="material-icons">article</i> Te Puede Interesar</h3>
             <div class="relacionadas-grid">
                 <a href="biblioteca-digital.php" class="relacionada-card">
-                    <img src="../imagenes/noticias/biblioteca.jpg" alt="Noticia relacionada">
+                    <img src="./images/noticias/biblioteca.jpg" alt="Noticia relacionada">
                     <div class="relacionada-content">
                         <span class="relacionada-categoria">Institucional</span>
                         <h4>Nueva Biblioteca Digital Inaugurada</h4>
@@ -345,7 +345,7 @@ $css = "noticia-biblioteca.css";
                     </div>
                 </a>
                 <a href="#" class="relacionada-card">
-                    <img src="../imagenes/noticias/biblioteca.jpg" alt="Noticia relacionada">
+                    <img src="./images/noticias/biblioteca.jpg" alt="Noticia relacionada">
                     <div class="relacionada-content">
                         <span class="relacionada-categoria">Cultura</span>
                         <h4>Festival de Arte y Cultura 2024</h4>
@@ -353,7 +353,7 @@ $css = "noticia-biblioteca.css";
                     </div>
                 </a>
                 <a href="#" class="relacionada-card">
-                    <img src="../imagenes/noticias/biblioteca.jpg" alt="Noticia relacionada">
+                    <img src="./images/noticias/biblioteca.jpg" alt="Noticia relacionada">
                     <div class="relacionada-content">
                         <span class="relacionada-categoria">Académico</span>
                         <h4>Estudiantes Destacados del Semestre</h4>
