@@ -44,6 +44,9 @@
             <div class="chip filter-chip" data-category="eventos">
                 <i class="material-icons tiny">event</i> Eventos
             </div>
+            <div class="chip filter-chip" data-category="tecnología">
+                <i class="material-icons tiny">computer</i> Tecnología
+            </div>
         </div>
 
         <!-- Lista de noticias -->
