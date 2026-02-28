@@ -88,7 +88,7 @@ include 'includes/header.php';
 
                         <!-- Gmail Institucional -->
                         <div class="col s12 m4 l2 img_enlaces">
-                            <a href="https://mail.google.com/mail/u/0/?authuser=0&pli=1#inbox" target="_blank"
+                            <a href="https://mail.google.com/a/ietsannicolas.edu.co" target="_blank"
                                 rel="noopener noreferrer" title="Gmail Institucional - @ietsannicolas.edu.co"
                                 class="enlace-convenio">
                                 <img class="borde-dorado hover-zoom" src="./images/convenios/gmail.jpg"
