@@ -189,7 +189,7 @@ include('includes/header.php');
                                    controls 
                                    preload="auto"
                                    aria-label="Reproductor del himno institucional">
-                                <source src="./images/simbolos/Himno.mpeg" type="audio/mpeg">
+                                <source src="./images/simbolos/Himno.mp3" type="audio/mpeg">
                                 Su navegador no soporta el elemento de audio.
                             </audio>
                         </div>
